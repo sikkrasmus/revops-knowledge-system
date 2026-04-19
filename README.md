@@ -1,3 +1,11 @@
+---
+type: meta
+title: Company Index
+description: Open framework for an LLM-maintained GTM/RevOps intelligence layer. Adapted from Karpathy's LLM Wiki.
+owner: rasmus@unfrankenstein.io
+last_reviewed: 2026-04-19
+---
+
 # Company Index
 
 **An open framework for an LLM-maintained GTM/RevOps intelligence layer.**

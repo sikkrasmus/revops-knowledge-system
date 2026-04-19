@@ -1,3 +1,11 @@
+---
+type: meta
+title: Authoring contract
+description: Canonical operating agreement between humans, LLMs, and reviewers. 12 sections covering source precedence, citations, staleness, lifecycle.
+owner: rasmus@unfrankenstein.io
+last_reviewed: 2026-04-19
+---
+
 # Authoring Contract
 
 The canonical operating agreement between human authors, LLM authors, and reviewers. Every page in this corpus — shared, function-specific, or source snapshot — is authored under this contract. `ci verify` enforces the mechanical parts; the judgmental parts are enforced by PR review.

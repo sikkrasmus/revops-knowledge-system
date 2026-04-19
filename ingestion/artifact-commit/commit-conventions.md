@@ -77,11 +77,11 @@ Downstream inbound links updated in 7 pages.
 
 ## Automation-generated commits
 
-`log-append.yml` commits use `github-actions[bot]` identity with `[skip ci]` in the subject to prevent verify-loop triggering. See [`../../.github/workflows/log-append.yml`](../../.github/workflows/log-append.yml).
+`log-append.yml` commits use `github-actions[bot]` identity with `[skip ci]` in the subject to prevent verify-loop triggering. See `.github/workflows/log-append.yml` at the repo root.
 
 Sentinel commits:
 
-- `[bootstrap]` in the commit subject allows `ci reindex --check` to skip verification for that commit only. Used exactly once — the initial reindex in [SPEC §7](../../../PRINCIPLES.md). Documented in CI workflow comments.
+- `[bootstrap]` in the commit subject allows `ci reindex --check` to skip verification for that commit only. Used exactly once — the initial reindex per the CI bootstrap policy documented alongside the workflow. See [`../../PRINCIPLES.md`](../../PRINCIPLES.md) and the workflow file comments.
 
 ## Attribution
 

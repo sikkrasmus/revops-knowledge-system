@@ -3,7 +3,12 @@ type: meta
 title: Positioning
 description: Value props, category narrative, and elevator pitches. Strategic — always PR.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - marketing-lead
+  - sales-lead
+  - product-lead
 last_reviewed: 2026-04-19
+verified_until: 2026-10-19
 ---
 
 # Positioning

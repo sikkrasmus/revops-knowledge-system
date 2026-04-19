@@ -92,9 +92,8 @@ Replace placeholder citations with real benchmark data when forking. Primary sou
 
 ## Related
 
-- [`grr.md`](grr.md) — Gross Revenue Retention (once filled in)
-- [`logo-churn.md`](logo-churn.md), [`revenue-churn.md`](revenue-churn.md)
-- [`../../../functions/cs/`](../../../functions/customer-success/) (Phase 2)
+- [`../`](../) — other metrics (GRR, logo-churn, revenue-churn planned for in-production forks)
+- [`../../../functions/customer-success/`](../../../functions/customer-success/) (Phase 2)
 - [`../../../functions/finance-legal/`](../../../functions/finance-legal/) (Phase 2)
 
 ## Change log

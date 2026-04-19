@@ -3,7 +3,12 @@ type: meta
 title: Personas & Buying Committees
 description: Individual roles plus buying-committee configurations across deal sizes and motions.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - sales-lead
+  - marketing-lead
+  - cs-lead
 last_reviewed: 2026-04-19
+verified_until: 2026-10-19
 ---
 
 # Personas & Buying Committees

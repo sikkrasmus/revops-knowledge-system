@@ -3,7 +3,11 @@ type: meta
 title: Data Definitions
 description: Opinionated, research-grounded metric and KPI definitions. The definitions layer.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - revops-lead
+  - finance-lead
 last_reviewed: 2026-04-19
+verified_until: 2027-04-19
 ---
 
 # Data Definitions

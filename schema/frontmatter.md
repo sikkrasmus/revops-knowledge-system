@@ -1,3 +1,11 @@
+---
+type: meta
+title: Frontmatter spec
+description: Required and optional frontmatter fields by page type. Base + motion/segment + drift fields.
+owner: rasmus@unfrankenstein.io
+last_reviewed: 2026-04-19
+---
+
 # Frontmatter Specification
 
 Every page in this corpus has YAML frontmatter between `---` markers at the top. `ci verify` enforces it. Enum values are centralized in [`enums.yaml`](enums.yaml) and validated mechanically.

@@ -3,7 +3,12 @@ type: meta
 title: ICP
 description: Tiered ICP (A/B/C) with firmographics, technographics, triggers, disqualifiers.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - revops-lead
+  - sales-lead
+  - marketing-lead
 last_reviewed: 2026-04-19
+verified_until: 2026-10-19
 ---
 
 # ICP

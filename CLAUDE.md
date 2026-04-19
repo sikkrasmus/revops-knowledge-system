@@ -1,3 +1,11 @@
+---
+type: meta
+title: CLAUDE.md routing
+description: Top-level router for Claude Code / Cowork. Loaded at session start. Hand-written.
+owner: rasmus@unfrankenstein.io
+last_reviewed: 2026-04-19
+---
+
 # CLAUDE.md — Routing
 
 Top-level router for this repo. Loaded by Claude Code / Cowork on session start. Answers: for queries about X, look in Y.

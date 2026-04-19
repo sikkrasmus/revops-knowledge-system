@@ -1,3 +1,11 @@
+---
+type: meta
+title: Phases
+description: Phase 0 through Phase 4+ roadmap. What's built, planned, and deferred.
+owner: rasmus@unfrankenstein.io
+last_reviewed: 2026-04-19
+---
+
 # Phases
 
 Honest roadmap. What's built today, what's next, what's deferred, and what's out of scope.

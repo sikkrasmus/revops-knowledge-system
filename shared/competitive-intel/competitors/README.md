@@ -3,7 +3,11 @@ type: meta
 title: Competitor profiles
 description: One file per competitor. Use the shared competitor page template.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - marketing-lead
+  - sales-lead
 last_reviewed: 2026-04-19
+verified_until: 2026-07-19
 ---
 
 # Competitor profiles

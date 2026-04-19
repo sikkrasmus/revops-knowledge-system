@@ -3,7 +3,12 @@ type: meta
 title: Pricing
 description: Price book, discount guardrails, and usage meters. Highest-conflict shared artifact.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - revops-lead
+  - finance-lead
+  - sales-lead
 last_reviewed: 2026-04-19
+verified_until: 2026-07-19
 ---
 
 # Pricing

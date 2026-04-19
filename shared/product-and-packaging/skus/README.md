@@ -3,7 +3,11 @@ type: meta
 title: SKUs
 description: One file per SKU. Use the shared product-sku page template.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - product-lead
+  - revops-lead
 last_reviewed: 2026-04-19
+verified_until: 2026-07-19
 ---
 
 # SKUs

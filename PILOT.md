@@ -1,3 +1,11 @@
+---
+type: meta
+title: Pilot implementation
+description: Paid pilot — fork this framework into production in 4-6 weeks, with direct implementation support.
+owner: rasmus@unfrankenstein.io
+last_reviewed: 2026-04-19
+---
+
 # Pilot Implementation
 
 I'm taking 3 companies through a Company Index implementation as paid pilots.

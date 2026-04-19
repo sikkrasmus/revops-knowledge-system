@@ -3,7 +3,12 @@ type: meta
 title: Competitive Intelligence
 description: Competitor profiles and cross-competitor win-loss patterns. Battlecards downstream in functions/sales/.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - marketing-lead
+  - sales-lead
+  - product-lead
 last_reviewed: 2026-04-19
+verified_until: 2026-07-19
 ---
 
 # Competitive Intelligence

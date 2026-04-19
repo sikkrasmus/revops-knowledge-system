@@ -3,7 +3,12 @@ type: meta
 title: Product and Packaging
 description: SKUs, editions, and add-ons. The product spine referenced by every function.
 owner: rasmus@unfrankenstein.io
+reviewers:
+  - product-lead
+  - revops-lead
+  - finance-lead
 last_reviewed: 2026-04-19
+verified_until: 2026-10-19
 ---
 
 # Product and Packaging

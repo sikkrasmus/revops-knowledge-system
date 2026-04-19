@@ -1,3 +1,11 @@
+---
+type: meta
+title: Section labels
+description: In-file syntax for scoping headings to motion/segment combinations. Grammar + regex parser.
+owner: rasmus@unfrankenstein.io
+last_reviewed: 2026-04-19
+---
+
 # Section Labels
 
 In-file syntax for scoping headings to specific motion/segment combinations. Enables a single canonical page to carry multiple views without parallel directory trees.

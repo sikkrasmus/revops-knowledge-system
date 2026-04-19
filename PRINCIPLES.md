@@ -1,3 +1,11 @@
+---
+type: meta
+title: Principles
+description: Eleven binding principles for the framework. Function-agnostic; principles outlive instances.
+owner: rasmus@unfrankenstein.io
+last_reviewed: 2026-04-19
+---
+
 # Principles
 
 The abstract framework, function-agnostic. These principles outlive any instance. If you fork this repo to build a Company Index for your org, the directory layout can change — the principles cannot, without breaking the system.
