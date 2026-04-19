@@ -1,0 +1,56 @@
+name: Verify
+
+# Runs on PR and on push to main. Gates:
+#   1. `ci reindex --check` — fails if index.md is stale relative to
+#      current frontmatter. The `[bootstrap]` sentinel in a commit
+#      subject skips this check for that one commit only (see SPEC §7).
+#   2. `ci verify --all` — fails if any page has missing required
+#      frontmatter, broken links, bad section labels, or citation
+#      inconsistency.
+#   3. Smoke test — runs each CLI command against the live corpus.
+# Loop-prevention: skips when the push commit message contains
+# `[skip ci]` (used by log-append.yml).
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install yq
+        run: |
+          sudo wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          sudo chmod +x /usr/local/bin/yq
+          yq --version
+
+      - name: Make ci executable
+        run: chmod +x consumption/cli/ci consumption/cli/tests/smoke.sh
+
+      - name: ci reindex --check
+        id: reindex_check
+        run: |
+          # Bootstrap sentinel: if the commit message contains [bootstrap],
+          # skip the --check invariant for this single commit.
+          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          if [[ "$COMMIT_MSG" == *"[bootstrap]"* ]]; then
+            echo "Bootstrap commit detected — skipping index.md freshness check for this commit."
+          else
+            ./consumption/cli/ci reindex --check
+          fi
+
+      - name: ci verify --all
+        run: ./consumption/cli/ci verify --all
+
+      - name: Smoke test
+        run: ./consumption/cli/tests/smoke.sh
+
+      - name: ci stale (informational)
+        if: always()
+        run: ./consumption/cli/ci stale || true
