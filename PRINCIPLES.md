@@ -81,7 +81,14 @@ Drift is detected and surfaced as frontmatter flags (`source_drift: true`, `veri
 
 ## 10. Provenance at the claim level
 
-Every factual claim cites its source inline: `[source: sources/calls/2026-04-15-acme-discovery.md]` or `[source: hubspot://deals?stage=closed-won as_of:2026-04-19]`. Every cited source appears in the page's frontmatter `sources:` list. `ci verify` enforces this — an unsourced assertion fails the build.
+Every factual claim cites its source inline. Two formats — file reference or system-query with `as_of:` timestamp:
+
+```
+[source: sources/calls/YYYY-MM-DD-acme-discovery.md]
+[source: hubspot://deals?stage=closed-won as_of:YYYY-MM-DD]
+```
+
+Every cited source appears in the page's frontmatter `sources:` list. `ci verify` enforces this — an unsourced assertion fails the build.
 
 Why this matters: agents hallucinate confidently. A corpus without claim-level citations turns into one where the LLM extrapolates. A corpus with them forces the LLM to refuse, hedge, or escalate instead.
 

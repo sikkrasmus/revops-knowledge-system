@@ -165,16 +165,25 @@ _v_verify_page() {
   done
 
   # 10. Orphan claim citations.
-  # Extract everything between "[source: " and "]" using grep + sed,
-  # portable across macOS BSD awk.
+  # Extract everything between "[source: " and "]" in non-code-block
+  # regions. Code fences (``` or ~~~) bracket example citations that
+  # shouldn't count as real claims.
   local claims
-  claims=$(grep -oE '\[source: [^]]+\]' "$file" | sed -E 's/^\[source: (.*)\]$/\1/' | sort -u)
+  claims=$(awk '
+    /^```/   { fence = !fence; next }
+    /^~~~/   { fence = !fence; next }
+    !fence   { print }
+  ' "$file" | grep -oE '\[source: [^]]+\]' | sed -E 's/^\[source: (.*)\]$/\1/' | sort -u)
 
   if [[ -n "$claims" ]]; then
     local fm_sources
     fm_sources=$(ci_get_list "$file" sources | sort -u)
     while IFS= read -r c; do
       [[ -z "$c" ]] && continue
+      # Skip placeholder citations used as examples (not real claims).
+      case "$c" in
+        *...*|*"<"*|*"{"*|*'`'*) continue ;;
+      esac
       # Match exact or prefix (as_of timestamps are permitted)
       if ! grep -qFx "$c" <<< "$fm_sources"; then
         # Also allow if the first part (before " as_of:") matches
