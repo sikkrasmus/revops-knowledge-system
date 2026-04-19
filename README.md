@@ -4,7 +4,7 @@
 
 Every AI agent in your revenue org reads from a knowledge base. Most of those knowledge bases are stale, scattered, and wrong. This is the substrate that makes the rest of your AI investment actually work.
 
-![Company Index Architecture](docs/assets/architecture.png)
+> Architecture diagram coming soon.
 
 ---
 
