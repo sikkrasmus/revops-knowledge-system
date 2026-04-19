@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+# ci — Company Index CLI. Bash + yq wrapper around grep, frontmatter, and the navigation trio.
+
+# We intentionally do not enable `-e` or `pipefail` globally: many
+# subcommands use pipelines where a filter's non-match (grep -q → 1)
+# is expected control flow. We enable `-u` for unset-var safety; each
+# subcommand handles errors explicitly.
+set -u
+
+_ci_self="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/ci"
+_ci_lib="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)/lib"
+
+source "${_ci_lib}/common.sh"
+
+usage() {
+  cat <<'EOF'
+ci — Company Index CLI
+
+USAGE
+  ci <command> [args]
+
+COMMANDS
+  list       List pages matching frontmatter filters
+  show       Print a page with resolved cross-references
+  search     Ranked grep across the corpus
+  sources    Show raw sources backing a page's claims
+  graph      Inbound + outbound links for a page
+  pending    Open PRs on the wiki (gh wrapper)
+  diff       Show pending changes + reviewer routing classification
+  verify     Frontmatter + links + citations check
+  stale      Corpus-wide staleness + drift report
+  log        Filtered read of log.md
+  reindex    Regenerate index.md from frontmatter
+
+OPTIONS
+  -h, --help    Show this help
+  -v, --version Show version
+
+Run `ci <command> -h` for per-command help.
+EOF
+}
+
+version() {
+  echo "ci 0.1.0 (Phase 0)"
+}
+
+if [[ $# -lt 1 ]]; then
+  usage
+  exit 3
+fi
+
+cmd="$1"
+shift
+
+case "$cmd" in
+  -h|--help|help) usage; exit 0 ;;
+  -v|--version) version; exit 0 ;;
+  list|show|search|sources|graph|pending|diff|verify|stale|log|reindex)
+    script="${_ci_lib}/${cmd}.sh"
+    if [[ ! -f "$script" ]]; then
+      ci_err "command not implemented: ${cmd}"
+      exit 3
+    fi
+    # shellcheck disable=SC1090
+    source "$script"
+    "ci_cmd_${cmd}" "$@"
+    ;;
+  *)
+    ci_err "unknown command: ${cmd}"
+    usage >&2
+    exit 3
+    ;;
+esac

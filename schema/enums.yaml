@@ -1,0 +1,55 @@
+# Machine-readable enum values for ci verify.
+# Also documented in frontmatter.md. Adding a value requires a PR to this file + the doc.
+
+type:
+  - icp                  # ICP tier or definition
+  - persona              # individual persona / role
+  - buying-committee     # multi-persona configuration
+  - sku                  # single SKU spec
+  - packaging            # edition / package definition
+  - pricing-policy       # canonical price book or policy
+  - discount-guardrail   # discount rules
+  - usage-meter          # usage-billed meter spec
+  - value-prop           # positioning artifact
+  - category-narrative   # category-level narrative
+  - elevator-pitch       # short pitch variant
+  - competitor           # competitor profile
+  - win-loss-pattern     # observed pattern
+  - metric-definition    # metric / KPI definition
+  - source               # raw source snapshot in sources/
+  - meta                 # repo-level meta (PRINCIPLES, PHASES, etc.)
+  - function-readme      # functions/<x>/README.md
+  - playbook             # function-specific playbook (P1+)
+  - methodology          # function-specific methodology (P1+)
+  - framework            # decision framework (P1+)
+  - play                 # repeatable play (P1+)
+  - battlecard           # P1 sales template
+  - objection            # P1 sales template
+  - pricing-pattern      # P1 sales template
+  - postmortem           # P1 sales template
+  - champion-profile     # P1 sales template
+
+motion:
+  - plg
+  - sales-assisted
+  - enterprise
+
+segment:
+  - smb
+  - mid-market
+  - enterprise
+
+consumers:
+  - marketing
+  - sales
+  - cs
+  - support
+  - revops
+  - finance
+  - legal
+  - product
+
+confidence:
+  - low
+  - medium
+  - high

@@ -1,0 +1,73 @@
+name: Append to log.md on PR merge
+
+# On every merged PR to main, append an entry to log.md documenting the
+# merge. Entries follow the format:
+#   ## [YYYY-MM-DD] pr-merged | #<pr-number> <pr-title> | <paths>
+#
+# The commit pushed by this workflow carries `[skip ci]` in its subject
+# to prevent verify.yml from running on the append itself (otherwise
+# the appended log.md change would trigger verify, which would re-run
+# the full suite for a single-line append).
+#
+# See SPEC §8 for mechanics rationale.
+
+on:
+  pull_request:
+    types: [closed]
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: read
+
+jobs:
+  append:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 2   # need parent for diff
+
+      - name: Configure git
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Compute affected paths
+        id: paths
+        run: |
+          # Diff the merge commit against its first parent to get changed files.
+          # Truncate to 5 paths + "+N more" suffix if longer.
+          CHANGED=$(git diff --name-only HEAD~1 HEAD | head -n 5 | paste -sd ',' -)
+          TOTAL=$(git diff --name-only HEAD~1 HEAD | wc -l | tr -d ' ')
+          if [ "$TOTAL" -gt 5 ]; then
+            EXTRA=$((TOTAL - 5))
+            CHANGED="${CHANGED} (+${EXTRA} more)"
+          fi
+          echo "changed=${CHANGED}" >> "$GITHUB_OUTPUT"
+
+      - name: Append entry to log.md
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_TITLE:  ${{ github.event.pull_request.title }}
+          CHANGED:   ${{ steps.paths.outputs.changed }}
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          # Truncate PR title to 80 chars per SPEC.
+          TRUNC_TITLE=$(printf '%s' "$PR_TITLE" | cut -c1-80)
+          ENTRY="## [${DATE}] pr-merged | #${PR_NUMBER} ${TRUNC_TITLE} | ${CHANGED}"
+          printf '\n%s\n' "$ENTRY" >> log.md
+
+      - name: Commit and push
+        run: |
+          git add log.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: append pr-merged entry to log.md [skip ci]
+
+PR #${{ github.event.pull_request.number }} merged."
+          git push origin main
