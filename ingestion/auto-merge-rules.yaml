@@ -1,0 +1,199 @@
+# Auto-merge rules — concept + example spec.
+#
+# NOT wired into CI enforcement in v1. Stage 1 = 100% PR (see
+# pr-workflow.md § Graduated trust). This file exists to illustrate the
+# graduated-trust model and give operators a concrete spec to wire up
+# when they move to Stage 2.
+#
+# Structure: per-stage rules. At each stage, the `auto_merge` list is the
+# set of change classes that don't need human review at that stage. The
+# `always_pr` list is the content classes that never auto-merge at that
+# stage (and typically at no stage).
+#
+# To wire up: a GitHub Action reads this file, classifies the PR's
+# change class (via label or content-diff heuristic), and applies
+# auto-merge if (a) the class is in the current stage's auto_merge list,
+# and (b) the class is not in always_pr, and (c) CI is green.
+
+version: 1
+
+stages:
+
+  stage_1:
+    description: |
+      Months 0-3. Nothing auto-merges. Build confidence first.
+    auto_merge: []
+    always_pr:
+      - all
+
+  stage_2:
+    description: |
+      Months 3-6. Routine autonomy. Low-risk mechanical changes
+      auto-merge; strategic content always PR.
+    auto_merge:
+      - backlink_update
+      - cross_reference_fix
+      - format_fix
+      - last_reviewed_refresh
+      - index_md_entry_add           # from ci reindex only
+      - single_canonical_source_factual_update
+      - frontmatter_field_typo_fix
+    always_pr:
+      - icp_definition_change
+      - pricing_change
+      - product_packaging_change
+      - legal_compliance_change
+      - strategic_positioning_change
+      - competitive_counter_positioning_change
+      - new_page_create
+      - page_delete
+      - page_rename
+      - schema_change
+      - ingestion_change
+      - any_change_flagged_source_drift_large
+
+  stage_3:
+    description: |
+      Months 6+. Pattern autonomy and multi-source consensus.
+      Always-PR list does not shrink.
+    auto_merge:
+      # all of stage_2
+      - backlink_update
+      - cross_reference_fix
+      - format_fix
+      - last_reviewed_refresh
+      - index_md_entry_add
+      - single_canonical_source_factual_update
+      - frontmatter_field_typo_fix
+      # new at stage_3
+      - multi_source_consensus_factual_update    # all cited sources agree
+      - pattern_matched_change                   # similar change accepted ≥N times
+      - high_trust_contributor_change            # contributor has ≥N merged PRs w/o rollback
+    always_pr:
+      # unchanged from stage_2
+      - icp_definition_change
+      - pricing_change
+      - product_packaging_change
+      - legal_compliance_change
+      - strategic_positioning_change
+      - competitive_counter_positioning_change
+      - new_page_create
+      - page_delete
+      - page_rename
+      - schema_change
+      - ingestion_change
+      - any_change_flagged_source_drift_large
+
+# Change-class definitions (glossary)
+change_classes:
+
+  backlink_update:
+    description: Page A moved / renamed → update inbound links in pages that cite A
+    rationale: Mechanical follow-through of a prior PR. No content judgment.
+
+  cross_reference_fix:
+    description: Broken internal link → canonical target
+    rationale: Mechanical fix. ci verify catches these; auto-merge completes them.
+
+  format_fix:
+    description: Whitespace, list formatting, punctuation inside a sentence
+    rationale: No content change.
+
+  last_reviewed_refresh:
+    description: Bump `last_reviewed` date with no body change
+    rationale: A human re-read and confirmed nothing needs change.
+
+  index_md_entry_add:
+    description: index.md entry added by `ci reindex` on a new page
+    rationale: Deterministic generation; not content judgment.
+
+  single_canonical_source_factual_update:
+    description: |
+      Factual update where a single authoritative source (e.g., billing
+      system, signed contract) is the obvious source of truth and the
+      diff matches the source exactly.
+    rationale: |
+      No judgment — the source is unambiguous. Example: billing system
+      updated a SKU price; matching page update.
+    requires:
+      - source is classified "authoritative" (signed-dated / system-of-record)
+      - diff content hash-matches source extract
+
+  frontmatter_field_typo_fix:
+    description: Typo in a frontmatter field value that's detectable against enums.yaml
+    rationale: Mechanical.
+
+  multi_source_consensus_factual_update:
+    description: |
+      Factual update where multiple cited sources agree on the same
+      value and the current page disagrees.
+    rationale: Consensus trumps single-point. Stage 3 only.
+    requires:
+      - ≥2 sources cited
+      - sources are independent (not same system, different queries)
+
+  pattern_matched_change:
+    description: |
+      Similar change has been accepted ≥N times in the past M days with
+      no rollback.
+    rationale: Track record earns autonomy. Stage 3 only.
+    requires:
+      - N=5 prior merges with same change shape
+      - No rollbacks of similar changes in 90 days
+
+  high_trust_contributor_change:
+    description: |
+      Contributor has merged ≥N PRs in this directory over M months
+      with zero rollbacks.
+    rationale: Individual track record. Stage 3 only.
+    requires:
+      - Contributor merge count ≥ 20 in directory
+      - Zero rollbacks in 180 days
+
+  icp_definition_change:
+    description: Any change to shared/icp/*.md content (not just backlinks)
+    rationale: Strategic. Cross-function impact. Always PR.
+
+  pricing_change:
+    description: |
+      Any change to shared/pricing/*.md content (price amounts, discount
+      thresholds, meter rates, approval thresholds).
+    rationale: Financial impact. Always PR.
+
+  product_packaging_change:
+    description: Any change to shared/product-and-packaging/ SKUs / editions / add-ons
+    rationale: Contract and downstream impact. Always PR.
+
+  legal_compliance_change:
+    description: Any change to functions/finance-legal/ (Phase 2)
+    rationale: Legal exposure. Always PR.
+
+  strategic_positioning_change:
+    description: |
+      Any change to shared/positioning/ that alters category claim,
+      primary value prop, or core differentiator.
+    rationale: Brand. Always PR.
+
+  new_page_create:
+    description: Any net-new page
+    rationale: Schema evolves. Always PR with issue.
+
+  page_delete:
+    description: Any page deletion
+    rationale: Downstream links break. Always PR with issue.
+
+  page_rename:
+    description: Slug change
+    rationale: Same as delete — breaks inbound links. Always PR.
+
+  schema_change:
+    description: Any change to schema/
+    rationale: Affects verify logic. Always PR.
+
+  ingestion_change:
+    description: Any change to ingestion/
+    rationale: Affects governance. Always PR.
+
+  any_change_flagged_source_drift_large:
+    description: Change where source_drift: true and the drift is "large"
+    rationale: Reconciliation is a judgment call. Always PR.
