@@ -2,7 +2,7 @@
 type: meta
 title: Personas & Buying Committees
 description: Individual roles plus buying-committee configurations across deal sizes and motions.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

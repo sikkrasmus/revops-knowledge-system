@@ -2,7 +2,7 @@
 type: play
 title: Outbound sequence — mid-market
 description: 21-day multi-channel outbound sequence for named mid-market accounts with active triggers. Produces qualified first meetings.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

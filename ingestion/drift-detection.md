@@ -2,7 +2,7 @@
 type: meta
 title: Drift Detection
 description: Lint-pass spec for three freshness signals — source drift, verification stale, contradiction.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

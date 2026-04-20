@@ -2,7 +2,7 @@
 type: framework
 title: Forecast methodology
 description: How we produce weekly commit / best-case / pipeline numbers. Reads MEDDPICC completeness, deal stage, and historical close rate.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

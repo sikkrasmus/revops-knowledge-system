@@ -2,7 +2,7 @@
 type: meta
 title: Connector Pattern
 description: Abstract pseudo-code template for any source-system connector. Phase 0 ships this pattern, not implementations.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

@@ -2,7 +2,7 @@
 type: win-loss-pattern
 title: Cross-competitor win-loss patterns
 description: Observed patterns from closed deals — what correlates with wins and losses.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
   - sales-lead

@@ -2,7 +2,7 @@
 type: meta
 title: CLAUDE.md routing
 description: Top-level router for Claude Code / Cowork. Loaded at session start. Hand-written.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-20
 ---
 
@@ -100,4 +100,4 @@ Full spec: [`schema/authoring-contract.md`](schema/authoring-contract.md). Highl
 
 ## Contributing
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md). For pilot inquiries, [`PILOT.md`](PILOT.md).
+For pilot inquiries, see [`PILOT.md`](PILOT.md).

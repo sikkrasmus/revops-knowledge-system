@@ -2,7 +2,7 @@
 type: playbook
 title: Negotiation playbook
 description: Negotiation converts a proposal into a signable contract. Most negotiation is procedural; strategic negotiation is rarer than reps think.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

@@ -2,7 +2,7 @@
 type: playbook
 title: Discovery playbook
 description: What a rep does in discovery — the first real working session with the buyer. Fills Metrics, Identify pain, Champion, and starts Economic buyer.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

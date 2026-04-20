@@ -2,7 +2,7 @@
 type: meta
 title: PR Workflow
 description: Graduated trust model, reviewer routing, and PR etiquette for every change in the corpus.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

@@ -2,7 +2,7 @@
 type: meta
 title: SKUs
 description: One file per SKU. Use the shared product-sku page template.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - product-lead
   - revops-lead

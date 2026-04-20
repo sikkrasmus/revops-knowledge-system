@@ -2,7 +2,7 @@
 type: meta
 title: Source Storage Policy
 description: Hybrid in-repo/out-of-repo policy, PII handling, retention rules for source artifacts.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

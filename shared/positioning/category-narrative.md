@@ -2,7 +2,7 @@
 type: category-narrative
 title: Category narrative
 description: Which category we claim and the frame around it.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
   - product-lead

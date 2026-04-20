@@ -2,7 +2,7 @@
 type: discount-guardrail
 title: Discount guardrails
 description: Discount approval thresholds and strategic exception band. Phase 0 abstract example.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - finance-lead

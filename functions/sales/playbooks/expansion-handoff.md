@@ -2,7 +2,7 @@
 type: playbook
 title: Expansion handoff playbook
 description: Expansion handoff passes the signed customer from Sales to CS with enough context that expansion signals surface and renewal risk drops.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - cs-lead

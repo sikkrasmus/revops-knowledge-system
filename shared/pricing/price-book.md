@@ -2,7 +2,7 @@
 type: pricing-policy
 title: Canonical price book
 description: Canonical price book across all motions and segments. Phase 0 abstract example.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - finance-lead

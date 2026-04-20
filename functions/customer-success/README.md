@@ -2,7 +2,7 @@
 type: function-readme
 title: Customer Success function
 description: Customer Success function — scaffold only in Phase 0; content filled in Phase 2.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - cs-lead
   - revops-lead

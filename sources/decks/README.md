@@ -2,7 +2,7 @@
 type: meta
 title: Deck Excerpts
 description: Markdown excerpts from pitch decks, narrative decks, and internal strategy decks.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

@@ -2,7 +2,7 @@
 type: function-readme
 title: Sales tools and stack
 description: Curated tool-category map for the Sales function. Categories with purpose and 1-2 representative tools per category; not a vendor endorsement list.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

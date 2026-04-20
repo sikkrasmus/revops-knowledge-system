@@ -2,7 +2,7 @@
 type: meta
 title: Issue template — stale claim
 description: Use when a specific claim in a page appears out-of-date but the corrected value isn't yet clear.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

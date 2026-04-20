@@ -2,7 +2,7 @@
 type: meta
 title: ICP
 description: Tiered ICP (A/B/C) with firmographics, technographics, triggers, disqualifiers.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - sales-lead

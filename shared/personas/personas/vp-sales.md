@@ -2,7 +2,7 @@
 type: persona
 title: VP Sales
 description: VP Sales persona — carries the quota, owns the sales operating system, balances rep capacity against pipeline reality.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

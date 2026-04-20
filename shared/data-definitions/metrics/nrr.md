@@ -2,7 +2,7 @@
 type: metric-definition
 title: Net Revenue Retention (NRR)
 description: NRR — percentage of recurring revenue retained from an existing cohort including expansion.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - finance-lead

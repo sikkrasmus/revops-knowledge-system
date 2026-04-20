@@ -2,7 +2,7 @@
 type: meta
 title: Internal Doc Snapshots
 description: Synthesized Confluence/Notion/Drive page snapshots. Originals stay in source system.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

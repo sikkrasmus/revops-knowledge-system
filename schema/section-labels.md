@@ -2,7 +2,7 @@
 type: meta
 title: Section labels
 description: In-file syntax for scoping headings to motion/segment combinations. Grammar + regex parser.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

@@ -2,7 +2,7 @@
 type: meta
 title: Functions
 description: Function-specific content directories. Shared components in shared/ feed every function.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
 last_reviewed: 2026-04-19

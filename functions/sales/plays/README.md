@@ -2,7 +2,7 @@
 type: function-readme
 title: Sales plays
 description: Repeatable plays — narrower than playbooks, more concrete than frameworks. Outbound, displacement, referral, renewal acceleration.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

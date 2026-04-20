@@ -2,7 +2,7 @@
 type: elevator-pitch
 title: Elevator pitches
 description: Scenario-specific pitch variants — cold email, first call, demo lead-in, event intro.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
   - sales-lead

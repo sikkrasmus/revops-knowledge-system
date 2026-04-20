@@ -2,7 +2,7 @@
 type: meta
 title: Issue template — contradiction found
 description: Use when two pages or a page and a source make incompatible claims.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

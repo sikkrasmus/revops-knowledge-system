@@ -2,7 +2,7 @@
 type: meta
 title: ci CLI
 description: Bash + yq CLI for the Company Index. Eleven commands wrapping grep, frontmatter filters, and the navigation trio.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

@@ -2,7 +2,7 @@
 type: meta
 title: Usage patterns
 description: Worked narratives for AE, Head of RevOps, and HITL agent use of the CLI in-workflow.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

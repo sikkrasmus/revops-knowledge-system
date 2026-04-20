@@ -2,7 +2,7 @@
 type: function-readme
 title: Sales methodology
 description: Canonical sales methodology for the function. MEDDPICC with motion and segment adaptations.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

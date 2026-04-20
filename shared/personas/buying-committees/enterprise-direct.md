@@ -2,7 +2,7 @@
 type: buying-committee
 title: Enterprise direct committee
 description: Enterprise buying-committee configuration — full committee including procurement, security, legal, with multi-signer paper process.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

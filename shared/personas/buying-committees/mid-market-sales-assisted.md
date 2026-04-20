@@ -2,7 +2,7 @@
 type: buying-committee
 title: Mid-market sales-assisted committee
 description: Typical buying-committee configuration for mid-market sales-assisted deals.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

@@ -2,7 +2,7 @@
 type: play
 title: Referral ask
 description: Moment-based play for sourcing warm pipeline from existing customers at success milestones.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - cs-lead

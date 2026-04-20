@@ -2,7 +2,7 @@
 type: packaging
 title: Editions — Starter / Growth / Enterprise
 description: Edition definitions — SKU inclusions, usage limits, segment targeting.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - product-lead
   - revops-lead

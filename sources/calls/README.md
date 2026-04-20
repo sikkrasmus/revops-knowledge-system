@@ -2,7 +2,7 @@
 type: meta
 title: Call Summaries
 description: Synthesized summaries of sales / CS / product calls. Raw recordings live in Gong/Fathom.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

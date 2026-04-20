@@ -2,7 +2,7 @@
 type: meta
 title: Company Index skill
 description: Claude Code / Cowork skill definition — registers ci as canonical retrieval path for this corpus.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

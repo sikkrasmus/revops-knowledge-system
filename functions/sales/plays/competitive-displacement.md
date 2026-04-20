@@ -2,7 +2,7 @@
 type: play
 title: Competitive displacement
 description: Play for displacing an incumbent vendor when buyer-side dissatisfaction signal is present. Counter-positioning, de-risking, and transition planning.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

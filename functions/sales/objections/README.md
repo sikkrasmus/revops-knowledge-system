@@ -2,7 +2,7 @@
 type: function-readme
 title: Sales objections
 description: Objection library — one page per common objection with persona, stage, frequency, tested response, and traps to avoid.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

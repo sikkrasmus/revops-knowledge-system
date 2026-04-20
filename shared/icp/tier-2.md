@@ -2,7 +2,7 @@
 type: icp
 title: Tier 2 ICP — broader addressable segment
 description: Tier 2 ICP — ABM addressable market, broader than Tier 1 but still qualified.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - marketing-lead

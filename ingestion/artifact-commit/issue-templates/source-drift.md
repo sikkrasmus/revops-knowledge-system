@@ -2,7 +2,7 @@
 type: meta
 title: Issue template — source drift detected
 description: Use when a source underlying one or more wiki pages has changed since snapshot.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 
