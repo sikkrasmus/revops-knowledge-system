@@ -3,7 +3,7 @@ type: meta
 title: CLAUDE.md routing
 description: Top-level router for Claude Code / Cowork. Loaded at session start. Hand-written.
 owner: rasmus@unfrankenstein.io
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-20
 ---
 
 # CLAUDE.md — Routing
@@ -25,7 +25,7 @@ This file is **hand-written and rarely changes** — updated only when repo stru
 | Value props, category narrative, elevator pitches | [`shared/positioning/`](shared/positioning/) |
 | Competitors, win-loss patterns | [`shared/competitive-intel/`](shared/competitive-intel/) |
 | Metric definitions (ARR, NRR, CAC, MQL, SQL...) | [`shared/data-definitions/`](shared/data-definitions/) |
-| Sales methodology, playbooks, battlecards | [`functions/sales/`](functions/sales/) — *Phase 1, scaffolded in Phase 0* |
+| Sales methodology, playbooks, battlecards | [`functions/sales/`](functions/sales/) — *Phase 1, filled* |
 | Marketing, CS, Support, RevOps, Finance/Legal | [`functions/<function>/`](functions/) — *Phase 2, scaffolded* |
 | Source snapshots (calls, contracts, decks, internal docs) | [`sources/`](sources/) |
 | Live-system query references (HubSpot, Gong, Stripe) | [`ingestion/connectors/`](ingestion/connectors/) — *abstract pattern only in v1* |
@@ -56,7 +56,8 @@ When a user asks a question that needs context from this corpus:
 What's real today vs. scaffolded:
 
 - **Built (Phase 0)**: `shared/` (all seven components), `schema/`, `consumption/`, `ingestion/` (governance + abstract connector pattern), `sources/` (scaffolds + policy).
-- **Scaffolded, not filled**: `functions/sales/` (Phase 1), `functions/marketing/` (Phase 2), `functions/customer-success/`, `functions/support/`, `functions/revops/`, `functions/finance-legal/` (Phase 2).
+- **Built (Phase 1)**: `functions/sales/` filled end-to-end — methodology (MEDDPICC), seven deal-stage playbooks, three decision frameworks, four plays, battlecards scaffold with one worked example, objections scaffold with one worked example, tools-and-stack category map. Upgraded `schema/page-templates/sales/` to Phase 0 template standard. Shared-spine additions: VP Sales persona, enterprise-direct buying committee.
+- **Scaffolded, not filled**: `functions/marketing/` (Phase 2), `functions/customer-success/`, `functions/support/`, `functions/revops/`, `functions/finance-legal/` (Phase 2).
 - **Deferred**: `examples/synthetic-company/` (Phase 3). Real connector implementations (Phase 3 / community). Conversation-harvest pipeline (Phase 4).
 
 Full phase model: [`PHASES.md`](PHASES.md).

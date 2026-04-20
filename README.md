@@ -3,7 +3,7 @@ type: meta
 title: Company Index
 description: Open framework for an LLM-maintained GTM/RevOps intelligence layer. Adapted from Karpathy's LLM Wiki.
 owner: rasmus@unfrankenstein.io
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-20
 ---
 
 # Company Index
@@ -14,7 +14,7 @@ Every AI agent in your revenue org reads from a knowledge base. That knowledge b
 
 Adapted from [Andrej Karpathy's LLM Wiki framework](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), specialized for B2B SaaS revenue operations.
 
-> **Status: Phase 0.** Shared spine + consumption surface + governance. Sales and other functions come in later phases — see [`PHASES.md`](PHASES.md).
+> **Status: Phase 1 shipped.** Shared spine + consumption surface + governance (Phase 0) plus the Sales function filled end-to-end (Phase 1). Other functions come in Phase 2 — see [`PHASES.md`](PHASES.md).
 
 ---
 
@@ -77,7 +77,7 @@ Eleven commands, all documented in [`consumption/cli/README.md`](consumption/cli
 - `competitive-intel/` — competitor profiles, win-loss patterns
 - `data-definitions/` — MQL, SQL, ARR, NRR, CAC, payback — opinionated, research-grounded
 
-**Function-specific (Phase 1+).** Six function directories scaffolded in [`functions/`](functions/). Sales fills first in Phase 1. Others scaffolded with READMEs pointing to phase status.
+**Function-specific (Phase 1+).** Six function directories in [`functions/`](functions/). Sales is filled end-to-end in Phase 1 — methodology (MEDDPICC), seven-stage playbooks, three decision frameworks, four repeatable plays, battlecards and objections scaffolds with worked examples, tool-category map. The other five function directories remain scaffolded with READMEs pointing to phase status.
 
 ## Governance
 
@@ -90,9 +90,9 @@ Every change — auto-merged or PR'd — appends to `log.md`. Rollback is one `g
 
 ## Phase status
 
-- **Phase 0 — shipping now.** Shared spine, schema, CLI MVP, SKILL.md, navigation trio, PR workflow, graduated trust rules, abstract connector pattern.
-- **Phase 1 — next.** Sales function filled in.
-- **Phase 2 — after.** Marketing, CS, Support, RevOps, Finance/Legal.
+- **Phase 0 — shipped.** Shared spine, schema, CLI MVP, SKILL.md, navigation trio, PR workflow, graduated trust rules, abstract connector pattern.
+- **Phase 1 — shipped.** Sales function filled — methodology, playbooks, frameworks, plays, battlecards, objections, tools-and-stack. Shared-spine additions: VP Sales persona, enterprise-direct buying committee.
+- **Phase 2 — next.** Marketing, CS, Support, RevOps, Finance/Legal.
 - **Phase 3 — proof.** Synthetic company instance (full worked example) + first real connector implementations.
 - **Phase 4+ — research.** Conversation-harvest ingestion, automated staleness detection with LLM, cross-corpus consistency.
 

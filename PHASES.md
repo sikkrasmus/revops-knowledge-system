@@ -3,7 +3,7 @@ type: meta
 title: Phases
 description: Phase 0 through Phase 4+ roadmap. What's built, planned, and deferred.
 owner: rasmus@unfrankenstein.io
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-20
 ---
 
 # Phases
@@ -55,28 +55,31 @@ Each phase states: what's in, what's out, success criteria.
 
 ---
 
-## Phase 1 — Sales function
+## Phase 1 — Sales function — shipped
 
 **Goal.** Fill one vertical function end-to-end to prove the pattern generalizes.
 
 **Why Sales first.** Audience demand lives there. v0's existing templates (battlecard, objection, postmortem, champion profile) salvage into `schema/page-templates/sales/`. Sales has the densest downstream references to the Phase 0 shared components (ICP, pricing, personas, positioning, competitive-intel).
 
-**In scope.**
+**In scope (delivered).**
 
-- `functions/sales/methodology/` — MEDDPICC or chosen framework with in-file section labels by motion.
-- `functions/sales/playbooks/` — by deal stage (discovery, demo, evaluation, proposal, negotiation, close).
-- `functions/sales/frameworks/` — decision frameworks (qualification, deal desk, escalation).
-- `functions/sales/plays/` — repeatable plays (outbound sequences, objection handling trees).
-- `functions/sales/tools-and-stack/` — curated tool landscape.
-- Salvaged templates in `schema/page-templates/sales/`: battlecard, objection, pricing-pattern, postmortem, champion-profile.
+- `functions/sales/methodology/` — MEDDPICC with motion and segment variants via in-file section labels.
+- `functions/sales/playbooks/` — seven deal-stage playbooks: discovery, demo, evaluation, proposal, negotiation, close, expansion-handoff.
+- `functions/sales/frameworks/` — three decision frameworks: qualification, deal-desk-escalation, forecast-methodology.
+- `functions/sales/plays/` — four plays: outbound-sequence-mid-market, competitive-displacement, referral-ask, renewal-acceleration.
+- `functions/sales/battlecards/` — README + one worked example battlecard against an abstract enterprise-incumbent archetype.
+- `functions/sales/objections/` — README + one worked example objection ("we can build this internally").
+- `functions/sales/tools-and-stack/` — curated tool-category map (CRM, sequencer, call recorder, CPQ, deal desk, forecasting).
+- Upgraded templates in `schema/page-templates/sales/`: battlecard, objection, pricing-pattern, postmortem, champion-profile, icp-sales (all six brought to the Phase 0 template standard).
+- Shared-spine additions surfaced by Sales fill: `shared/personas/personas/vp-sales.md`, `shared/personas/buying-committees/enterprise-direct.md`.
 
 **Out of scope.** Other functions. Real connector implementations.
 
-**Success criteria.** Pages exist, pass `ci verify --all`, cite shared components correctly. A Sales-flavored query ("find the battlecard for Vextrix in mid-market fintech") returns the right page via `ci search`.
+**Success criteria — all met.** Pages exist; `ci verify --all` returns 0 fail / 0 warn; `ci reindex --check` current; smoke tests 15/15; every sales page cites at least one `shared/` component in its Related section.
 
 ---
 
-## Phase 2 — Remaining functions
+## Phase 2 — Remaining functions — next
 
 **Goal.** Prove the pattern generalizes across all six functions.
 
@@ -135,6 +138,6 @@ Each phase states: what's in, what's out, success criteria.
 
 ## When phases unlock
 
-Phase 1 unlocks when Phase 0 is merged and at least one pilot is running. Phase 2 unlocks when Phase 1 is stable and Sales is in production for one pilot. Phase 3 unlocks when Phase 2 is complete or when a pilot explicitly asks to fork the synthetic company as a template. Phase 4 unlocks when Stage 2 governance is wired in practice (not just on paper).
+Phase 1 shipped in April 2026 on top of the Phase 0 merged baseline. Phase 2 unlocks when Phase 1 is stable in practice and Sales is in production for at least one pilot. Phase 3 unlocks when Phase 2 is complete or when a pilot explicitly asks to fork the synthetic company as a template. Phase 4 unlocks when Stage 2 governance is wired in practice (not just on paper).
 
 No fixed dates. Dates would be wrong.
