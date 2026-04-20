@@ -54,7 +54,9 @@ EOF
     resolved=$(cd "$dir" 2>/dev/null && cd "$(dirname "$target")" 2>/dev/null && pwd)/$(basename "$target") || true
     if [[ -n "$resolved" ]]; then
       local relpath="${resolved#"$root/"}"
-      if [[ -f "$resolved" ]]; then
+      if [[ -e "$resolved" ]]; then
+        # -e matches files and directories; directory links (paths ending
+        # in /) are valid per ci verify and widely used in the corpus.
         printf '  %s\n' "$relpath"
       else
         printf '  %s  [BROKEN]\n' "$relpath"
