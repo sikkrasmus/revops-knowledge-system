@@ -10,7 +10,7 @@ last_reviewed: 2026-04-19
 
 The v1 ingestion path. Function heads, contributors, and LLMs commit changes via PR when they make them. Same workflow as any docs repo. Low friction, no new infrastructure. Governance = PR review + graduated trust (see [`../pr-workflow.md`](../pr-workflow.md)).
 
-This is what Phase 0 ships as the "working" ingestion surface. Real connectors are Phase 3 / community.
+This is what Phase 0 ships as the "working" ingestion surface. Real connectors are community / paid pilot.
 
 ---
 

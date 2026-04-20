@@ -59,7 +59,7 @@ Deal reviews should be written within 7 days of close (won or lost) while contex
 
 ## Phase 0 content
 
-None. Phase 3 synthetic-company instance populates with worked examples.
+None. Your fork populates this directory with real deal reviews.
 
 ## Related
 

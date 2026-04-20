@@ -8,7 +8,7 @@ last_reviewed: 2026-04-19
 
 # Usage Patterns
 
-Three worked narratives. Each demonstrates how a specific user retrieves from the corpus in-workflow. Commands are literal — copy-paste-runnable against a filled corpus (Phase 3 synthetic-company instance, or your own fork).
+Three worked narratives. Each demonstrates how a specific user retrieves from the corpus in-workflow. Commands are literal — copy-paste-runnable against a filled fork with real data.
 
 The point: retrieval isn't abstract. It's what an AE types into Claude at 9:03 AM before a 9:15 call. If that user flow is friction-laden, the corpus might as well not exist.
 

@@ -11,8 +11,8 @@ last_reviewed: 2026-04-19
 How changes land in the corpus. Three paths:
 
 - **Artifact-commit** (v1, shippable) — function heads and contributors commit via PR. [`artifact-commit/`](artifact-commit/).
-- **Connectors** (Phase 3 / community) — automated pipelines that pull from source systems and open PRs. Abstract pattern only in v1: [`connectors/PATTERN.md`](connectors/PATTERN.md).
-- **Conversation harvest** (Phase 4+) — ingest Claude Code / Cowork session transcripts. Design doc only: [`conversation-harvest/DESIGN.md`](conversation-harvest/DESIGN.md).
+- **Connectors** (community / paid pilot) — automated pipelines that pull from source systems and open PRs. Abstract pattern only in v1: [`connectors/PATTERN.md`](connectors/PATTERN.md).
+- **Conversation harvest** (Phase 3+) — ingest Claude Code / Cowork session transcripts. Design doc only: [`conversation-harvest/DESIGN.md`](conversation-harvest/DESIGN.md).
 
 Governance applies to all three paths equally: [`pr-workflow.md`](pr-workflow.md).
 

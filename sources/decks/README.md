@@ -49,4 +49,4 @@ consumers:
 
 ## Phase 0 content
 
-None. Phase 3 synthetic-company instance populates.
+None. Your fork populates this directory with real decks.

@@ -41,7 +41,7 @@ Operating agreement between humans, LLMs, and reviewers:
 
 ### Ingest
 
-Changes land via PR. v1 ships the artifact-commit path — humans and LLMs edit via PR. Abstract connector pattern in [`../ingestion/connectors/PATTERN.md`](../ingestion/connectors/PATTERN.md) specifies five lifecycle stages (auth → extract → synthesize → snapshot → PR). Real implementations in Phase 3+.
+Changes land via PR. v1 ships the artifact-commit path — humans and LLMs edit via PR. Abstract connector pattern in [`../ingestion/connectors/PATTERN.md`](../ingestion/connectors/PATTERN.md) specifies five lifecycle stages (auth → extract → synthesize → snapshot → PR). Real implementations arrive via community contributions or paid pilot.
 
 ### Query
 

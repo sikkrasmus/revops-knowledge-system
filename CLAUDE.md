@@ -58,7 +58,7 @@ What's real today vs. scaffolded:
 - **Built (Phase 0)**: `shared/` (all seven components), `schema/`, `consumption/`, `ingestion/` (governance + abstract connector pattern), `sources/` (scaffolds + policy).
 - **Built (Phase 1)**: `functions/sales/` filled end-to-end — methodology (MEDDPICC), seven deal-stage playbooks, three decision frameworks, four plays, battlecards scaffold with one worked example, objections scaffold with one worked example, tools-and-stack category map. Upgraded `schema/page-templates/sales/` to Phase 0 template standard. Shared-spine additions: VP Sales persona, enterprise-direct buying committee.
 - **Scaffolded, not filled**: `functions/marketing/` (Phase 2), `functions/customer-success/`, `functions/support/`, `functions/revops/`, `functions/finance-legal/` (Phase 2).
-- **Deferred**: `examples/synthetic-company/` (Phase 3). Real connector implementations (Phase 3 / community). Conversation-harvest pipeline (Phase 4).
+- **Deferred**: real connector implementations (community). Conversation-harvest pipeline (Phase 3).
 
 Full phase model: [`PHASES.md`](PHASES.md).
 

@@ -1,14 +1,14 @@
 ---
 type: meta
 title: Conversation-harvest design
-description: Phase 4+ ingestion path — extract candidate wiki changes from Claude Code / Cowork transcripts. Design only; not built in v1.
+description: Phase 3+ ingestion path — extract candidate wiki changes from Claude Code / Cowork transcripts. Design only; not built in v1.
 owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 
 # Conversation-harvest design
 
-Phase 4+ ingestion path. Not built in v1. This document captures the design so future work can reference it.
+Phase 3+ ingestion path. Not built in v1. This document captures the design so future work can reference it.
 
 ---
 
@@ -18,7 +18,7 @@ Teams already have Claude Code / Cowork sessions happening daily across Sales, C
 
 Conversation-harvest ingestion reads session transcripts, extracts candidate wiki changes, and opens PRs against the corpus with proposed diffs and provenance.
 
-## Why Phase 4, not v1
+## Why Phase 3, not v1
 
 Hard problems — genuinely hard, not just under-scoped:
 
@@ -79,7 +79,7 @@ One PR per cluster. Bulk-batch PRs discouraged — reviewers can't process ten-p
 - **Cooldown** — after a reviewer rejects a similar claim, don't re-propose for K days.
 - **Auditable trace** — every harvest-PR links back to session IDs the reviewer can inspect if they need to verify.
 
-## What Phase 4 ships
+## What Phase 3 ships
 
 - Harvester service (opt-in per-user, per-org).
 - Dedup + confidence algorithm.

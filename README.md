@@ -54,7 +54,7 @@ Companies that implement this well treat it like a product. They staff it. They 
 
 ## Three operations
 
-- **Ingest.** Changes land via PR. Function heads commit in v1. Automated connectors are specified as an abstract pattern in [`ingestion/connectors/PATTERN.md`](ingestion/connectors/PATTERN.md). Real implementations come in Phase 3.
+- **Ingest.** Changes land via PR. Function heads commit in v1. Automated connectors are specified as an abstract pattern in [`ingestion/connectors/PATTERN.md`](ingestion/connectors/PATTERN.md). Real implementations arrive via community contributions or paid pilot.
 - **Query.** Humans and agents retrieve via the `ci` CLI (see [`consumption/`](consumption/)) or native Read/Grep against the markdown. Every page cites its sources.
 - **Lint.** A weekly pass flags three freshness signals: source drift, stale verification, and contradictions. It opens reconciliation PRs. Humans approve.
 
@@ -110,8 +110,7 @@ Every change appends to `log.md`. Rollback is one `git revert` away. Details in 
 - **Phase 0 shipped.** Shared spine, schema, CLI MVP, SKILL.md, navigation trio, PR workflow, graduated trust rules, abstract connector pattern.
 - **Phase 1 shipped.** Sales function filled. Methodology, playbooks, frameworks, plays, battlecards, objections, tools-and-stack. Shared-spine additions: VP Sales persona, enterprise-direct buying committee.
 - **Phase 2 next.** Marketing, CS, Support, RevOps, Finance/Legal.
-- **Phase 3.** Synthetic company instance (full worked example) plus first real connector implementations.
-- **Phase 4+.** Conversation-harvest ingestion, automated staleness detection with LLM, cross-corpus consistency.
+- **Phase 3+.** Conversation-harvest ingestion, automated staleness detection with LLM, cross-corpus consistency. Real connector implementations arrive via community or paid pilot.
 
 Full roadmap: [`PHASES.md`](PHASES.md).
 

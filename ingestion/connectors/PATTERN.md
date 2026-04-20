@@ -8,7 +8,7 @@ last_reviewed: 2026-04-19
 
 # Connector Pattern
 
-Abstract pseudo-code template for any source-system connector. Phase 0 specifies this pattern; real implementations come in Phase 3 or as community contributions.
+Abstract pseudo-code template for any source-system connector. Phase 0 specifies this pattern; real implementations arrive via community contributions or the paid pilot.
 
 ---
 
@@ -130,7 +130,7 @@ The `llm_synthesize` step depends on a prompt template per source type (call, do
 - **Redacts PII** per [`../../sources/POLICY.md`](../../sources/POLICY.md).
 - **Returns structured metadata** (title, one-line description, affected functions).
 
-Prompt templates are in-repo under `ingestion/artifact-commit/` (Phase 4+ — currently covered by the generalized prompt described in [`../artifact-commit/README.md`](../artifact-commit/README.md)). Versioned so changes can be rolled back.
+Prompt templates are in-repo under `ingestion/artifact-commit/` (Phase 3+ — currently covered by the generalized prompt described in [`../artifact-commit/README.md`](../artifact-commit/README.md)). Versioned so changes can be rolled back.
 
 ## What the wiki-impact computation does
 
@@ -143,7 +143,7 @@ Heuristic v1:
 - Check graph — pages that cite similar sources.
 - Rank candidates; take top N.
 
-An LLM-based implementation (Phase 4) would use claim-level matching.
+An LLM-based implementation (Phase 3) would use claim-level matching.
 
 ## What contradicts?
 
@@ -198,8 +198,7 @@ Logged to `log.md` via the ingest pipeline (not the merge hook — ingest append
 ## Reference implementations
 
 Phase 0: none.
-Phase 3: synthetic-company examples (HubSpot, Gong, Confluence planned).
-Community: TBD — follow this pattern and submit a PR adding a `<system>.md` spec file alongside this one.
+Community: follow this pattern and submit a PR adding a `<system>.md` spec file alongside this one.
 
 ## Related
 

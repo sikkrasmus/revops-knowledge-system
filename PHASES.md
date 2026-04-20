@@ -1,7 +1,7 @@
 ---
 type: meta
 title: Phases
-description: Phase 0 through Phase 4+ roadmap. What's built, planned, and deferred.
+description: Phase 0 through Phase 3+ roadmap. What's built, planned, and deferred.
 owner: rasmus@latentflows.com
 last_reviewed: 2026-04-20
 ---
@@ -33,10 +33,9 @@ Each phase states: what's in, what's out, success criteria.
 
 **Out of scope (deferred).**
 
-- Real connector implementations (Confluence, Gong, HubSpot, etc.) — Phase 3 / community.
+- Real connector implementations (Confluence, Gong, HubSpot, etc.) — future / community.
 - Filling `functions/sales/` content beyond a scaffolded README — Phase 1.
-- Filling `examples/synthetic-company/` — Phase 3.
-- Conversation-harvest pipeline implementation — Phase 4.
+- Conversation-harvest pipeline implementation — Phase 3.
 - Auto-merge enforcement (the YAML ships as concept) — Stage 2 operator decision.
 - Confidence scoring algorithm — heuristic only in v1, real spec in v2.
 - Embeddings / vector DB — never (per principle 4 / 5).
@@ -87,30 +86,13 @@ Each phase states: what's in, what's out, success criteria.
 
 **Ordering.** Sequence by reuse of Phase 0 + Phase 1: Marketing next (shares positioning, competitive-intel, ICP heavily), then CS (shares ICP, personas, pricing for expansion), then RevOps (owns data-definitions), then Finance/Legal (authored-shared: pricing, contracts, compliance posture), then Support.
 
-**Out of scope.** The synthetic company instance — that's Phase 3.
+**Out of scope.** Real connector implementations.
 
 **Success criteria.** Each function directory has methodology, playbooks, frameworks, plays. Cross-function references resolve. `ci verify --all` passes. `ci graph` shows dense cross-function citation patterns.
 
 ---
 
-## Phase 3 — Synthetic company instance
-
-**Goal.** Prove the framework with a fully-worked example that a reader can fork as a starting template.
-
-**In scope.**
-
-- `examples/synthetic-company/` — full corpus against a specific archetype (e.g., "$25M ARR usage-billed B2B SaaS, hybrid PLG + sales-assisted").
-- Every shared and function artifact filled in with realistic synthetic data.
-- At least 2-3 real connector implementations (`ingestion/connectors/hubspot.md`, `gong.md`, `confluence.md`) with working extract-synthesize-PR flows.
-- Synthetic sources in `examples/synthetic-company/sources/` demonstrating the source-storage model.
-
-**Out of scope.** Multi-archetype examples (one synthetic company is enough to prove the pattern). The conversation-harvest pipeline.
-
-**Success criteria.** A fork of `examples/synthetic-company/` runs with `ci` commands and returns realistic answers. The connector implementations can be swapped from synthetic to real source systems with only credential changes.
-
----
-
-## Phase 4+ — Advanced ingestion & maintenance
+## Phase 3+ — Advanced ingestion & maintenance
 
 **Goal.** Reduce the HITL burden at scale.
 
@@ -121,7 +103,7 @@ Each phase states: what's in, what's out, success criteria.
 - **Cross-corpus consistency checks.** Compare pages that reference each other for factual consistency; flag divergences.
 - **Stage 2 → Stage 3 auto-merge enforcement.** Wire `ingestion/auto-merge-rules.yaml` into CI with configurable per-stage rules.
 
-**Out of scope for v1 of Phase 4.** Federated Company Indexes across multiple companies (that's a different product).
+**Out of scope for v1 of Phase 3.** Federated Company Indexes across multiple companies (that's a different product).
 
 **Success criteria.** The HITL burden measurably drops between Stage 2 and Stage 3. Rollback incidents stay below a threshold. The log shows the automated paths are working.
 
@@ -138,6 +120,6 @@ Each phase states: what's in, what's out, success criteria.
 
 ## When phases unlock
 
-Phase 1 shipped in April 2026 on top of the Phase 0 merged baseline. Phase 2 unlocks when Phase 1 is stable in practice and Sales is in production for at least one pilot. Phase 3 unlocks when Phase 2 is complete or when a pilot explicitly asks to fork the synthetic company as a template. Phase 4 unlocks when Stage 2 governance is wired in practice (not just on paper).
+Phase 1 shipped in April 2026 on top of the Phase 0 merged baseline. Phase 2 unlocks when Phase 1 is stable in practice and Sales is in production for at least one pilot. Phase 3 unlocks when Stage 2 governance is wired in practice (not just on paper).
 
 No fixed dates. Dates would be wrong.

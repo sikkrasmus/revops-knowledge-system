@@ -31,7 +31,7 @@ confidence: medium
 
 # Tier 1 ICP — prime-fit profile
 
-> Phase 0 abstract example. Replace ranges and triggers with real numbers when forking. Synthetic-company instance lives in Phase 3.
+> Phase 0 abstract example. Replace ranges and triggers with real numbers when forking.
 
 ## Summary
 

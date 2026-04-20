@@ -87,6 +87,5 @@ Graduation criteria: the artifact becomes multi-author-in-practice, or drift cau
 
 ## Phase status
 
-- **Phase 0** (this release): all seven components scaffolded with README, templates, and at least one abstract example. Not filled with synthetic-company specifics.
-- **Phase 3**: synthetic-company instance fills the spine end-to-end.
+- **Phase 0** (this release): all seven components scaffolded with README, templates, and at least one abstract example. Abstract only — not filled with any specific company's data.
 - **In-production fork**: your fork fills the spine with your real ICP, pricing, personas, etc.

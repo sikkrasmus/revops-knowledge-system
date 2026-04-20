@@ -46,7 +46,7 @@ consumers:
 
 ## Phase 0 content
 
-No actual contract excerpts ship in Phase 0. Phase 3 synthetic-company instance populates.
+No actual contract excerpts ship in Phase 0. Your fork populates this directory with real excerpts.
 
 ## Related
 

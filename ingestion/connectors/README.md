@@ -10,7 +10,7 @@ last_reviewed: 2026-04-19
 
 Specifications for pulling from source systems — HubSpot, Salesforce, Gong, Fathom, Confluence, Notion, Stripe, Slack, email, etc. — and generating wiki updates via PR.
 
-**Phase 0 ships no real connector implementations.** This directory holds the **abstract pattern** in [`PATTERN.md`](PATTERN.md). Real implementations come in Phase 3 (alongside the synthetic-company example) or as community contributions.
+**Phase 0 ships no real connector implementations.** This directory holds the **abstract pattern** in [`PATTERN.md`](PATTERN.md). Real implementations arrive via community contributions or the paid pilot.
 
 ---
 
@@ -18,7 +18,7 @@ Specifications for pulling from source systems — HubSpot, Salesforce, Gong, Fa
 
 - Scope discipline — Phase 0 is about the framework, not integrations.
 - Each connector is a meaningful project (auth, rate limits, pagination, error handling, PII, schema mapping). Building all of them well would be Phase 1+2's worth of work on its own.
-- Real connectors are meaningful with a worked example (Phase 3 synthetic company) or a specific operator need.
+- Real connectors are meaningful against a specific operator's source systems and data shape — best built per-fork or as community contributions.
 - Community contribution model benefits from a clear pattern to conform to.
 
 ## The connector contract
@@ -111,7 +111,7 @@ Most connectors combine both — webhook for immediate triggers, pull for backfi
 - **Store credentials in the repo** — always environment / secret manager.
 - **Duplicate live-system data into the repo** — follow the hybrid policy in [`../../sources/POLICY.md`](../../sources/POLICY.md).
 
-## Implementation plan for real connectors (Phase 3+)
+## Implementation plan for real connectors (community / paid pilot)
 
 Candidate first connectors:
 
@@ -143,4 +143,4 @@ The connector pattern is designed for community extension. If you build a connec
 - [`PATTERN.md`](PATTERN.md) — abstract connector pattern
 - [`../../sources/POLICY.md`](../../sources/POLICY.md) — in-repo vs. out-of-repo rules
 - [`../pr-workflow.md`](../pr-workflow.md) — how connector-generated PRs are reviewed
-- [`../conversation-harvest/DESIGN.md`](../conversation-harvest/DESIGN.md) — Phase 4 conversation-harvest (different pattern)
+- [`../conversation-harvest/DESIGN.md`](../conversation-harvest/DESIGN.md) — Phase 3 conversation-harvest (different pattern)

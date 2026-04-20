@@ -85,7 +85,7 @@ Graph-aware lint that compares claims across pages:
 2. **Page A cites X; Page B cites ¬X** — requires claim extraction from page body.
 3. **Source reference mismatch** — two pages cite the same source but report different synthesized claims.
 
-V1 detection is regex + frontmatter pattern matching for the common cases. Full claim-extraction (LLM-based) is Phase 4.
+V1 detection is regex + frontmatter pattern matching for the common cases. Full claim-extraction (LLM-based) is Phase 3.
 
 ### When contradiction fires
 

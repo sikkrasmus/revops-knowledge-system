@@ -62,4 +62,4 @@ See [`../../ingestion/drift-detection.md`](../../ingestion/drift-detection.md).
 
 ## Phase 0 content
 
-This README serves as the placeholder source referenced by shared spine pages in Phase 0. Real snapshots arrive in the Phase 3 synthetic-company instance.
+This README serves as the placeholder source referenced by shared spine pages in Phase 0. Your fork populates this directory with real snapshots.

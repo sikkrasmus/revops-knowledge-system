@@ -66,7 +66,7 @@ Every battlecard uses the template in [`../../../schema/page-templates/sales/bat
 - **Cite the canonical competitor profile.** Every battlecard links to the matching entry under [`../../../shared/competitive-intel/competitors/`](../../../shared/competitive-intel/competitors/). No unattached battlecards.
 - **Every "we win" claim is sourced.** Win-loss patterns ([`../../../shared/competitive-intel/win-loss-patterns.md`](../../../shared/competitive-intel/win-loss-patterns.md)), closed-deal data, or a specific call recording.
 - **Write the "where they win" section honestly.** A battlecard that claims we dominate on every axis is untrusted by AEs and useless in a deal.
-- **Abstract competitor names in Phase 1.** Battlecards in this directory use abstract labels (`Competitor X — enterprise incumbent`, `Competitor Y — modern challenger`). Named real competitors arrive with the Phase 3 synthetic-company instance per [`../../../PHASES.md`](../../../PHASES.md).
+- **Abstract competitor names in this release.** Battlecards in this directory use abstract labels (`Competitor X — enterprise incumbent`, `Competitor Y — modern challenger`). Your fork replaces these with named real competitors.
 - **Re-verify quarterly.** Each battlecard's `verified_until` is 90 days from `last_reviewed`. `ci stale` surfaces expiries; Sales lead owns the refresh cadence.
 
 ## Phase 1 content

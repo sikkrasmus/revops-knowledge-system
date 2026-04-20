@@ -54,4 +54,4 @@ consumers:
 
 ## Phase 0 content
 
-No actual call summaries ship in Phase 0 — this is an abstract framework release. Phase 3 synthetic-company instance populates this directory as a worked example.
+No actual call summaries ship in Phase 0 — this is an abstract framework release. Your fork populates this directory with real call snapshots.

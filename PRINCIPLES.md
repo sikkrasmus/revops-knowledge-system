@@ -26,7 +26,7 @@ This is the maintenance-economics shift that makes a "self-maintained evolving k
 
 ## 3. Principles over instances
 
-The durable value is the framework — schema, authoring contract, governance rules, consumption patterns. A worked synthetic-company instance is proof, not the product. This is why Phase 0 ships the framework and defers the synthetic company to Phase 3. Don't confuse the two.
+The durable value is the framework — schema, authoring contract, governance rules, consumption patterns. Your fork is the instance; the framework is the product. Don't confuse the two.
 
 When something in a specific instance conflicts with a principle, the principle wins and the instance gets corrected.
 
@@ -54,7 +54,7 @@ Every change — auto-merged or PR'd — appends to `log.md`. Rollback is always
 
 ## 7. Build in phases by function
 
-Phase 0 (shared spine) → Phase 1 (one vertical function end-to-end: Sales) → Phase 2+ (remaining functions) → Phase 3 (synthetic company instance + first real connectors) → Phase 4+ (advanced ingestion).
+Phase 0 (shared spine) → Phase 1 (one vertical function end-to-end: Sales) → Phase 2 (remaining functions) → Phase 3+ (advanced ingestion, conversation-harvest, cross-corpus consistency).
 
 Sales is Phase 1 because (a) audience demand lives there, (b) sales has the densest downstream references to shared components, and (c) existing templates (battlecard, objection, postmortem, champion profile) salvage cleanly into `schema/page-templates/sales/`.
 
