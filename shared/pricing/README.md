@@ -2,7 +2,7 @@
 type: meta
 title: Pricing
 description: Price book, discount guardrails, and usage meters. Highest-conflict shared artifact.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - finance-lead

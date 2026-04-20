@@ -2,7 +2,7 @@
 type: methodology
 title: MEDDPICC — canonical sales methodology
 description: The canonical methodology. Eight letters every qualified deal must fill in, with motion and segment adaptations.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

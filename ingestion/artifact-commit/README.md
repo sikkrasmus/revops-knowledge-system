@@ -2,7 +2,7 @@
 type: meta
 title: Artifact-commit Ingestion
 description: v1 ingestion path — function heads and LLMs commit artifact changes via PR.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

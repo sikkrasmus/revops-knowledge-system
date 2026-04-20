@@ -2,7 +2,7 @@
 type: playbook
 title: Proposal playbook
 description: Proposal is the formal pricing and structure the buyer takes internally for approval. Shaped by everything upstream, validated by the economic buyer.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

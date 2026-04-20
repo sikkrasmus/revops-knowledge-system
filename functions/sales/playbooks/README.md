@@ -2,7 +2,7 @@
 type: function-readme
 title: Sales playbooks
 description: Deal-stage playbooks. One page per stage, each declaring inputs, exit criteria, and the MEDDPICC letters it fills.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

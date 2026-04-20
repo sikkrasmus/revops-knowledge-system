@@ -2,7 +2,7 @@
 type: icp
 title: Tier 1 ICP — prime-fit profile
 description: Tier 1 ICP for the prime-fit addressable segment. Abstract Phase 0 example.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - sales-lead

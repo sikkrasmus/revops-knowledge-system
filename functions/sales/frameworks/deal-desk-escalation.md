@@ -2,7 +2,7 @@
 type: framework
 title: Deal-desk escalation framework
 description: Decision tree for routing non-standard deal asks. Reads the shared discount guardrails and pricing policy; outputs approver + required conditions.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

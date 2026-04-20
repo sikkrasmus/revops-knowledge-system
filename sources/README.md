@@ -2,7 +2,7 @@
 type: meta
 title: Sources
 description: File-based source layer. Snapshots of calls, contracts, decks, and internal docs with hybrid in-repo/out-of-repo policy.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

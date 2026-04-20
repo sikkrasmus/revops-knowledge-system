@@ -2,7 +2,7 @@
 type: value-prop
 title: Core value propositions
 description: Value props by target segment / motion. Phase 0 abstract example.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
   - sales-lead

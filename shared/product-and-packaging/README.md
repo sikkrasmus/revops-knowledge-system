@@ -2,7 +2,7 @@
 type: meta
 title: Product and Packaging
 description: SKUs, editions, and add-ons. The product spine referenced by every function.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - product-lead
   - revops-lead

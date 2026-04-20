@@ -2,7 +2,7 @@
 type: function-readme
 title: Sales frameworks
 description: Decision frameworks — qualification, deal-desk escalation, forecast methodology. Frameworks answer "what should we do" given inputs.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

@@ -2,7 +2,7 @@
 type: meta
 title: Frontmatter spec
 description: Required and optional frontmatter fields by page type. Base + motion/segment + drift fields.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 
@@ -21,7 +21,7 @@ This is the precise spec. For the operating agreement (who writes what, when to 
 type: icp                                    # enum — see enums.yaml
 title: Tier 1 ICP — Multi-product Platforms
 description: Tier 1 ICP profile for $25-100M ARR multi-product B2B SaaS companies.
-owner: rasmus@unfrankenstein.io              # email or github handle
+owner: rasmus@latentflows.com              # email or github handle
 reviewers:                                   # list; required for shared/ + functions/
   - revops-lead
   - sales-lead

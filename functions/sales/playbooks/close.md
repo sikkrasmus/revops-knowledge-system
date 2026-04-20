@@ -2,7 +2,7 @@
 type: playbook
 title: Close playbook
 description: Close is the mechanical stage from countersigned contract through CRM-closed-won and CS kickoff trigger.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

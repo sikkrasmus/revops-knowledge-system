@@ -2,7 +2,7 @@
 type: playbook
 title: Demo playbook
 description: Demo is the working session that turns hypothesized pain into a concrete evaluation plan. Not a feature tour.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

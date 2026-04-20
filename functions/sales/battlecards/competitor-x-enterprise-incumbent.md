@@ -2,7 +2,7 @@
 type: battlecard
 title: Competitor X — enterprise incumbent battlecard
 description: Battlecard against the enterprise-incumbent archetype — large install base, legacy architecture, broad feature surface. Reference shape.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

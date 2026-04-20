@@ -2,7 +2,7 @@
 type: persona
 title: Head of RevOps
 description: Head of RevOps persona — cross-functional operator who owns the GTM operating system.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

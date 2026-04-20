@@ -2,7 +2,7 @@
 type: meta
 title: Phases
 description: Phase 0 through Phase 4+ roadmap. What's built, planned, and deferred.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-20
 ---
 

@@ -2,7 +2,7 @@
 type: usage-meter
 title: Usage meters
 description: Metered units, rates, overage handling for usage-billed motions.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - finance-lead

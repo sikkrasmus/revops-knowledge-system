@@ -2,7 +2,7 @@
 type: objection
 title: "\"We can build this internally\""
 description: Common objection from RevOps and engineering-leadership buyers. Underlying concern is usually opportunity cost, not capability.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

@@ -2,7 +2,7 @@
 type: meta
 title: Commit Conventions
 description: Commit-message format for changes in this corpus.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

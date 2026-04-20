@@ -2,7 +2,7 @@
 type: packaging
 title: Add-ons
 description: Add-ons that extend editions — what they are, what they attach to, decision rubric.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - product-lead
   - revops-lead

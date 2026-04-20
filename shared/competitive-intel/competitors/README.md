@@ -2,7 +2,7 @@
 type: meta
 title: Competitor profiles
 description: One file per competitor. Use the shared competitor page template.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
   - sales-lead

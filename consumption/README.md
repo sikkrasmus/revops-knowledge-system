@@ -2,7 +2,7 @@
 type: meta
 title: Consumption
 description: CLI + SKILL.md + usage patterns. Grep-native retrieval surface for humans and agents.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

@@ -2,7 +2,7 @@
 type: meta
 title: Conversation-harvest design
 description: Phase 4+ ingestion path — extract candidate wiki changes from Claude Code / Cowork transcripts. Design only; not built in v1.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

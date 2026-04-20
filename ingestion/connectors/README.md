@@ -2,7 +2,7 @@
 type: meta
 title: Connectors
 description: Connector spec format and citation convention. Phase 0 ships the abstract pattern only.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

@@ -1,59 +1,74 @@
 ---
 type: meta
 title: Company Index
-description: Open framework for an LLM-maintained GTM/RevOps intelligence layer. Adapted from Karpathy's LLM Wiki.
-owner: rasmus@unfrankenstein.io
+description: An evolving revenue systems wiki that becomes the context layer for every AI agent in your GTM org.
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-20
 ---
 
 # Company Index
 
-**An open framework for an LLM-maintained GTM/RevOps intelligence layer.**
+**An evolving revenue systems wiki that becomes the context layer for every AI agent in your GTM org.**
 
-Every AI agent in your revenue org reads from a knowledge base. That knowledge base isn't a single wiki — it's the entire GTM + RevOps intelligence layer, spanning six functions (Marketing, Sales, CS, Support, RevOps, Finance/Legal), ~100 tools, and a handful of company motions. This repo is the open framework for building and maintaining it.
+## The problem
 
-Adapted from [Andrej Karpathy's LLM Wiki framework](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f), specialized for B2B SaaS revenue operations.
+Your team already uses Claude, ChatGPT, and Gemini across sales, marketing, and CS. Each tool reads from whatever context someone pastes into the prompt. That context sits in Slack threads, old Notion pages, and people's heads.
 
-> **Status: Phase 1 shipped.** Shared spine + consumption surface + governance (Phase 0) plus the Sales function filled end-to-end (Phase 1). Other functions come in Phase 2 — see [`PHASES.md`](PHASES.md).
+Output quality tracks context quality. Your context is scattered, so your AI output is scattered.
 
----
+Traditional wikis tried to fix this and failed. Humans had to update the wiki on top of their real jobs. They couldn't keep up. Pages went stale within a quarter. Teams stopped trusting them and stopped using them. The wiki became a graveyard.
 
-## What this is
+The maintenance cost killed the wiki. This framework solves that.
 
-An abstract framework — not a product. Four parts:
+1. **LLMs maintain the wiki.** Agents draft updates from source material like calls, deals, and internal docs. Humans review and approve via PR.
+2. **Staleness gets tracked.** Every page has a `verified_until` date. A weekly lint pass flags drift, contradictions, and expired content, then opens reconciliation PRs.
+3. **Every claim cites its source.** When something looks wrong, you trace it in one step.
 
-1. **Schema** — authoring contract, frontmatter spec, section-label grammar, page templates.
-2. **Corpus** — markdown in git: a `shared/` spine used by every function, plus per-function directories.
-3. **Consumption** — a CLI (`ci`) and a `SKILL.md` that turn the corpus into a retrieval surface for humans and agents. Grep-native, no embeddings.
-4. **Governance** — graduated trust: every change PRs on day one; auto-merge expands as the system earns a track record.
+## What it unlocks
 
-The durable value is the framework. Instances are proof.
+**1. Every IC produces better AI output.**
+
+Claude Code, Cowork, ChatGPT, and Gemini all read from the same wiki. An AE asking for discovery call prep gets the current ICP, the real pricing, and the live battlecard. A marketer drafting a campaign gets the approved positioning and the verified metric definitions. A CS manager writing a QBR gets the current expansion playbook. Same context across every tool, every function, every IC.
+
+**2. HITL agents run real workflows.**
+
+Deal-desk routing. Forecast rollups. Renewal-risk scoring. Competitive displacement. These workflows need a shared wiki to work from. With the wiki in place, agents move from demo to production. Humans stay in the loop for approval. The agent does the prep.
+
+**3. GTM and RevOps alignment becomes visible.**
+
+Pricing, ICP, positioning, and metric definitions live in one place. Every change is a PR. When VP Sales and Head of Marketing disagree about what a qualified lead is, the resolution lives in the wiki and stays there.
+
+## What to expect
+
+This is a blueprint and an architecture. Forking the repo takes five minutes. Filling it out for your company takes weeks.
+
+The payoff is a context layer that compounds. Every call you summarize, every deal you close, every experiment you run feeds the wiki. Next quarter your agents get smarter. The wiki they read is richer than last quarter.
+
+Companies that implement this well treat it like a product. They staff it. They review PRs weekly. They trust the outputs because they trust the process that produced them.
 
 ## Three layers
 
-1. **Raw sources** — files in `sources/` (synthesized call summaries, cleaned exports, redacted deal reviews) plus connector specs for live systems (HubSpot, Gong, Stripe, etc.) that stay in their systems of record. Hybrid in-repo/out-of-repo policy in [`sources/POLICY.md`](sources/POLICY.md).
-2. **The wiki** — `shared/` (seven co-authored components) + `functions/<function>/` (function-specific content). Motion (`plg` / `sales-assisted` / `enterprise`) and segment (`smb` / `mid-market` / `enterprise`) are frontmatter tags + in-file section labels. Never directory trees.
-3. **The schema** — [`schema/authoring-contract.md`](schema/authoring-contract.md), [`schema/frontmatter.md`](schema/frontmatter.md), [`schema/section-labels.md`](schema/section-labels.md), [`schema/page-templates/`](schema/page-templates/). The operating agreement between human authors, LLM authors, and reviewers.
+1. **Raw sources.** Call summaries, deal reviews, pricing docs, contracts. Either committed to `sources/` or referenced via connector specs that keep them in their system of record (HubSpot, Gong, Stripe). Hybrid policy in [`sources/POLICY.md`](sources/POLICY.md).
+2. **The wiki.** `shared/` holds the seven components every function uses. `functions/<function>/` holds function-specific content. Motion and segment live as frontmatter tags and in-file section labels.
+3. **The schema.** The authoring contract that keeps humans, LLMs, and reviewers working from the same rules. See [`schema/authoring-contract.md`](schema/authoring-contract.md), [`schema/frontmatter.md`](schema/frontmatter.md), [`schema/section-labels.md`](schema/section-labels.md), [`schema/page-templates/`](schema/page-templates/).
 
 ## Three operations
 
-- **Ingest** — changes land via PR. In v1 that's artifact-commit (function heads commit). Automated connectors are specified as an abstract pattern in [`ingestion/connectors/PATTERN.md`](ingestion/connectors/PATTERN.md); real implementations come in Phase 3.
-- **Query** — humans and agents retrieve via `ci` (see [`consumption/`](consumption/)) or native Read/Grep against the markdown. Provenance is claim-level.
-- **Lint** — a weekly pass detects three freshness signals (source drift, verification stale, contradictions) and opens reconciliation PRs. Nothing auto-rewrites. See [`ingestion/drift-detection.md`](ingestion/drift-detection.md).
+- **Ingest.** Changes land via PR. Function heads commit in v1. Automated connectors are specified as an abstract pattern in [`ingestion/connectors/PATTERN.md`](ingestion/connectors/PATTERN.md). Real implementations come in Phase 3.
+- **Query.** Humans and agents retrieve via the `ci` CLI (see [`consumption/`](consumption/)) or native Read/Grep against the markdown. Every page cites its sources.
+- **Lint.** A weekly pass flags three freshness signals: source drift, stale verification, and contradictions. It opens reconciliation PRs. Humans approve.
 
-## Navigation trio
+## The navigation trio
 
-Three files at the repo root handle routing and audit. Each has a distinct role:
+Three files at the repo root handle routing and audit:
 
-- [`CLAUDE.md`](CLAUDE.md) — **routing** (hand-written). Loaded by Claude Code / Cowork on session start. Where each type of knowledge lives.
-- [`index.md`](index.md) — **catalog** (generated, never hand-edited). `ci reindex` walks the tree, reads frontmatter, rebuilds it. CI fails the build if it's stale.
-- [`log.md`](log.md) — **audit** (automation-appended). PR merges, lint runs, ingest events.
+- [`CLAUDE.md`](CLAUDE.md) is the **routing map**, hand-written. Claude Code and Cowork load it at session start to learn where each kind of knowledge lives.
+- [`index.md`](index.md) is the **catalog**, generated by `ci reindex`. The LLM reads this first to locate relevant pages, then drills in. This replaces vector search at the scale we expect (hundreds to low thousands of pages).
+- [`log.md`](log.md) is the **audit trail**, appended by automation on every merge, lint run, and ingest event.
 
-The LLM reads `index.md` first to locate relevant pages, then drills into them. This replaces embedding-based retrieval at the scale we expect (hundreds to low thousands of pages).
+## Consumption
 
-## Consumption model
-
-Convenience wrappers around grep, find, and frontmatter filtering — not a retrieval engine. Implementation: Bash + `yq`. Zero runtime install. Agents invoke via the Bash tool.
+The `ci` CLI wraps grep, find, and frontmatter filtering. Bash plus `yq`. Zero runtime install. Agents invoke it via the Bash tool.
 
 ```bash
 ci list --type icp --motion sales-assisted
@@ -63,53 +78,61 @@ ci verify --all
 ci reindex --check
 ```
 
-Eleven commands, all documented in [`consumption/cli/README.md`](consumption/cli/README.md). The [`consumption/SKILL.md`](consumption/SKILL.md) registers `ci` as the canonical retrieval path for Claude Code / Cowork.
+Eleven commands, documented in [`consumption/cli/README.md`](consumption/cli/README.md). The [`consumption/SKILL.md`](consumption/SKILL.md) registers `ci` as the canonical retrieval path for Claude Code and Cowork.
 
-## Component model
+## Shared spine
 
-**Shared spine (Phase 0).** Seven co-authored-shared components in [`shared/`](shared/):
+Seven co-authored components in [`shared/`](shared/):
 
-- `icp/` — tiered ICP (A/B/C) with firmographics, triggers, disqualifiers
-- `personas/` — individual roles and buying-committee configurations
-- `product-and-packaging/` — SKUs, editions, add-ons
-- `pricing/` — price book, discount guardrails, usage meters
-- `positioning/` — value props, category narrative, elevator pitches
-- `competitive-intel/` — competitor profiles, win-loss patterns
-- `data-definitions/` — MQL, SQL, ARR, NRR, CAC, payback — opinionated, research-grounded
+- `icp/` tiered ICP (A/B/C) with firmographics, triggers, disqualifiers.
+- `personas/` individual roles and buying-committee configurations.
+- `product-and-packaging/` SKUs, editions, add-ons.
+- `pricing/` price book, discount guardrails, usage meters.
+- `positioning/` value props, category narrative, elevator pitches.
+- `competitive-intel/` competitor profiles, win-loss patterns.
+- `data-definitions/` MQL, SQL, ARR, NRR, CAC, payback. Opinionated and backed by research.
 
-**Function-specific (Phase 1+).** Six function directories in [`functions/`](functions/). Sales is filled end-to-end in Phase 1 — methodology (MEDDPICC), seven-stage playbooks, three decision frameworks, four repeatable plays, battlecards and objections scaffolds with worked examples, tool-category map. The other five function directories remain scaffolded with READMEs pointing to phase status.
+## Function-specific content
+
+Six function directories in [`functions/`](functions/). Sales is filled end-to-end in Phase 1: MEDDPICC methodology, seven-stage playbooks, three decision frameworks, four repeatable plays, battlecards and objections scaffolds with worked examples, tool-category map. The other five functions are scaffolded and ship in Phase 2.
 
 ## Governance
 
-Graduated trust along two axes:
+Trust expands along two dimensions:
 
-- **Maturity**: Stage 1 (months 0-3) = 100% PR. Stage 2 (months 3-6) = routine auto-merge for low-risk classes. Stage 3 (months 6+) = multi-source consensus and pattern-matched autonomy.
-- **Content type**: some classes (ICP, pricing, packaging, legal, strategic positioning, page creation/deletion) always PR — no matter the stage.
+- **Maturity.** Stage 1 (months 0-3) means 100% PR review. Stage 2 (months 3-6) adds routine auto-merge for low-risk classes. Stage 3 (months 6+) adds multi-source consensus and pattern-matched autonomy.
+- **Content type.** Some classes always require a PR regardless of stage: ICP, pricing, packaging, legal, strategic positioning, and page creation or deletion.
 
-Every change — auto-merged or PR'd — appends to `log.md`. Rollback is one `git revert` away. Details in [`ingestion/pr-workflow.md`](ingestion/pr-workflow.md).
+Every change appends to `log.md`. Rollback is one `git revert` away. Details in [`ingestion/pr-workflow.md`](ingestion/pr-workflow.md).
 
 ## Phase status
 
-- **Phase 0 — shipped.** Shared spine, schema, CLI MVP, SKILL.md, navigation trio, PR workflow, graduated trust rules, abstract connector pattern.
-- **Phase 1 — shipped.** Sales function filled — methodology, playbooks, frameworks, plays, battlecards, objections, tools-and-stack. Shared-spine additions: VP Sales persona, enterprise-direct buying committee.
-- **Phase 2 — next.** Marketing, CS, Support, RevOps, Finance/Legal.
-- **Phase 3 — proof.** Synthetic company instance (full worked example) + first real connector implementations.
-- **Phase 4+ — research.** Conversation-harvest ingestion, automated staleness detection with LLM, cross-corpus consistency.
+- **Phase 0 shipped.** Shared spine, schema, CLI MVP, SKILL.md, navigation trio, PR workflow, graduated trust rules, abstract connector pattern.
+- **Phase 1 shipped.** Sales function filled. Methodology, playbooks, frameworks, plays, battlecards, objections, tools-and-stack. Shared-spine additions: VP Sales persona, enterprise-direct buying committee.
+- **Phase 2 next.** Marketing, CS, Support, RevOps, Finance/Legal.
+- **Phase 3.** Synthetic company instance (full worked example) plus first real connector implementations.
+- **Phase 4+.** Conversation-harvest ingestion, automated staleness detection with LLM, cross-corpus consistency.
 
 Full roadmap: [`PHASES.md`](PHASES.md).
 
----
+## Who this is for
 
-## Pilot implementation
+RevOps leaders and GTM operators who already use AI agents and have hit the context wall.
 
-The framework in this repo is open and free. Paid pilot is how you skip the 3-month learning curve: I work alongside your team for 4-6 weeks. Details: [`PILOT.md`](PILOT.md). Two of three spots remaining.
+The framework is MIT-licensed. Any company can fork it and use it. The paid pilot targets B2B SaaS companies under $100M ARR.
+
+## Two paths to adopt
+
+**Self-implement.** Fork the repo. Read [`PHASES.md`](PHASES.md). Plan for a two to three month learning curve before the first function is production-grade.
+
+**Pilot with Latent Flows.** Four to six weeks with me working alongside your team. We skip the learning curve and ship the shared spine plus one function to production. Details in [`PILOT.md`](PILOT.md). Two of three spots remaining.
 
 ## Credits
 
-- [Andrej Karpathy's LLM Wiki framework](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) — the core pattern (navigation trio, `index.md`-first retrieval, append-only log)
-- [GitLab Handbook](https://handbook.gitlab.com/docs/frontmatter/) — frontmatter conventions
-- [AGENTS.md](https://agents.md/) — agent-instruction file standard (donated to the Linux Foundation AAIF, 2025)
-- RevOps leaders who commented on the original [LinkedIn thread](https://linkedin.com/in/rasmussikk) and pulled this out of my head
+- [Andrej Karpathy's LLM Wiki framework](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) for the core pattern: navigation trio, index-first retrieval, append-only log.
+- [GitLab Handbook](https://handbook.gitlab.com/docs/frontmatter/) for frontmatter conventions.
+- [AGENTS.md](https://agents.md/) for the agent-instruction file standard (donated to the Linux Foundation AAIF, 2025).
+- RevOps leaders who commented on the original [LinkedIn thread](https://linkedin.com/in/rasmussikk) and pulled this out of my head.
 
 ## License
 

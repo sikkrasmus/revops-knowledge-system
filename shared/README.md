@@ -2,7 +2,7 @@
 type: meta
 title: Shared Spine
 description: The seven co-authored-shared components every function reads from.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
 last_reviewed: 2026-04-19

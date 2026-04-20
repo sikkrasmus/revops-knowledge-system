@@ -52,7 +52,7 @@ EOF
       functions/finance-legal/*)       route="Finance lead; co-reviewer: Legal" ;;
       sources/*)                       route="RevOps lead; co-reviewer: Legal on PII-sensitive" ;;
       ingestion/*|schema/*)            route="RevOps lead" ;;
-      README.md|CLAUDE.md|PRINCIPLES.md|PHASES.md|PILOT.md|CONTRIBUTING.md|NOTION-LANDING.md) route="Repo owner" ;;
+      README.md|CLAUDE.md|PRINCIPLES.md|PHASES.md|PILOT.md) route="Repo owner" ;;
     esac
     printf '  %-50s  %s\n' "$f" "$route"
   done

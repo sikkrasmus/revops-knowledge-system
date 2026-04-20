@@ -2,7 +2,7 @@
 type: meta
 title: Authoring contract
 description: Canonical operating agreement between humans, LLMs, and reviewers. 12 sections covering source precedence, citations, staleness, lifecycle.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

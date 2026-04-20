@@ -2,7 +2,7 @@
 type: playbook
 title: Evaluation playbook
 description: Evaluation is the stage where the buyer runs the product against their own data and signs off that it works. Scope, measure, decide.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

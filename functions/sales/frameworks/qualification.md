@@ -2,7 +2,7 @@
 type: framework
 title: Qualification framework
 description: Decision tree for whether an account enters active pursuit. Upstream of MEDDPICC; reads ICP fit and committee signals.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

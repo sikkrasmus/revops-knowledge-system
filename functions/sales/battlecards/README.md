@@ -2,7 +2,7 @@
 type: function-readme
 title: Sales battlecards
 description: One battlecard per competitor. Deployable counter-positioning for AEs in active deals. Stale fast; re-verified quarterly.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - marketing-lead

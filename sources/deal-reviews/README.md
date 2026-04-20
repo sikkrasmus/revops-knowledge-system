@@ -2,7 +2,7 @@
 type: meta
 title: Deal Review Notes
 description: Redacted deal-review notes — retrospectives on specific closed-won or closed-lost deals.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

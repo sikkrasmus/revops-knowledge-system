@@ -2,7 +2,7 @@
 type: meta
 title: Positioning
 description: Value props, category narrative, and elevator pitches. Strategic — always PR.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
   - sales-lead

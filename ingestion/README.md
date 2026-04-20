@@ -2,7 +2,7 @@
 type: meta
 title: Ingestion
 description: How changes land in the corpus — PR workflow, graduated trust, drift detection, connector patterns.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

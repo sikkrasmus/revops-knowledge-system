@@ -2,7 +2,7 @@
 type: function-readme
 title: Sales function
 description: Sales function — what it owns, consumes, and publishes. Scaffold in Phase 0, filled in Phase 1.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - revops-lead

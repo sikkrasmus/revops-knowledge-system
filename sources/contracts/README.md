@@ -2,7 +2,7 @@
 type: meta
 title: Contract Excerpts
 description: Redacted contract excerpts — pricing terms, SLA language, notable clauses. Originals in legal vault.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

@@ -2,7 +2,7 @@
 type: meta
 title: PR Template
 description: Required fields for every PR against the corpus.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 

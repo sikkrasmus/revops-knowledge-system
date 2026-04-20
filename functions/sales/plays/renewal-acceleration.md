@@ -2,7 +2,7 @@
 type: play
 title: Renewal acceleration
 description: Play to close renewals 90-120 days early while capturing expansion ACV. Coordinated with CS; reads usage, committee, and commercial signals.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - sales-lead
   - cs-lead

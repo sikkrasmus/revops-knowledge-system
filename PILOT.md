@@ -2,7 +2,7 @@
 type: meta
 title: Pilot implementation
 description: Paid pilot — fork this framework into production in 4-6 weeks, with direct implementation support.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 last_reviewed: 2026-04-19
 ---
 
@@ -70,7 +70,7 @@ A working, owned, in-production Company Index for your revenue org in 4-6 weeks.
 
 ## Apply
 
-Five short questions. DM me on [LinkedIn](https://linkedin.com/in/rasmussikk) or email **rasmus@unfrankenstein.io** with answers:
+Five short questions. DM me on [LinkedIn](https://linkedin.com/in/rasmussikk) or email **rasmus@latentflows.com** with answers:
 
 1. Company name + ARR band ($10-25M / $25-50M / $50-100M).
 2. Your role.

@@ -2,7 +2,7 @@
 type: icp
 title: Tier 3 ICP — opportunistic / self-serve-qualified
 description: Tier 3 ICP — minimal outbound, self-serve conversion when signals align.
-owner: rasmus@unfrankenstein.io
+owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
   - marketing-lead
