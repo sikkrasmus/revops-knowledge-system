@@ -28,21 +28,21 @@ A persona is atomic — one role with pains, authority, objections, buying prefe
 
 A buying committee is a configuration — "for $50K mid-market deals, the committee is champion + approver + reviewer, and here's how the decision actually moves." Committees reference personas; personas don't reference committees.
 
-## Persona list (Phase 0 examples)
+## Persona list
 
-- [`personas/head-of-revops.md`](personas/head-of-revops.md) — Head of RevOps (abstract Phase 0 example)
+- [`personas/head-of-revops.md`](personas/head-of-revops.md) — Head of RevOps (Phase 0)
+- [`personas/vp-sales.md`](personas/vp-sales.md) — VP Sales (Phase 1 addition, surfaced by Sales function fill)
 
-Additional personas get added as the spine fills. Common roles worth their own page: VP Sales, VP Marketing, CFO, Head of Data, Head of CS, Head of Product, CRO, COO.
+Additional personas get added as the spine fills. Common roles worth their own page: VP Marketing, CFO, Head of Data, Head of CS, Head of Product, CRO, COO.
 
-## Buying-committee list (Phase 0 examples)
+## Buying-committee list
 
-- [`buying-committees/mid-market-sales-assisted.md`](buying-committees/mid-market-sales-assisted.md) — mid-market sales-assisted committee (abstract)
+- [`buying-committees/mid-market-sales-assisted.md`](buying-committees/mid-market-sales-assisted.md) — mid-market sales-assisted committee (Phase 0)
+- [`buying-committees/enterprise-direct.md`](buying-committees/enterprise-direct.md) — enterprise direct committee (Phase 1 addition)
 
-Add more as you encounter distinct committee configurations. Typical breakdowns:
+Add more as you encounter distinct committee configurations. Open slots:
 
 - `smb-plg.md` — self-serve + ICs
-- `mid-market-sales-assisted.md` — champion + approver + reviewer
-- `enterprise-direct.md` — full committee including procurement, security, legal
 - `multi-entity.md` — same buyer spanning multiple business units with shared procurement
 
 ## Ownership
