@@ -37,10 +37,13 @@ jobs:
 
       - name: ci reindex --check
         id: reindex_check
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
           # Bootstrap sentinel: if the commit message contains [bootstrap],
           # skip the --check invariant for this single commit.
-          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          # COMMIT_MSG is passed via env to avoid shell injection from
+          # commit messages containing quotes or other metacharacters.
           if [[ "$COMMIT_MSG" == *"[bootstrap]"* ]]; then
             echo "Bootstrap commit detected, skipping index.md freshness check for this commit."
           else
