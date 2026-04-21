@@ -378,7 +378,7 @@ revops-knowledge-system/
 - [Andrej Karpathy's LLM Wiki framework](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) for the navigation trio, index-first retrieval, and append-only log.
 - [GitLab Handbook](https://handbook.gitlab.com/docs/frontmatter/) for frontmatter conventions.
 - [AGENTS.md](https://agents.md/) for the agent-instruction file standard.
-- The RevOps leaders who commented on the original [LinkedIn thread](https://linkedin.com/in/rasmussikk) and pulled this out of my head.
+- The RevOps leaders who commented on the original [LinkedIn thread](https://www.linkedin.com/feed/update/urn:li:activity:7450853694281084929/) and pulled this out of my head.
 
 ---
 
