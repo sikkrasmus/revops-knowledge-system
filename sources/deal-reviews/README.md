@@ -1,22 +1,22 @@
 ---
 type: meta
 title: Deal Review Notes
-description: Redacted deal-review notes — retrospectives on specific closed-won or closed-lost deals.
+description: Redacted deal-review notes. Retrospectives on specific closed-won or closed-lost deals.
 owner: rasmus@latentflows.com
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-21
 ---
 
 # Deal Review Notes
 
-Redacted deal-review notes. Retrospectives on specific closed deals — what worked, what didn't, what informed the outcome. Wiki pages (postmortem, win-loss-pattern, pricing-pattern, champion-profile) cite these.
+Redacted deal-review notes. Retrospectives on specific closed deals, what worked, what didn't, what informed the outcome. Wiki pages (postmortem, win-loss-pattern, pricing-pattern, champion-profile) cite these.
 
 ## What to include
 
-- Deal identifiers (internal CRM deal ID; customer name aliased unless consented).
-- Outcome: closed-won / closed-lost / no-decision, timeline, ACV band.
+- Deal identifiers (internal CRM deal ID, customer name aliased unless consented).
+- Outcome: closed-won, closed-lost, or no-decision. Timeline. ACV band.
 - Key events: triggers, stakeholder changes, objections, pricing negotiation arc.
 - Stakeholder roles and committee composition (aliased).
-- What we'd do differently.
+- What we would do differently.
 
 ## What to exclude
 
@@ -57,11 +57,11 @@ consumers:
 
 Deal reviews should be written within 7 days of close (won or lost) while context is fresh. Weekly batch ingestion acceptable for high-velocity segments.
 
-## Phase 0 content
+## What ships here
 
-None. Your fork populates this directory with real deal reviews.
+No actual deal reviews. A fork populates this directory with real deal-review notes.
 
 ## Related
 
-- [`../../shared/competitive-intel/win-loss-patterns.md`](../../shared/competitive-intel/win-loss-patterns.md) — patterns synthesized from these
-- [`../../shared/pricing/discount-guardrails.md`](../../shared/pricing/discount-guardrails.md) — pricing patterns synthesized from these
+- [`../../shared/competitive-intel/win-loss-patterns.md`](../../shared/competitive-intel/win-loss-patterns.md), patterns synthesized from these
+- [`../../shared/pricing/discount-guardrails.md`](../../shared/pricing/discount-guardrails.md), pricing patterns synthesized from these

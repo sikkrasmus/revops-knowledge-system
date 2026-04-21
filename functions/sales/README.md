@@ -102,4 +102,4 @@ Phase 1 fills these with real content. The v0 salvaged templates (battlecard, ob
 ## Related
 
 - [`../../shared/`](../../shared/) — spine Sales consumes from
-- [`../../PHASES.md`](../../PHASES.md) — phase roadmap
+- [`../../docs/03-IMPLEMENTATION.md`](../../docs/03-IMPLEMENTATION.md) — suggested rollout and the eight hard parts

@@ -60,7 +60,7 @@ Standard max discount in mid-market...
 ## Pricing {motion: plg}                    ← single space before brace, need two
 ## Pricing  {}                              ← empty braces
 ## Pricing  {motion: growth}                ← unknown enum value
-## Pricing  {type: icp}                     ← unknown key (only motion/segment allowed)
+## Pricing  {type: icp}                     ← unknown key, only motion and segment allowed
 ```
 
 ## Parser rule (regex for `ci`)
@@ -76,8 +76,8 @@ Groups:
 
 ## When to use section labels vs. frontmatter tags
 
-- **Frontmatter `motion:` / `segment:`** — page-level broad filter. "This whole page applies to these motions."
-- **In-file section labels** — precise per-heading scope. "This specific sub-section applies to this motion."
+- **Frontmatter `motion:` and `segment:`** are the page-level broad filter. "This whole page applies to these motions."
+- **In-file section labels** are the precise per-heading scope. "This specific sub-section applies to this motion."
 
 A page with `motion: [plg, sales-assisted]` in frontmatter typically contains both unlabeled sections (apply to all tagged motions) and labeled sections (scope narrower). Example:
 
@@ -119,17 +119,17 @@ ci list --type pricing-policy | xargs -I{} ci show {} --section-filter "segment=
 
 ## Why this grammar
 
-- **Machine-parseable** — the regex above is precise, no ambiguity.
-- **Human-readable** — labels sit at the end of the heading line, not a separate block.
-- **Grep-friendly** — `grep '{motion: plg}'` works across the corpus.
-- **No new markdown tokens** — a standard heading with a trailing comment-like suffix, so Obsidian / VSCode / GitHub all render the heading correctly and the label is visible inline.
+- **Machine-parseable.** The regex above is precise, no ambiguity.
+- **Human-readable.** Labels sit at the end of the heading line, not in a separate block.
+- **Grep-friendly.** `grep '{motion: plg}'` works across the corpus.
+- **No new markdown tokens.** A standard heading with a trailing comment-like suffix. Obsidian, VS Code, and GitHub all render the heading correctly and the label is visible inline.
 
 ## Extending to other keys
 
-Adding a key (e.g., `region`, `phase`) requires:
+Adding a key (`region`, `phase`, etc.) requires:
 
 1. A PR to `enums.yaml` defining the enum values.
 2. A PR to this file adding the key to the allowed list.
 3. A PR to the `ci verify` regex in [`../consumption/cli/lib/verify.sh`](../consumption/cli/lib/verify.sh) to include the new key.
 
-v1 ships with only `motion` and `segment`. Don't add keys ad-hoc.
+v1 ships with only `motion` and `segment`. Do not add keys ad-hoc.

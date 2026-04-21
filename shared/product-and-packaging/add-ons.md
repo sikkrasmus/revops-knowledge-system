@@ -1,7 +1,7 @@
 ---
 type: packaging
 title: Add-ons
-description: Add-ons that extend editions — what they are, what they attach to, decision rubric.
+description: Add-ons that extend editions. What they are, what they attach to, the graduation rubric.
 owner: rasmus@latentflows.com
 reviewers:
   - product-lead
@@ -33,7 +33,7 @@ confidence: medium
 
 ## What an add-on is
 
-An add-on extends an edition with capability that doesn't justify inclusion in the base edition — typically because (a) attach rate is below threshold, (b) it requires additional cost-to-serve, or (c) it's only valuable to a sub-segment.
+An add-on extends an edition with capability that does not justify inclusion in the base edition. Typical reasons: (a) attach rate is below threshold, (b) it requires additional cost-to-serve, or (c) it is only valuable to a sub-segment.
 
 ## Current add-ons
 
@@ -43,7 +43,7 @@ An add-on extends an edition with capability that doesn't justify inclusion in t
 | `<add-on 2>` | Enterprise only | `<rate>` | Enterprise |
 | `<add-on 3>` | All editions | `<rate>` | All |
 
-## Add-on vs. edition-included — decision rubric
+## Add-on vs. edition-included: decision rubric
 
 | Factor | Keep as add-on | Graduate to edition-included |
 |---|---|---|
@@ -60,6 +60,6 @@ If an add-on graduates to edition-included but attach signal fades, roll back to
 
 ## Related
 
-- [`editions.md`](editions.md) — what add-ons attach to
-- [`../pricing/`](../pricing/) — pricing for add-ons
-- [`skus/`](skus/) — individual SKU specs
+- [`editions.md`](editions.md), what add-ons attach to
+- [`../pricing/`](../pricing/), pricing for add-ons
+- [`skus/`](skus/), individual SKU specs

@@ -12,7 +12,7 @@ verified_until: 2027-04-19
 
 # Data Definitions
 
-The "definitions layer." Every metric, KPI, funnel stage, or commercial term used across the company has a single definition here. Opinionated — we take a position, cite the research that backs it, and document the common misdefinitions we reject.
+The "definitions layer." Every metric, KPI, funnel stage, or commercial term used across the company has a single definition here. The directory is opinionated: we take a position, cite the research that backs it, and document the common misdefinitions we reject.
 
 Template: [`../../schema/page-templates/shared/metric-definition.md`](../../schema/page-templates/shared/metric-definition.md).
 
@@ -24,12 +24,12 @@ All metric definitions live under [`metrics/`](metrics/). One file per metric.
 
 Phase 0 example included: [`metrics/nrr.md`](metrics/nrr.md). The full Phase 0 set that an in-production fork should fill:
 
-- `mql.md`, `sql.md`, `sal.md` — funnel stages
-- `arr.md`, `mrr.md` — recurring revenue
-- `logo-churn.md`, `revenue-churn.md` — churn variants
-- `nrr.md`, `grr.md` — retention
-- `cac.md`, `payback.md` — acquisition economics
-- `pipeline-coverage.md` — forecasting
+- `mql.md`, `sql.md`, `sal.md`, funnel stages
+- `arr.md`, `mrr.md`, recurring revenue
+- `logo-churn.md`, `revenue-churn.md`, churn variants
+- `nrr.md`, `grr.md`, retention
+- `cac.md`, `payback.md`, acquisition economics
+- `pipeline-coverage.md`, forecasting
 
 ## Ownership
 
@@ -39,7 +39,7 @@ Phase 0 example included: [`metrics/nrr.md`](metrics/nrr.md). The full Phase 0 s
 
 ## Why opinionated
 
-The industry cannot agree on basic definitions (MQL vs. MAL vs. MQA; NRR including logo vs. net-new; CAC fully-loaded vs. sales-only). A company that tries to stay neutral gets contradictions across functions: Marketing's MQL definition doesn't match Sales's SQL threshold, and Finance reports a third version to the board.
+The industry cannot agree on basic definitions (MQL vs. MAL vs. MQA; NRR including logo vs. net-new; CAC fully-loaded vs. sales-only). A company that tries to stay neutral gets contradictions across functions: Marketing's MQL definition does not match Sales's SQL threshold, and Finance reports a third version to the board.
 
 This directory takes a position. Every metric page:
 
@@ -51,8 +51,8 @@ This directory takes a position. Every metric page:
 
 ## Review cadence
 
-- **Annually** — full re-verification of every metric against current practice and benchmark research.
-- **On methodology change** — e.g., switching from a trailing-3-month to trailing-12-month NRR: full cross-corpus audit of every page that cites the metric.
+- **Annually.** Full re-verification of every metric against current practice and benchmark research.
+- **On methodology change.** For example, switching from trailing-3-month to trailing-12-month NRR triggers a full cross-corpus audit of every page that cites the metric.
 
 ## Change class
 
@@ -60,11 +60,10 @@ This directory takes a position. Every metric page:
 
 ## Lint signals
 
-- **Cross-doc contradiction** — if a dashboard definition, a page claim, or a function-specific report uses a metric differently than this directory defines it: `has_contradiction` flag.
-- **Citation rot** — if a benchmark source is >3 years old: `verification_stale: true`.
+- **Cross-doc contradiction.** If a dashboard definition, a page claim, or a function-specific report uses a metric differently than this directory defines it, the page gets a `has_contradiction` flag.
+- **Citation rot.** If a benchmark source is older than 3 years, the page gets `verification_stale: true`.
 
 ## Related
 
-- [`../../functions/revops/`](../../functions/revops/) (Phase 2) — analytics and reporting
-- [`../../functions/finance-legal/`](../../functions/finance-legal/) (Phase 2) — financial reporting
-- [`../icp/`](../icp/), [`../pricing/`](../pricing/) — reference metrics defined here
+- [`../../functions/FUTURE-FUNCTIONS.md`](../../functions/FUTURE-FUNCTIONS.md), where the RevOps function (analytics and reporting) and finance and legal function (financial reporting) are described.
+- [`../icp/`](../icp/), [`../pricing/`](../pricing/), reference metrics defined here

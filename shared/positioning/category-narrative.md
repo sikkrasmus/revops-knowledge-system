@@ -34,7 +34,7 @@ confidence: medium
 
 ## The category we claim
 
-> `<category name>` — `<one-sentence definition>`
+> `<category name>`. `<one-sentence definition>`
 
 ## Why this category, not another
 
@@ -42,7 +42,7 @@ confidence: medium
 
 ## Why the category matters now
 
-<Paragraph: the market shift that made this category necessary. Evidence-backed — cite analyst reports, macro trends, buyer behavior shifts.>
+<Paragraph: the market shift that made this category necessary. Evidence-backed: cite analyst reports, macro trends, buyer behavior shifts.>
 
 ## Who defines this category
 
@@ -50,8 +50,8 @@ confidence: medium
 
 ## Adjacent categories we're NOT in
 
-- **Adjacent X** — here's why we're not this.
-- **Adjacent Y** — here's why.
+- **Adjacent X.** Here's why we're not this.
+- **Adjacent Y.** Here's why.
 
 Being clear about what we're *not* is often more important than what we are. Buyers triangulate.
 
@@ -59,22 +59,22 @@ Being clear about what we're *not* is often more important than what we are. Buy
 
 For each category incumbent (if any):
 
-- **Incumbent A** — our differentiator: `<specific>`
-- **Incumbent B** — our differentiator: `<specific>`
+- **Incumbent A.** Our differentiator: `<specific>`
+- **Incumbent B.** Our differentiator: `<specific>`
 
 Deeper competitive analysis in [`../competitive-intel/`](../competitive-intel/).
 
 ## Category health signals to monitor
 
-- Analyst coverage (Gartner/Forrester MQ or equivalent)
+- Analyst coverage (Gartner or Forrester MQ or equivalent)
 - Competitor fundraising in the category
 - New entrants
-- Buyer interview patterns — do they ask for "category X" or a different name?
+- Buyer interview patterns: do they ask for "category X" or a different name?
 
 Semi-annual review. Category drift is one of the most common positioning rot patterns.
 
 ## Related
 
-- [`value-props.md`](value-props.md) — value props within this category
-- [`elevator-pitches.md`](elevator-pitches.md) — how the category shows up in pitches
-- [`../competitive-intel/`](../competitive-intel/) — category competitors
+- [`value-props.md`](value-props.md), value props within this category
+- [`elevator-pitches.md`](elevator-pitches.md), how the category shows up in pitches
+- [`../competitive-intel/`](../competitive-intel/), category competitors

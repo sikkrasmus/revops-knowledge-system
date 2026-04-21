@@ -18,9 +18,9 @@ This is the precise spec. For the operating agreement (who writes what, when to 
 
 ```yaml
 ---
-type: icp                                    # enum — see enums.yaml
-title: Tier 1 ICP — Multi-product Platforms
-description: Tier 1 ICP profile for $25-100M ARR multi-product B2B SaaS companies.
+type: icp                                    # enum, see enums.yaml
+title: Tier 1 ICP, multi-product platforms
+description: Tier 1 ICP profile for $25 to $100M ARR multi-product B2B SaaS companies.
 owner: rasmus@latentflows.com              # email or github handle
 reviewers:                                   # list; required for shared/ + functions/
   - revops-lead
@@ -57,15 +57,15 @@ confidence: high                             # optional; enum
 | `description` | string | all pages | Single line, max 200 chars, ends with `.`. Used by `ci reindex` as the one-line summary in `index.md`. |
 | `owner` | string | all pages | Email or github handle |
 | `last_reviewed` | ISO date | all pages | `YYYY-MM-DD` |
-| `verified_until` | ISO date | `shared/`, `functions/` | `YYYY-MM-DD` — when today > this date, `ci verify` sets `verification_stale: true` |
+| `verified_until` | ISO date | `shared/`, `functions/` | `YYYY-MM-DD`. When today > this date, `ci verify` sets `verification_stale: true` |
 | `reviewers` | list[string] | `shared/`, `functions/` | List of reviewer handles or role slugs |
 
 ## Conditionally-required fields
 
 | Field | When required |
 |---|---|
-| `motion` | When the page's content is motion-specific — typically `shared/pricing/`, `shared/positioning/`, `shared/personas/`, most `functions/` pages |
-| `segment` | When the page's content is segment-specific — ICP tiers, segment-specific playbooks |
+| `motion` | When the page's content varies by motion. Typically `shared/pricing/`, `shared/positioning/`, `shared/personas/`, most `functions/` pages. |
+| `segment` | When the page's content varies by segment. ICP tiers, segment-specific playbooks. |
 | `consumers` | On all `shared/` pages. States which functions read this page. |
 | `sources` | On any page with factual claims. Required for all `shared/` pages. |
 
@@ -80,23 +80,27 @@ confidence: high                             # optional; enum
 
 ## Field formats
 
-- **Dates** — ISO 8601 `YYYY-MM-DD`. No other formats accepted.
-- **Lists** — YAML sequences. Empty list is `[]` (not omitted).
-- **Optional fields** — when the field exists but has no value, use explicit `null` (not omitted).
-- **Enums** — exact string match against [`enums.yaml`](enums.yaml). Unknown values fail `ci verify`.
+- **Dates.** ISO 8601 `YYYY-MM-DD`. No other formats accepted.
+- **Lists.** YAML sequences. Empty list is `[]`, not omitted.
+- **Optional fields.** When the field exists but has no value, use explicit `null`, not omitted.
+- **Enums.** Exact string match against [`enums.yaml`](enums.yaml). Unknown values fail `ci verify`.
+
+## Source-page frontmatter
+
+Pages under `sources/` carry additional fields (`source_system`, `source_url`, `source_captured_at`, `pii_status`) defined in [`../sources/POLICY.md`](../sources/POLICY.md). The base required fields above still apply.
 
 ## Motion and segment
 
 See [`section-labels.md`](section-labels.md) for how in-file headings can scope sub-sections to specific motion/segment combinations.
 
-Page-level frontmatter tags are the broad filter (e.g., `motion: [plg, sales-assisted]` = this page applies to PLG and sales-assisted motions). In-file section labels are the precise per-section scope (e.g., `## Enterprise pricing  {motion: enterprise}` = only this heading's content applies to enterprise motion).
+Page-level frontmatter tags are the broad filter. `motion: [plg, sales-assisted]` means the page applies to PLG and sales-assisted motions. In-file section labels are the precise per-section scope. `## Enterprise pricing  {motion: enterprise}` means only this heading's content applies to enterprise motion.
 
 ## Source references
 
 Two formats accepted:
 
-- **File reference**: `sources/<category>/<filename>` — must resolve to a file in the repo.
-- **System query**: `<system>://<query-string> as_of:<ISO-date>` — `<system>` must have a connector spec in `ingestion/connectors/`. The `as_of:` timestamp is required.
+- **File reference**: `sources/<category>/<filename>`. Must resolve to a file in the repo.
+- **System query**: `<system>://<query-string> as_of:<ISO-date>`. `<system>` must have a connector spec in `ingestion/connectors/`. The `as_of:` timestamp is required.
 
 Claim-level citations in page body use square brackets: `[source: <reference>]`. `ci verify` requires every `[source: ...]` to match an entry in `sources:` and vice versa.
 
@@ -113,11 +117,11 @@ Claim-level citations in page body use square brackets: `[source: <reference>]`.
 7. Source references resolve (files exist or connector spec exists).
 8. Every `[source: ...]` citation appears in `sources:` and vice versa.
 
-`ci verify --all` adds corpus-wide checks — duplicate slugs, `index.md` freshness.
+`ci verify --all` adds corpus-wide checks: duplicate slugs, `index.md` freshness.
 
 ## Adding enum values
 
-New `type`, `motion`, `segment`, `consumers`, or `confidence` value requires a PR to [`enums.yaml`](enums.yaml) with a brief rationale. Don't add values ad-hoc in page frontmatter — `ci verify` will fail.
+A new `type`, `motion`, `segment`, `consumers`, or `confidence` value requires a PR to [`enums.yaml`](enums.yaml) with a brief rationale. Do not add values ad-hoc in page frontmatter. `ci verify` will fail.
 
 ## Why frontmatter at all
 

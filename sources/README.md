@@ -8,21 +8,30 @@ last_reviewed: 2026-04-19
 
 # Sources
 
-The file-based source layer. Snapshots of external source material — calls, contracts, decks, internal docs — that the wiki is derived from. Hybrid in-repo/out-of-repo policy per [`POLICY.md`](POLICY.md).
+The file-based source layer. Synthesized snapshots of external source material (calls, contracts, decks, internal docs) that the corpus cites. Hybrid in-repo and out-of-repo policy per [`POLICY.md`](POLICY.md).
 
-Live systems (HubSpot, Gong, Stripe, Salesforce, Slack) are **never duplicated here**. They're cited by point-in-time reference via connector specs in [`../ingestion/connectors/`](../ingestion/connectors/).
+Live systems (HubSpot, Gong, Stripe, Salesforce, Slack) are **never duplicated here**. They are cited by point-in-time reference via connector specs in [`../ingestion/connectors/`](../ingestion/connectors/).
 
 ---
 
-## Directory structure
+## Two source models
+
+The framework recognizes exactly two ways a wiki page is backed by evidence.
+
+1. **In-repo synthesized snapshot.** Markdown file under `sources/`. Captured at ingestion time, immutable once captured (beyond PII re-review). Cited as `[source: sources/<category>/<filename>]`.
+2. **Live-system reference.** Connector spec in `ingestion/connectors/` defines the system. Cited as `[source: <system>://<query> as_of:<ISO-date>]`. Never copied into the repo.
+
+Both rules are framework-binding. Which subdirectories you carve under `sources/` is an instance choice. The five below are the example shape for B2B SaaS sales-assisted at $10 to $100M ARR. A devtools or PLG fork might add `community/` (Discord transcripts, GitHub issues). A vertical SaaS fork in a regulated industry might add `regulatory/` (compliance docs, audit findings). Adjust to fit.
+
+## Example directory layout
 
 | Directory | What lives here | Raw source lives in |
 |---|---|---|
-| [`calls/`](calls/) | synthesized call summaries (markdown) | Gong / Fathom / Chorus / Avoma |
+| [`calls/`](calls/) | synthesized call summaries (markdown) | Gong, Fathom, Chorus, Avoma |
 | [`contracts/`](contracts/) | redacted contract excerpts | Legal vault, Google Drive |
 | [`decks/`](decks/) | deck excerpts (markdown, not original slides) | Google Drive, Notion |
-| [`internal-docs/`](internal-docs/) | synthesized Confluence/Notion/Drive snapshots | Confluence, Notion, Google Drive |
-| [`deal-reviews/`](deal-reviews/) | redacted deal review notes | Salesforce / HubSpot deal rooms |
+| [`internal-docs/`](internal-docs/) | synthesized Confluence, Notion, Drive snapshots | Confluence, Notion, Google Drive |
+| [`deal-reviews/`](deal-reviews/) | redacted deal review notes | Salesforce, HubSpot deal rooms |
 
 ## What goes in-repo
 
@@ -75,13 +84,13 @@ Multi-product platforms close 40% faster than single-product peers
 <YYYY-MM-DD>-<slug>.md
 ```
 
-Example: `2026-04-15-acme-discovery.md` — call on 2026-04-15, slug `acme-discovery`.
+Example: `2026-04-15-acme-discovery.md`. A call on 2026-04-15, slug `acme-discovery`.
 
 Slug tips:
 
-- Anonymize if the customer name is sensitive — use an alias.
+- Anonymize if the customer name is sensitive. Use an alias.
 - Don't put individual names in the slug.
-- Keep short — the slug is the identifier forever.
+- Keep it short. The slug is the identifier forever.
 
 ## Frontmatter requirements (source pages)
 
@@ -108,7 +117,7 @@ See [`POLICY.md`](POLICY.md) for PII status definitions and handling.
 
 ## Relation to the wiki
 
-Sources are **snapshots at ingestion time**. The wiki page synthesized from a source is a reconciled artifact — you can't re-sync it by re-fetching the source, because synthesis usually combines multiple sources.
+Sources are **snapshots at ingestion time**. The wiki page synthesized from a source is a reconciled artifact. You cannot re-sync it by re-fetching the source, because synthesis usually combines multiple sources.
 
 Drift is detected (webhook where available, lint pass weekly) and surfaces as a frontmatter flag on the *wiki page*, not the source. The source file itself is immutable once captured (beyond PII re-review).
 
@@ -116,6 +125,7 @@ See [`../ingestion/drift-detection.md`](../ingestion/drift-detection.md).
 
 ## Related
 
-- [`POLICY.md`](POLICY.md) — hybrid in-repo/out-of-repo policy, PII rules
-- [`../ingestion/connectors/PATTERN.md`](../ingestion/connectors/PATTERN.md) — abstract connector pattern
-- [`../schema/authoring-contract.md`](../schema/authoring-contract.md) — citation requirements
+- [`POLICY.md`](POLICY.md), hybrid in-repo and out-of-repo policy, PII rules
+- [`../ingestion/connectors/PATTERN.md`](../ingestion/connectors/PATTERN.md), abstract connector pattern
+- [`../schema/authoring-contract.md`](../schema/authoring-contract.md), citation requirements
+- [`../schema/frontmatter.md`](../schema/frontmatter.md), base frontmatter spec for all pages

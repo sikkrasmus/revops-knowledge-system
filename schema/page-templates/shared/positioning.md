@@ -1,6 +1,6 @@
 ---
 type: value-prop
-title: "<Positioning label — e.g., Core value prop — for multi-product platforms>"
+title: "<Positioning label, e.g., Core value prop for multi-product platforms>"
 description: "<one-line summary of this positioning artifact>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -56,7 +56,7 @@ confidence: medium
 
 ## Proof points
 
-- `<proof 1 — e.g., "customer X reduced cycle time by 40% in 90 days" [source: ...]>`
+- `<proof 1, e.g., "customer X reduced cycle time by 40% in 90 days" [source: ...]>`
 - `<proof 2>`
 - `<proof 3>`
 
@@ -76,15 +76,15 @@ confidence: medium
 
 ## What to avoid saying
 
-- `<anti-pattern 1 — overpromise, trigger word, objection-inducing phrase>`
+- `<anti-pattern 1: overpromise, trigger word, objection-inducing phrase>`
 - `<anti-pattern 2>`
 
 ## Related
 
-- [`shared/icp/`](../icp/) — audiences this positioning targets
-- [`shared/competitive-intel/`](../competitive-intel/) — competitor positioning we're differentiating against
-- [`shared/product-and-packaging/`](../product-and-packaging/) — SKUs this positions
+- [`shared/icp/`](../icp/), audiences this positioning targets
+- [`shared/competitive-intel/`](../competitive-intel/), competitor positioning we're differentiating against
+- [`shared/product-and-packaging/`](../product-and-packaging/), SKUs this positions
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

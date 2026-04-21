@@ -1,6 +1,6 @@
 ---
 type: icp
-title: Tier 1 ICP — prime-fit profile
+title: Tier 1 ICP, prime-fit profile
 description: Tier 1 ICP for the prime-fit addressable segment. Abstract Phase 0 example.
 owner: rasmus@latentflows.com
 reviewers:
@@ -29,26 +29,26 @@ has_contradiction: null
 confidence: medium
 ---
 
-# Tier 1 ICP — prime-fit profile
+# Tier 1 ICP, prime-fit profile
 
 > Phase 0 abstract example. Replace ranges and triggers with real numbers when forking.
 
 ## Summary
 
-Tier 1 is the prime-fit segment — the companies where the product's unit economics, buyer composition, and technographic context most cleanly match an accelerated-sales path. Concentrated outbound, inbound conversion priority, dedicated CS.
+Tier 1 is the prime-fit segment. These are the companies where the product's unit economics, buyer composition, and technographic context most cleanly match an accelerated sales path. Concentrated outbound, inbound conversion priority, dedicated CS.
 
 ## Firmographics
 
-- **ARR band**: `<e.g., $25-100M>` [source: sources/internal-docs/README.md]
-- **Employee count**: `<e.g., 150-800>`
+- **ARR band**: `<e.g., $25 to $100M>` [source: sources/internal-docs/README.md]
+- **Employee count**: `<e.g., 150 to 800>`
 - **Headquarters / region**: North America, UK, Western Europe
 - **Funding stage**: Series B+ or equivalent (profitable with board, PE-backed, or public)
-- **Vertical concentration**: `<top 3 verticals>` — not a hard gate but a prioritization signal
+- **Vertical concentration**: `<top 3 verticals>`. Not a hard gate, used as a prioritization signal.
 
 ## Technographics
 
-- **CRM**: HubSpot or Salesforce — active usage, not legacy
-- **Data stack**: cloud data warehouse (Snowflake / BigQuery / Redshift) in production
+- **CRM**: HubSpot or Salesforce, active usage rather than legacy.
+- **Data stack**: cloud data warehouse (Snowflake, BigQuery, or Redshift) in production
 - **Adjacent tools**: `<any tools that integrate tightly with our product>`
 - **Integration signals**: API-first posture; recent data-stack or RevOps investment
 
@@ -72,19 +72,19 @@ Tier 1 is the prime-fit segment — the companies where the product's unit econo
 
 ### Sales-assisted variant  {motion: sales-assisted}
 
-Typical deal structure in this motion: 1-3 month sales cycle, $30-80K ACV, 1-2 year term. Evaluation involves a champion + decision-maker + one reviewer. Economic buyer typically VP-level.
+Typical deal structure in this motion: 1 to 3 month sales cycle, $30 to $80K ACV, 1 to 2 year term. Evaluation involves a champion plus decision-maker plus one reviewer. Economic buyer typically VP-level.
 
 ### Enterprise variant  {motion: enterprise, segment: enterprise}
 
-Longer cycle (4-9 months), $150-500K+ ACV, MSA-anchored, multi-year with ramp. Buying committee expands to include procurement, security, and legal.
+Longer cycle (4 to 9 months), $150 to $500K+ ACV, MSA-anchored, multi-year with ramp. Buying committee expands to include procurement, security, and legal.
 
 ## Related
 
-- [`../personas/`](../personas/) — buying-committee personas typical in this tier
-- [`tier-2.md`](tier-2.md) — the next-broader tier
-- [`disqualifiers.md`](disqualifiers.md) — hard exclusions
-- [`../pricing/`](../pricing/) — Tier 1 pricing guidance
+- [`../personas/`](../personas/), buying-committee personas typical in this tier
+- [`tier-2.md`](tier-2.md), the next-broader tier
+- [`disqualifiers.md`](disqualifiers.md), hard exclusions
+- [`../pricing/`](../pricing/), Tier 1 pricing guidance
 
 ## Change log
 
-- 2026-04-19 — Phase 0 abstract example scaffolded. Replace with real firmographics and triggers before using in production.
+- 2026-04-19. Phase 0 abstract example scaffolded. Replace with real firmographics and triggers before using in production.

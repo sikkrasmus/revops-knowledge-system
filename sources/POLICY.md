@@ -1,16 +1,16 @@
 ---
 type: meta
 title: Source Storage Policy
-description: Hybrid in-repo/out-of-repo policy, PII handling, retention rules for source artifacts.
+description: Hybrid in-repo and out-of-repo policy, PII handling, retention rules for source artifacts.
 owner: rasmus@latentflows.com
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-21
 ---
 
 # Source Storage Policy
 
-The hybrid policy that decides what lives in-repo vs. referenced externally, and the PII/sensitivity rules that apply to everything in `sources/`.
+The hybrid policy that decides what lives in-repo vs. referenced externally, plus the PII and sensitivity rules that apply to everything in `sources/`.
 
-This is policy, not a suggestion. PRs that violate it get blocked at review. `ci verify` can flag some violations mechanically; others require human judgment.
+This is policy, not a suggestion. PRs that violate it get blocked at review. `ci verify` can flag some violations mechanically. Others require human judgment.
 
 ---
 
@@ -20,9 +20,9 @@ This is policy, not a suggestion. PRs that violate it get blocked at review. `ci
 
 All three criteria must hold:
 
-- **Small** — single-digit megabytes max per file; typically kilobytes.
-- **Non-sensitive** — no personal data, no trade secrets beyond what's acceptable on GitHub, no customer-identifying info unless permission is explicit.
-- **Auditable** — markdown or text format that a human can read and review.
+- **Small.** Single-digit megabytes max per file. Typically kilobytes.
+- **Non-sensitive.** No personal data, no trade secrets beyond what is acceptable on GitHub, no customer-identifying info unless permission is explicit.
+- **Auditable.** Markdown or text format that a human can read and review.
 
 Typical in-repo content:
 
@@ -33,23 +33,23 @@ Typical in-repo content:
 
 ### Out-of-repo (referenced by URL or connector spec)
 
-- **Raw recordings** (audio, video) — stay in Gong / Fathom / etc.
-- **Sensitive contracts** — stay in Legal vault. Can cite with `[source: drive://...]` syntax.
-- **Full unredacted transcripts** — stay in the transcription tool.
-- **Customer data exports** — stay in the CRM or data warehouse.
-- **Production system data** — cited via connector specs (`hubspot://`, `salesforce://`, `stripe://`) with `as_of:` timestamps.
+- **Raw recordings** (audio, video) stay in Gong, Fathom, or equivalent.
+- **Sensitive contracts** stay in the legal vault. Cite with `[source: drive://...]` syntax.
+- **Full unredacted transcripts** stay in the transcription tool.
+- **Customer data exports** stay in the CRM or data warehouse.
+- **Production system data** is cited via connector specs (`hubspot://`, `salesforce://`, `stripe://`) with `as_of:` timestamps.
 
 ## 2. PII handling
 
 Three PII statuses, tracked in every source page's frontmatter:
 
-- **`pii_status: none`** — no personal data in the file. Safest category.
-- **`pii_status: redacted`** — personal data removed or aliased. Requires PR review confirming redaction quality.
-- **`pii_status: needs-review`** — PII present, pending redaction or exclusion. Blocks merge.
+- **`pii_status: none`.** No personal data in the file. Safest category.
+- **`pii_status: redacted`.** Personal data removed or aliased. Requires PR review confirming redaction quality.
+- **`pii_status: needs-review`.** PII present, pending redaction or exclusion. Blocks merge.
 
 ### What counts as PII
 
-- Individual names of customer employees (unless explicitly consented for naming — rare)
+- Individual names of customer employees, unless explicitly consented for naming (rare)
 - Email addresses of customer employees
 - Phone numbers
 - Account identifiers that resolve to individuals
@@ -87,7 +87,7 @@ When in doubt: synthesize without identifying content, and keep the raw recordin
 
 ## 5. Deletion
 
-- **Never `git rm` + force-push** — history preservation is the audit trail.
+- **Never `git rm` plus force-push.** History preservation is the audit trail.
 - **When a customer revokes consent**: remove the synthesized source file via PR (normal commit); optionally cite BFG-repo-cleaner for full history purge if contractually required. Coordinate with legal.
 - **When a source is factually wrong**: don't delete. Add a `correction.md` alongside it that cites the correction, and mark the original with a frontmatter flag. History preserves both.
 
@@ -140,6 +140,6 @@ When in doubt, keep it out of the repo and reference externally.
 
 ## Related
 
-- [`README.md`](README.md) — directory layout and citation formats
-- [`../schema/authoring-contract.md`](../schema/authoring-contract.md) — citation requirements
-- [`../ingestion/drift-detection.md`](../ingestion/drift-detection.md) — drift handling
+- [`README.md`](README.md), directory layout and citation formats
+- [`../schema/authoring-contract.md`](../schema/authoring-contract.md), citation requirements
+- [`../ingestion/drift-detection.md`](../ingestion/drift-detection.md), drift handling

@@ -1,7 +1,7 @@
 ---
 type: elevator-pitch
 title: Elevator pitches
-description: Scenario-specific pitch variants — cold email, first call, demo lead-in, event intro.
+description: Scenario-specific pitch variants. Cold email, first call, demo lead-in, event intro.
 owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
@@ -48,31 +48,31 @@ confidence: medium
 
 > `<2 sentence framing before the demo>`
 >
-> Sets context for what the buyer is about to see. Establishes the frame, not the pitch.
+> Sets context for what the buyer is about to see. Establishes the frame so the demo lands as evidence, not a sales pitch.
 
 ## Event intro  {motion: sales-assisted}
 
-> `<1 sentence for booth / panel / speaker intro>`
+> `<1 sentence for booth, panel, or speaker intro>`
 
 ## Self-serve landing page  {motion: plg}
 
-> `<hero copy: 1 headline + 1 sub-headline>`
+> `<hero copy: 1 headline plus 1 sub-headline>`
 >
-> Product-first. Claim + concrete benefit. CTA to self-signup.
+> Product-first hero copy that pairs the claim with a concrete benefit and a CTA to self-signup.
 
 ## Enterprise board-deck narrative  {motion: enterprise, segment: enterprise}
 
-> `<strategic pitch: 3-5 sentences>`
+> `<strategic pitch: 3 to 5 sentences>`
 >
-> Category-level. ROI-framed. Positioned as infrastructure, not as a tool.
+> Category-level framing, ROI-anchored, positioned as infrastructure rather than a tool.
 
 ## What's tested vs. drafted
 
-Each pitch variant above should carry a `[source: ...]` citation pointing to where it was tested — e.g., a sequence in HubSpot, a Gong call pattern, an event that used it, or A/B test results. Untested pitches that live here get a `confidence: low` flag and a PR to validate.
+Each pitch variant above should carry a `[source: ...]` citation pointing to where it was tested (a sequence in HubSpot, a Gong call pattern, an event that used it, A/B test results). Untested pitches get a `confidence: low` flag and a PR to validate.
 
 ## Related
 
-- [`value-props.md`](value-props.md) — the core claims these pitches reference
-- [`category-narrative.md`](category-narrative.md) — the frame these pitches operate inside
-- [`../../functions/sales/`](../../functions/sales/) (Phase 1) — sales plays that deploy these pitches
-- [`../../functions/marketing/`](../../functions/marketing/) (Phase 2) — marketing campaigns that deploy these
+- [`value-props.md`](value-props.md), the core claims these pitches reference
+- [`category-narrative.md`](category-narrative.md), the frame these pitches operate inside
+- [`../../functions/sales/`](../../functions/sales/) (Phase 1), sales plays that deploy these pitches
+- [`../../functions/FUTURE-FUNCTIONS.md`](../../functions/FUTURE-FUNCTIONS.md), where the marketing function (campaigns that deploy these pitches) is described.

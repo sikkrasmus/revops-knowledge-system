@@ -1,7 +1,7 @@
 ---
 type: win-loss-pattern
 title: Cross-competitor win-loss patterns
-description: Observed patterns from closed deals — what correlates with wins and losses.
+description: Observed patterns from closed deals. What correlates with wins and losses.
 owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
@@ -34,47 +34,47 @@ confidence: medium
 
 ## Patterns that correlate with wins
 
-### Pattern W1 — multi-product evaluation
+### Pattern W1, multi-product evaluation
 
-When the buyer is evaluating for multi-product / multi-team rollout, we win at a 1.6x higher rate than single-team evaluations [source: sources/internal-docs/README.md]. The pattern holds across competitors.
+When the buyer is evaluating for multi-product or multi-team rollout, we win at a 1.6x higher rate than single-team evaluations [source: sources/internal-docs/README.md]. The pattern holds across competitors.
 
-Implication: qualify for multi-team scope early; if single-team, set expectations about the landing narrative.
+Implication: qualify for multi-team scope early. If single-team, set expectations about the landing narrative.
 
-### Pattern W2 — new-hire champion in first 90 days
+### Pattern W2, new-hire champion in first 90 days
 
 Deals where the champion is net-new to their role (<90 days) close at 1.4x the baseline rate. New-role champions prioritize tooling decisions as a quick win.
 
-Implication: track hiring signals in target accounts; time outbound to new-hire windows.
+Implication: track hiring signals in target accounts. Time outbound to new-hire windows.
 
-### Pattern W3 — second-generation RevOps investment
+### Pattern W3, second-generation RevOps investment
 
-Companies that have had at least one previous RevOps tooling investment that didn't stick close at a higher rate — they've learned what to look for. "We've been burned before" is a buying signal, not a disqualifier.
+Companies that have had at least one previous RevOps tooling investment that did not stick close at a higher rate. They have learned what to look for, so "we've been burned before" reads as a buying signal rather than a disqualifier.
 
 Implication: lead with risk-mitigation and incremental-trust language with these buyers.
 
 ## Patterns that correlate with losses
 
-### Pattern L1 — single-stakeholder evaluation
+### Pattern L1, single-stakeholder evaluation
 
 Deals where only one person is involved from the buyer side close at half the baseline rate and churn at twice the rate post-close.
 
-Implication: push to expand the committee in discovery; disqualify deals that stay single-stakeholder through evaluation.
+Implication: push to expand the committee in discovery. Disqualify deals that stay single-stakeholder through evaluation.
 
-### Pattern L2 — pricing discussion in first meeting
+### Pattern L2, pricing discussion in first meeting
 
-Deals where the buyer anchors on pricing in the first call close at 0.7x the baseline rate. Pricing-first buyers are usually shopping, not buying.
+Deals where the buyer anchors on pricing in the first call close at 0.7x the baseline rate. Pricing-first buyers are usually shopping rather than buying.
 
-Implication: redirect pricing conversations to discovery in meeting one; reschedule a later call for commercial.
+Implication: redirect pricing conversations to discovery in meeting one. Reschedule a later call for commercial.
 
-### Pattern L3 — procurement involvement before technical fit confirmed
+### Pattern L3, procurement involvement before technical fit confirmed
 
 Deals where procurement enters before the technical buyer confirms fit stall or lose at high rates.
 
-Implication: flag when procurement contacts us; route to AE to slow-walk and re-engage the technical buyer.
+Implication: flag when procurement contacts us. Route to AE to slow-walk and re-engage the technical buyer.
 
 ## Competitor-independent wins
 
-When we lose head-to-head but don't lose to a specific competitor ("evaluated, chose to build internally" / "deprioritized the initiative"):
+When we lose head-to-head but do not lose to a specific competitor ("evaluated, chose to build internally" or "deprioritized the initiative"):
 
 - Most common cause: business case not made strong enough for the CFO.
 - Counter: invest more in ROI models and reference stories with named financial outcomes.
@@ -85,6 +85,6 @@ Patterns extracted from rolling 12-month closed-deal analysis. Re-verified quart
 
 ## Related
 
-- [`competitors/`](competitors/) — per-competitor profiles
-- [`../positioning/`](../positioning/) — positioning we use against these patterns
-- [`../../functions/sales/`](../../functions/sales/) (Phase 1) — playbooks informed by these patterns
+- [`competitors/`](competitors/), per-competitor profiles
+- [`../positioning/`](../positioning/), positioning we use against these patterns
+- [`../../functions/sales/`](../../functions/sales/) (Phase 1), playbooks informed by these patterns

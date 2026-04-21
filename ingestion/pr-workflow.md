@@ -3,12 +3,12 @@ type: meta
 title: PR Workflow
 description: Graduated trust model, reviewer routing, and PR etiquette for every change in the corpus.
 owner: rasmus@latentflows.com
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-21
 ---
 
 # PR Workflow
 
-The canonical HITL governance pattern. Graduated trust (from [`../PRINCIPLES.md`](../PRINCIPLES.md) §6), reviewer routing, and PR etiquette. Every change — human, LLM, or automated — flows through this.
+The canonical human-in-the-loop governance pattern. Graduated trust (from [`../PRINCIPLES.md`](../PRINCIPLES.md) §6), reviewer routing, and PR etiquette. Every change (human, LLM, or automated) flows through this.
 
 ---
 
@@ -18,11 +18,11 @@ Trust is earned in stages. At each stage, the default behavior for a change clas
 
 | Stage | Timeline | What auto-merges |
 |---|---|---|
-| **Stage 1 — Gated** | Months 0-3 | Nothing. 100% PR. Build human confidence in the corpus and in the LLM's change quality. |
-| **Stage 2 — Routine autonomy** | Months 3-6 | Cross-reference updates, backlinks, format fixes, single-canonical-source factual updates where the source is authoritative (e.g., updated price list → pricing page with matching citation). |
-| **Stage 3 — Pattern autonomy** | Months 6+ | Multi-source consensus changes (sources agree), pattern-matched changes (similar change accepted N times), high-trust contributor changes. |
+| **Stage 1, gated** | Months 0 to 3 | Nothing. 100% PR. Build human confidence in the corpus and in the LLM's change quality. |
+| **Stage 2, routine autonomy** | Months 3 to 6 | Cross-reference updates, backlinks, format fixes, single-canonical-source factual updates where the source is authoritative (an updated price list propagating to the pricing page with matching citation, for example). |
+| **Stage 3, pattern autonomy** | Months 6+ | Multi-source consensus changes (sources agree), pattern-matched changes (similar change accepted N times), high-trust contributor changes. |
 
-**Phase 0 / v1 is Stage 1.** Auto-merge is not wired into CI. The [`auto-merge-rules.yaml`](auto-merge-rules.yaml) file ships as concept for operators who move to Stage 2 later.
+**v1 is Stage 1.** Auto-merge is not wired into CI. The [`auto-merge-rules.yaml`](auto-merge-rules.yaml) file ships as concept for operators who move to Stage 2 later.
 
 ## 2. Content-type dimension
 
@@ -31,10 +31,10 @@ Orthogonal to maturity stage. Some content types always PR, regardless of stage.
 ### Always PR (never auto-merge, at any stage)
 
 - ICP definition changes (`shared/icp/`)
-- Pricing & discounting (`shared/pricing/`)
-- Product & packaging changes (`shared/product-and-packaging/`)
-- Legal / compliance posture (`functions/finance-legal/`, Phase 2)
-- Positioning & messaging strategic changes (`shared/positioning/`)
+- Pricing and discounting (`shared/pricing/`)
+- Product and packaging changes (`shared/product-and-packaging/`)
+- Legal and compliance posture (`functions/finance-legal/` in a fork that fills it)
+- Positioning and messaging strategic changes (`shared/positioning/`)
 - Competitor counter-positioning strategic changes (`shared/competitive-intel/counters` in sales battlecards)
 - New page creation (anywhere)
 - Page deletion (anywhere)
@@ -59,6 +59,8 @@ Review ownership follows directory. Each directory has a designated owner and co
 
 ### Default routing
 
+The example routing below maps to this repo's worked instance (B2B SaaS sales-assisted, $10 to $100M ARR). The seven shared-spine rows belong to any fork that lands on the same spine. The function rows depend on which functions a fork fills. Adjust to fit.
+
 | Directory | Primary reviewer | Required co-reviewers on substantive changes |
 |---|---|---|
 | `shared/icp/` | RevOps lead | Sales lead, Marketing lead |
@@ -69,15 +71,11 @@ Review ownership follows directory. Each directory has a designated owner and co
 | `shared/competitive-intel/` | Marketing lead | Sales lead, Product lead |
 | `shared/data-definitions/` | RevOps lead | Finance lead |
 | `functions/sales/` | Sales lead | RevOps lead |
-| `functions/marketing/` | Marketing lead | — |
-| `functions/customer-success/` | CS lead | Sales lead |
-| `functions/support/` | Support lead | — |
-| `functions/revops/` | RevOps lead | Finance lead |
-| `functions/finance-legal/` | Finance lead | Legal |
+| `functions/<other>/` (when filled) | Function lead for that domain | Per the function's spine touchpoints |
 | `sources/` | RevOps lead | Legal on PII-sensitive |
-| `ingestion/` | RevOps lead | — |
-| `schema/` | RevOps lead | — |
-| Root docs (`README.md`, `CLAUDE.md`, etc.) | Repo owner | — |
+| `ingestion/` | RevOps lead | None |
+| `schema/` | RevOps lead | None |
+| Root docs (`README.md`, `CLAUDE.md`, `PRINCIPLES.md`) | Repo owner | None |
 
 ### Cross-directory changes
 
@@ -85,9 +83,9 @@ A PR touching multiple directories requires all affected primary reviewers to ap
 
 ### Escalation
 
-- **Strategic content changes** (always-PR list above) — when reviewers disagree, escalate to the content's executive sponsor (CRO for sales-adjacent, CMO for marketing-adjacent, etc.).
-- **Source of truth conflicts** — when two sources contradict and reviewers can't resolve, the function that owns the most downstream consumers decides.
-- **Lint-exception requests** — when an automated check blocks a change that a human believes should merge, the change request goes to RevOps lead.
+- **Strategic content changes** (always-PR list above). When reviewers disagree, escalate to the content's executive sponsor (CRO for sales-adjacent, CMO for marketing-adjacent, and so on).
+- **Source of truth conflicts.** When two sources contradict and reviewers can't resolve, the function that owns the most downstream consumers decides.
+- **Lint-exception requests.** When an automated check blocks a change that a human believes should merge, the change request goes to RevOps lead.
 
 ## 4. Conflict-resolution policy
 
@@ -104,22 +102,22 @@ When a PR surfaces a contradiction (new source conflicts with existing page or w
 Every LLM-authored PR includes:
 
 - **Clear title** following [`artifact-commit/commit-conventions.md`](artifact-commit/commit-conventions.md).
-- **Summary** — what changed, why, which function(s) are affected.
-- **Sources cited** — every factual claim in the PR description links to its source.
-- **Affected consumers** — use `ci graph` to enumerate pages that cite the changed page.
-- **Confidence score** — `low` / `medium` / `high` (heuristic in v1).
-- **Lint status** — attach `ci verify` output.
-- **Change class** — map to [`auto-merge-rules.yaml`](auto-merge-rules.yaml) categories so reviewer knows what gate applies.
+- **Summary.** What changed, why, which functions are affected.
+- **Sources cited.** Every factual claim in the PR description links to its source.
+- **Affected consumers.** Use `ci graph` to enumerate pages that cite the changed page.
+- **Confidence score.** `low`, `medium`, or `high`. Heuristic in v1.
+- **Lint status.** Attach `ci verify` output.
+- **Change class** mapped to [`auto-merge-rules.yaml`](auto-merge-rules.yaml) categories so the reviewer knows what gate applies.
 
 Use the template in [`artifact-commit/pr-template.md`](artifact-commit/pr-template.md).
 
 ## 6. Human-authored PRs
 
-Humans authoring directly follow the same contract — frontmatter, citations, review routing. The exception: a human making an obvious local fix (typo, broken link) can self-merge if the change is in their directory of ownership and the fix is trivially verifiable.
+Humans authoring directly follow the same contract: frontmatter, citations, review routing. The exception: a human making an obvious local fix (typo, broken link) can self-merge if the change is in their directory of ownership and the fix is trivially verifiable.
 
 ## 7. Rollback
 
-Every change — auto-merged or PR'd — is `git revert`-able. The revert itself is a PR:
+Every change, auto-merged or PR'd, is `git revert`-able. The revert itself is a PR.
 
 - Reverts of strategic content require the original PR's reviewers to approve.
 - Reverts of routine auto-merges can be expedited.
@@ -131,11 +129,11 @@ Separate from per-PR review:
 
 - **Weekly**: `ci stale` report reviewed by RevOps lead. Triage: needs-reverify vs. needs-reconciliation vs. acceptable staleness.
 - **Monthly**: sample audit of auto-merged PRs from the past month. Confirm quality hasn't degraded.
-- **Quarterly**: review `auto-merge-rules.yaml` — which classes move up a stage, which demote, which new ones.
+- **Quarterly**: review `auto-merge-rules.yaml`. Which classes move up a stage, which demote, which new ones get added.
 
 ## Related
 
-- [`../schema/authoring-contract.md`](../schema/authoring-contract.md) — editing rules
-- [`auto-merge-rules.yaml`](auto-merge-rules.yaml) — change-class matrix
-- [`drift-detection.md`](drift-detection.md) — how drift surfaces into PRs
-- [`artifact-commit/`](artifact-commit/) — v1 ingestion path
+- [`../schema/authoring-contract.md`](../schema/authoring-contract.md), editing rules
+- [`auto-merge-rules.yaml`](auto-merge-rules.yaml), change-class matrix
+- [`drift-detection.md`](drift-detection.md), how drift surfaces into PRs
+- [`artifact-commit/`](artifact-commit/), v1 ingestion path

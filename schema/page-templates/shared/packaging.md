@@ -45,9 +45,9 @@ Links: see [`shared/product-and-packaging/skus/`](./skus/).
 
 ## Usage limits
 
-- `<limit 1 — e.g., 10K API calls/month>`
-- `<limit 2 — e.g., 5 seats>`
-- `<limit 3 — e.g., 30-day data retention>`
+- `<limit 1, e.g., 10K API calls/month>`
+- `<limit 2, e.g., 5 seats>`
+- `<limit 3, e.g., 30-day data retention>`
 
 ## Who it's for
 
@@ -73,9 +73,9 @@ Links: see [`shared/product-and-packaging/skus/`](./skus/).
 
 ## Related
 
-- [`shared/pricing/`](../pricing/) — pricing for this edition
-- [`shared/product-and-packaging/skus/`](./skus/) — SKU specs
+- [`shared/pricing/`](../pricing/), pricing for this edition
+- [`shared/product-and-packaging/skus/`](./skus/), SKU specs
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

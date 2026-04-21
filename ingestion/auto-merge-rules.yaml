@@ -1,4 +1,4 @@
-# Auto-merge rules — concept + example spec.
+# Auto-merge rules. Concept and example spec.
 #
 # NOT wired into CI enforcement in v1. Stage 1 = 100% PR (see
 # pr-workflow.md § Graduated trust). This file exists to illustrate the
@@ -113,7 +113,7 @@ change_classes:
       system, signed contract) is the obvious source of truth and the
       diff matches the source exactly.
     rationale: |
-      No judgment — the source is unambiguous. Example: billing system
+      No judgment, the source is unambiguous. Example: billing system
       updated a SKU price; matching page update.
     requires:
       - source is classified "authoritative" (signed-dated / system-of-record)
@@ -184,7 +184,7 @@ change_classes:
 
   page_rename:
     description: Slug change
-    rationale: Same as delete — breaks inbound links. Always PR.
+    rationale: Same as delete. Breaks inbound links. Always PR.
 
   schema_change:
     description: Any change to schema/

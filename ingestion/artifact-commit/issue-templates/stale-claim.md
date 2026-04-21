@@ -1,12 +1,12 @@
 ---
 type: meta
-title: Issue template — stale claim
+title: Issue template, stale claim
 description: Use when a specific claim in a page appears out-of-date but the corrected value isn't yet clear.
 owner: rasmus@latentflows.com
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-21
 ---
 
-# Issue template — stale claim
+# Issue template, stale claim
 
 Copy into a new issue.
 

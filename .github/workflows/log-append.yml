@@ -9,7 +9,9 @@ name: Append to log.md on PR merge
 # the appended log.md change would trigger verify, which would re-run
 # the full suite for a single-line append).
 #
-# See SPEC §8 for mechanics rationale.
+# Rationale and the parallel [bootstrap] sentinel are documented in
+# ingestion/artifact-commit/commit-conventions.md (§ Automation-generated
+# commits).
 
 on:
   pull_request:
@@ -55,7 +57,7 @@ jobs:
           CHANGED:   ${{ steps.paths.outputs.changed }}
         run: |
           DATE=$(date -u +%Y-%m-%d)
-          # Truncate PR title to 80 chars per SPEC.
+          # Truncate PR title to 80 chars per commit-conventions.md.
           TRUNC_TITLE=$(printf '%s' "$PR_TITLE" | cut -c1-80)
           ENTRY="## [${DATE}] pr-merged | #${PR_NUMBER} ${TRUNC_TITLE} | ${CHANGED}"
           printf '\n%s\n' "$ENTRY" >> log.md
@@ -67,7 +69,7 @@ jobs:
             echo "No changes to commit."
             exit 0
           fi
-          git commit -m "chore: append pr-merged entry to log.md [skip ci]
-
-PR #${{ github.event.pull_request.number }} merged."
+          git commit \
+            -m "chore: append pr-merged entry to log.md [skip ci]" \
+            -m "PR #${{ github.event.pull_request.number }} merged."
           git push origin main

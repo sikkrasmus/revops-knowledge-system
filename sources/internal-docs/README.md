@@ -12,7 +12,7 @@ Synthesized snapshots of Confluence, Notion, or Google Drive pages. Original pag
 
 ## Why snapshots, not live sync
 
-Per principle 9 in [`../../PRINCIPLES.md`](../../PRINCIPLES.md): the wiki is a reconciled artifact, not a replica. Re-syncing would overwrite synthesis (a wiki page often combines one Confluence page + three calls + a deal review). Snapshots capture the state of the source at ingestion time; drift is detected and surfaces as a flag, not an overwrite.
+Per principle 9 in [`../../PRINCIPLES.md`](../../PRINCIPLES.md): the wiki is a reconciled artifact, not a replica. Re-syncing would overwrite synthesis. A wiki page often combines one Confluence page plus three calls plus a deal review. Snapshots capture the state of the source at ingestion time. Drift is detected and surfaces as a flag, not an overwrite.
 
 ## What to include
 
@@ -60,6 +60,6 @@ consumers:
 
 See [`../../ingestion/drift-detection.md`](../../ingestion/drift-detection.md).
 
-## Phase 0 content
+## What ships here
 
-This README serves as the placeholder source referenced by shared spine pages in Phase 0. Your fork populates this directory with real snapshots.
+This README serves as the placeholder source referenced by shared-spine example pages in this repo. A fork populates this directory with real snapshots.

@@ -1,7 +1,7 @@
 ---
 type: packaging
-title: Editions — Starter / Growth / Enterprise
-description: Edition definitions — SKU inclusions, usage limits, segment targeting.
+title: Editions, Starter / Growth / Enterprise
+description: Edition definitions. SKU inclusions, usage limits, segment targeting.
 owner: rasmus@latentflows.com
 reviewers:
   - product-lead
@@ -30,28 +30,28 @@ has_contradiction: null
 confidence: high
 ---
 
-# Editions — Starter / Growth / Enterprise
+# Editions, Starter / Growth / Enterprise
 
 > Phase 0 abstract example.
 
 ## Overview
 
-Three editions. Starter is the self-serve / PLG entry. Growth is sales-assisted mid-market. Enterprise is MSA-anchored custom.
+Three editions. Starter targets self-serve and PLG entry. Growth targets sales-assisted mid-market. Enterprise targets MSA-anchored custom deals.
 
 ## Edition: Starter
 
 - **Target**: SMB, self-serve, single-team usage.
 - **SKUs included**: Core (with usage limits), Community support.
 - **SKUs not included**: Advanced analytics, SSO/SAML, audit logs, enterprise integrations.
-- **Usage limits**: `<e.g., 10 seats, 10K events/month, 30-day data retention>`.
+- **Usage limits**: `<e.g., 10 seats, 10K events per month, 30-day data retention>`.
 - **Pricing model**: Monthly or annual self-serve. See [`../pricing/`](../pricing/).
 
 ## Edition: Growth
 
 - **Target**: Mid-market, sales-assisted.
 - **SKUs included**: Core (higher limits), Advanced analytics, Basic integrations.
-- **Added limits lift**: `<e.g., up to 100 seats, 1M events/month, 12-month data retention>`.
-- **Pricing model**: Annual contract, ACV typical $15-80K. Sales-assisted onboarding.
+- **Added limits lift**: `<e.g., up to 100 seats, 1M events per month, 12-month data retention>`.
+- **Pricing model**: Annual contract, ACV typical $15 to $80K. Sales-assisted onboarding.
 
 ## Edition: Enterprise
 
@@ -62,15 +62,15 @@ Three editions. Starter is the self-serve / PLG entry. Growth is sales-assisted 
 
 ## Upgrade paths
 
-- **Starter → Growth**: typical triggers — seat count exceeded, integration request that Starter can't fulfill, user activity suggesting professional use case.
-- **Growth → Enterprise**: typical triggers — multi-entity / multi-region needs, SSO/SAML requirement, audit log / compliance requirement, usage volume exceeding Growth limits.
+- **Starter to Growth.** Typical triggers: seat count exceeded, integration request that Starter cannot fulfill, user activity suggesting professional use case.
+- **Growth to Enterprise.** Typical triggers: multi-entity or multi-region needs, SSO/SAML requirement, audit log or compliance requirement, usage volume exceeding Growth limits.
 
 ## Edition vs. add-on decisions
 
-When a new capability ships: does it go in an existing edition (which one), become an add-on, or require a new edition? The decision rubric lives in [`add-ons.md`](add-ons.md). The default: start as an add-on to the highest-fit edition; graduate to edition-included when attach rate crosses a threshold.
+When a new capability ships: does it go in an existing edition (which one), become an add-on, or require a new edition? The decision rubric lives in [`add-ons.md`](add-ons.md). Default: start as an add-on to the highest-fit edition. Graduate to edition-included when attach rate crosses a threshold.
 
 ## Related
 
-- [`skus/`](skus/) — SKU-level specs
-- [`add-ons.md`](add-ons.md) — add-on structure
-- [`../pricing/`](../pricing/) — price points by edition
+- [`skus/`](skus/), SKU-level specs
+- [`add-ons.md`](add-ons.md), add-on structure
+- [`../pricing/`](../pricing/), price points by edition

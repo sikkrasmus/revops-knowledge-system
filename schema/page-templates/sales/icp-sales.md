@@ -1,6 +1,6 @@
 ---
 type: icp
-title: "<Sales-lens ICP view — tier / segment label>"
+title: "<Sales-lens ICP view, tier / segment label>"
 description: "<one-line summary of the sales qualification lens on top of the canonical shared ICP, ends with period>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -24,10 +24,10 @@ has_contradiction: null
 confidence: medium
 ---
 
-# <Sales-lens ICP view — tier / segment label>
+# <Sales-lens ICP view, tier / segment label>
 
 > Template for a sales-lens ICP view. Replace frontmatter values and placeholder content; remove this blockquote.
-> The canonical ICP definition lives in [`../../../shared/icp/`](../../../shared/icp/). This template is for a Sales-function adaptation that surfaces qualification-ready signals — firmographics, technographics, triggers, and negative filters — in the form an AE consumes them. Default `verified_until` to 90 days; qualification signals stale fast.
+> The canonical ICP definition lives in [`../../../shared/icp/`](../../../shared/icp/). This template is for a Sales-function adaptation that surfaces qualification-ready signals (firmographics, technographics, triggers, negative filters) in the form an AE consumes them. Default `verified_until` to 90 days. Qualification signals stale fast.
 > Any ICP definitional change must PR through `shared/icp/` first; this page cites it.
 
 ## Canonical reference
@@ -45,8 +45,8 @@ Hard gates. If any miss, the account is out of scope for this tier.
 
 ## Technographics that unlock engagement
 
-- **Core CRM**: `<e.g., Salesforce, HubSpot>` — confirms discovery talks can be concrete
-- **Data warehouse**: `<e.g., Snowflake, BigQuery>` — confirms integration story holds
+- **Core CRM**: `<e.g., Salesforce, HubSpot>`. Confirms discovery talks can be concrete.
+- **Data warehouse**: `<e.g., Snowflake, BigQuery>`. Confirms integration story holds.
 - **Adjacent stack signals**: `<tools our product tightly integrates with>`
 
 ## Triggers (active buying signals)
@@ -71,10 +71,10 @@ See [`../../../shared/icp/disqualifiers.md`](../../../shared/icp/disqualifiers.m
 
 The 4-6 questions that let an AE confirm tier fit on the first call.
 
-1. `<question>` — signals `<fit attribute>`
-2. `<question>` — signals `<fit attribute>`
-3. `<question>` — signals `<fit attribute>`
-4. `<question>` — signals `<fit attribute>`
+1. `<question>`, signals `<fit attribute>`
+2. `<question>`, signals `<fit attribute>`
+3. `<question>`, signals `<fit attribute>`
+4. `<question>`, signals `<fit attribute>`
 
 ## Segment variants
 
@@ -88,11 +88,11 @@ The 4-6 questions that let an AE confirm tier fit on the first call.
 
 ## Related
 
-- [`../../../shared/icp/`](../../../shared/icp/) — canonical ICP tiers
-- [`../../../shared/personas/`](../../../shared/personas/) — buying-committee composition per tier
-- [`../../../functions/sales/frameworks/qualification.md`](../../../functions/sales/frameworks/qualification.md) — the qualification framework that consumes this view
-- [`../../../functions/sales/methodology/`](../../../functions/sales/methodology/) — methodology hooks into these signals
+- [`../../../shared/icp/`](../../../shared/icp/), canonical ICP tiers
+- [`../../../shared/personas/`](../../../shared/personas/), buying-committee composition per tier
+- [`../../../functions/sales/frameworks/qualification.md`](../../../functions/sales/frameworks/qualification.md), the qualification framework that consumes this view
+- [`../../../functions/sales/methodology/`](../../../functions/sales/methodology/), methodology hooks into these signals
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

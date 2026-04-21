@@ -35,47 +35,47 @@ Hard exclusions. A company that matches these is not an ICP, regardless of tier-
 
 ---
 
-## Stage / size
+## Stage and size
 
-- **Pre-product-market-fit** — typically under ~$5M ARR with customer concentration risk. The product isn't valuable yet.
-- **Declining revenue** — companies losing net revenue and cutting budget. We'll be cut.
+- **Pre-product-market-fit.** Typically under ~$5M ARR with customer concentration risk. The product is not valuable enough to them yet.
+- **Declining revenue.** Companies losing net revenue and cutting budget. We will be cut.
 
-## Regulatory / compliance
+## Regulatory and compliance
 
-- **Industries we lack compliance posture for** — `<e.g., fully-regulated banks, defense contractors, healthcare providers handling PHI>` when we can't meet the required controls.
-- **Geographies we can't serve** — `<data residency requirements we don't meet>`.
-- **Sanctions exposure** — OFAC-listed entities or ownership; referenced in [`../../functions/finance-legal/`](../../functions/finance-legal/) (Phase 2).
+- **Industries we lack compliance posture for.** `<e.g., fully-regulated banks, defense contractors, healthcare providers handling PHI>` when we cannot meet the required controls.
+- **Geographies we cannot serve.** `<data residency requirements we do not meet>`.
+- **Sanctions exposure**, OFAC-listed entities or ownership. The finance and legal function (described in [`../../functions/FUTURE-FUNCTIONS.md`](../../functions/FUTURE-FUNCTIONS.md)) owns the screening policy when filled.
 
 ## Commercial
 
-- **Active procurement freeze** — won't close.
-- **Known-bad-payer** — referenced in finance's unpaid-invoice list (Phase 2).
-- **Litigation against us or a peer in our category** — legal review always.
+- **Active procurement freeze.** Will not close.
+- **Known-bad-payer.** Referenced in finance's unpaid-invoice list.
+- **Litigation against us or a peer in our category.** Always routes to legal review.
 
 ## Product fit
 
-- **Competing product deeply embedded with a multi-year renewal just signed** — displacement cycle too long.
-- **Required workflow we don't support and won't add** — specific product gap that kills the use case.
+- **Competing product deeply embedded with a multi-year renewal just signed.** Displacement cycle is too long.
+- **Required workflow we do not support and will not add.** A specific product gap kills the use case.
 
 ## Relational
 
-- **Relationship with an active customer that creates a conflict** — CS surfaces this via the account graph.
+- **Relationship with an active customer that creates a conflict.** CS surfaces this via the account graph.
 
 ## How to use this list
 
-- **Marketing** — exclude disqualified accounts from targeting lists. Enforce at list-upload time.
-- **Sales outbound** — sequence tools should filter on disqualifier flags where possible. AE does a manual check before sequencing.
-- **Inbound qualification** — automatic disqualification of matching firmographic / domain signals; route to self-serve or politely decline.
-- **CS** — if a disqualified account self-serves in, surface for review rather than onboarding.
+- **Marketing.** Exclude disqualified accounts from targeting lists. Enforce at list-upload time.
+- **Sales outbound.** Sequence tools should filter on disqualifier flags where possible. AE does a manual check before sequencing.
+- **Inbound qualification.** Automatic disqualification of matching firmographic or domain signals. Route to self-serve or politely decline.
+- **CS.** If a disqualified account self-serves in, surface for review rather than onboarding.
 
 ## Sources
 
 Disqualifier inputs:
 
-- **Closed-lost analysis** [source: sources/internal-docs/README.md] — patterns where we lost and couldn't have won.
-- **Churn postmortems** — accounts that churned because they shouldn't have closed.
-- **Legal / compliance constraints** — from the legal function.
-- **Finance constraints** — from the finance function.
+- **Closed-lost analysis** [source: sources/internal-docs/README.md]. Patterns where we lost and could not have won.
+- **Churn postmortems.** Accounts that churned because they should not have closed.
+- **Legal and compliance constraints.** From the legal function.
+- **Finance constraints.** From the finance function.
 
 ## Review cadence
 

@@ -34,30 +34,30 @@ confidence: high
 
 | Discount range | Approver | Required conditions |
 |---|---|---|
-| 0–10% | AE | Standard — no special justification |
-| 10–18% | Deal Desk | Justification note + comparable-deal citation |
-| 18–25% | VP Sales / RevOps Lead | Strategic exception conditions (see below) |
-| >25% | CFO | Multi-year + reference commitment + strategic logo |
+| 0 to 10% | AE | Standard. No special justification. |
+| 10 to 18% | Deal Desk | Justification note plus comparable-deal citation |
+| 18 to 25% | VP Sales / RevOps Lead | Strategic exception conditions (see below) |
+| >25% | CFO | Multi-year, plus reference commitment, plus strategic logo |
 
-## Strategic exception band (18–25%)
+## Strategic exception band (18 to 25%)
 
 All four conditions must be met:
 
-- **3-year term**
-- **Multi-product bundle** (two or more SKUs)
-- **Reference-customer commitment** — customer agrees to a reference call within 90 days
-- **Target-segment net-new logo** — matches Tier 1 firmographics, not already a customer or recent churn
+- **3-year term.**
+- **Multi-product bundle** (two or more SKUs).
+- **Reference-customer commitment.** Customer agrees to a reference call within 90 days.
+- **Target-segment net-new logo.** Matches Tier 1 firmographics, not already a customer or recent churn.
 
-Missing any condition → hold at 18% max. The pattern is the combination; no individual condition unlocks the exception band.
+Missing any condition holds the deal at 18% max. The pattern is the combination; no individual condition unlocks the exception band.
 
 ## Non-price concession tiers
 
-In lieu of or alongside discount — grant these against discount budget:
+Granted against discount budget, in lieu of or alongside a discount:
 
-- **3-year term commitment** — worth ~5% equivalent in effective discount
-- **Public reference / case study rights** — worth ~3% equivalent
-- **Multi-entity rollout** — worth 3-5% equivalent
-- **Design-partner program** — worth 5-10% equivalent if the partnership yields product input
+- **3-year term commitment.** Worth ~5% equivalent in effective discount.
+- **Public reference or case study rights.** Worth ~3% equivalent.
+- **Multi-entity rollout.** Worth 3 to 5% equivalent.
+- **Design-partner program.** Worth 5 to 10% equivalent if the partnership yields product input.
 
 ## Observed pattern (sourced)
 
@@ -89,6 +89,6 @@ Any of:
 
 ## Related
 
-- [`price-book.md`](price-book.md) — the pricing this guardrails protect
-- [`../../functions/sales/`](../../functions/sales/) (Phase 1) — deal desk plays reference this
-- [`../../functions/finance-legal/`](../../functions/finance-legal/) (Phase 2) — revenue recognition impact
+- [`price-book.md`](price-book.md), the pricing these guardrails protect
+- [`../../functions/sales/`](../../functions/sales/) (Phase 1), deal desk plays reference this
+- [`../../functions/FUTURE-FUNCTIONS.md`](../../functions/FUTURE-FUNCTIONS.md), where the finance and legal function (revenue-recognition impact) is described.

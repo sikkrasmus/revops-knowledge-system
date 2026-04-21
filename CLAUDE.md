@@ -3,10 +3,14 @@ type: meta
 title: CLAUDE.md routing
 description: Top-level router for Claude Code / Cowork. Loaded at session start. Hand-written.
 owner: rasmus@latentflows.com
-last_reviewed: 2026-04-20
+last_reviewed: 2026-04-21
 ---
 
 # CLAUDE.md — Routing
+
+> [!NOTE]
+> This file is loaded automatically by Claude Code or Cowork at session start. It is a routing map for agents.
+> If you are a human reader, start with [`README.md`](README.md) instead.
 
 Top-level router for this repo. Loaded by Claude Code / Cowork on session start. Answers: for queries about X, look in Y.
 
@@ -15,6 +19,8 @@ This file is **hand-written and rarely changes** — updated only when repo stru
 ---
 
 ## Where each kind of knowledge lives
+
+The routing below maps to this repo's example instance: B2B SaaS sales-assisted, $10 to $100M ARR. A fork on a different shape (devtools or PLG, vertical SaaS, OSS-sponsored, multi-product) will adjust the spine list and re-route. See [`shared/README.md`](shared/README.md) for the framework-vs-instance distinction.
 
 | Query about | Look in |
 |---|---|
@@ -25,8 +31,8 @@ This file is **hand-written and rarely changes** — updated only when repo stru
 | Value props, category narrative, elevator pitches | [`shared/positioning/`](shared/positioning/) |
 | Competitors, win-loss patterns | [`shared/competitive-intel/`](shared/competitive-intel/) |
 | Metric definitions (ARR, NRR, CAC, MQL, SQL...) | [`shared/data-definitions/`](shared/data-definitions/) |
-| Sales methodology, playbooks, battlecards | [`functions/sales/`](functions/sales/) — *Phase 1, filled* |
-| Marketing, CS, Support, RevOps, Finance/Legal | [`functions/<function>/`](functions/) — *Phase 2, scaffolded* |
+| Sales methodology, playbooks, battlecards | [`functions/sales/`](functions/sales/) (filled) |
+| Marketing, CS, Support, RevOps, Finance/Legal | [`functions/FUTURE-FUNCTIONS.md`](functions/FUTURE-FUNCTIONS.md) (described, not yet filled) |
 | Source snapshots (calls, contracts, decks, internal docs) | [`sources/`](sources/) |
 | Live-system query references (HubSpot, Gong, Stripe) | [`ingestion/connectors/`](ingestion/connectors/) — *abstract pattern only in v1* |
 
@@ -51,16 +57,16 @@ When a user asks a question that needs context from this corpus:
 3. Fall back to native Read/Grep on `shared/` and `functions/` if `ci` isn't installed or the query doesn't fit the CLI's shape.
 4. Cite claim-level sources when summarizing. Every factual claim on a page comes with a `[source: ...]` citation — surface these.
 
-## Phase status
+## Status
 
-What's real today vs. scaffolded:
+What is real today vs. scaffolded:
 
-- **Built (Phase 0)**: `shared/` (all seven components), `schema/`, `consumption/`, `ingestion/` (governance + abstract connector pattern), `sources/` (scaffolds + policy).
-- **Built (Phase 1)**: `functions/sales/` filled end-to-end — methodology (MEDDPICC), seven deal-stage playbooks, three decision frameworks, four plays, battlecards scaffold with one worked example, objections scaffold with one worked example, tools-and-stack category map. Upgraded `schema/page-templates/sales/` to Phase 0 template standard. Shared-spine additions: VP Sales persona, enterprise-direct buying committee.
-- **Scaffolded, not filled**: `functions/marketing/` (Phase 2), `functions/customer-success/`, `functions/support/`, `functions/revops/`, `functions/finance-legal/` (Phase 2).
-- **Deferred**: real connector implementations (community). Conversation-harvest pipeline (Phase 3).
+- **Built**: `shared/` (all seven components), `schema/`, `consumption/`, `ingestion/` (governance plus abstract connector pattern), `sources/` (scaffolds plus policy).
+- **Filled function**: `functions/sales/` end to end. Methodology (MEDDPICC), seven deal-stage playbooks, three decision frameworks, four plays, battlecards scaffold with one worked example, objections scaffold with one worked example, tools-and-stack category map. Plus shared-spine additions surfaced by the fill: VP Sales persona, enterprise-direct buying committee.
+- **Described, not yet filled**: marketing, customer success, support, RevOps, finance/legal. See [`functions/FUTURE-FUNCTIONS.md`](functions/FUTURE-FUNCTIONS.md) for what each covers and the fill pattern.
+- **Deferred**: real connector implementations. Conversation-harvest pipeline.
 
-Full phase model: [`PHASES.md`](PHASES.md).
+Suggested rollout plan and the eight hard parts of running this in production: [`docs/03-IMPLEMENTATION.md`](docs/03-IMPLEMENTATION.md).
 
 ## Conventions
 
@@ -98,6 +104,3 @@ Full spec: [`schema/authoring-contract.md`](schema/authoring-contract.md). Highl
 - **Changes PR on day one.** Graduated trust stages expand auto-merge later. Some content types (ICP, pricing, packaging, legal, strategic positioning, new page, delete page) always PR.
 - **Don't rename or delete pages without an issue.** Page identity is load-bearing — breaking slugs breaks links across the corpus.
 
-## Contributing
-
-For pilot inquiries, see [`PILOT.md`](PILOT.md).

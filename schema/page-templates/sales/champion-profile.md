@@ -1,6 +1,6 @@
 ---
 type: champion-profile
-title: "<Champion profile — role or archetype>"
+title: "<Champion profile, role or archetype>"
 description: "<one-line summary of the champion archetype and when to identify or develop one, ends with period>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -24,10 +24,10 @@ has_contradiction: null
 confidence: medium
 ---
 
-# <Champion profile — role or archetype>
+# <Champion profile, role or archetype>
 
 > Template for champion archetype pages. Replace frontmatter values and placeholder content; remove this blockquote.
-> A champion is the person who sells for you when you're not in the room. MEDDPICC identifies three traits: power / influence, track record for change, and personal motivation. This page captures an archetype — not a named individual.
+> A champion is the person who sells for you when you're not in the room. MEDDPICC identifies three traits: power and influence, track record for change, and personal motivation. This page captures an archetype, not a named individual.
 
 ## Archetype in one paragraph
 
@@ -38,7 +38,7 @@ confidence: medium
 - **Title(s)**: `<e.g., Head of RevOps, VP Sales, Senior Deal Desk Manager>`
 - **Reports to**: `<typical manager>`
 - **Span of control**: `<direct reports, budget authority, scope of influence>`
-- **Where they sit in the buying committee**: `<influencer / decision-maker / economic buyer — typical role>`
+- **Where they sit in the buying committee**: `<influencer / decision-maker / economic buyer, plus typical role>`
 
 ## The three MEDDPICC champion traits
 
@@ -56,13 +56,13 @@ confidence: medium
 
 ## How to identify one
 
-- `<signal 1 — e.g., proactively shares internal stakeholder map>`
+- `<signal 1, e.g., proactively shares internal stakeholder map>`
 - `<signal 2>`
 - `<signal 3>`
 
 ## How to develop one
 
-- `<tactic 1 — e.g., co-create the business case>`
+- `<tactic 1, e.g., co-create the business case>`
 - `<tactic 2>`
 - `<tactic 3>`
 
@@ -70,18 +70,18 @@ confidence: medium
 
 Before relying on this archetype as the champion, one or more of these should hold:
 
-- They have defended our position in a meeting we weren't invited to — and you have evidence [source: ...].
+- They have defended our position in a meeting we weren't invited to, and you have evidence [source: ...].
 - They have pulled another stakeholder into a call without being asked.
 - They have shared an internal doc (budget template, architecture diagram, procurement process doc) they didn't have to share.
-- They have told you the name of the person most likely to block the deal — and what that person cares about.
+- They have told you the name of the person most likely to block the deal, and what that person cares about.
 
 If none hold, the relationship is pre-champion. Treat them as a coach, not a champion, in pipeline reviews.
 
 ## Common failure modes
 
-- **Influence without power** — they want this; they can't make it happen.
-- **Power without motivation** — they can make it happen; they have no reason to.
-- **Motivation without track record** — they want this and have the authority; nothing they've tried to change has shipped.
+- **Influence without power.** They want this. They can't make it happen.
+- **Power without motivation.** They can make it happen. They have no reason to.
+- **Motivation without track record.** They want this and have the authority. Nothing they've tried to change has shipped.
 
 ## Segment variants
 
@@ -95,10 +95,10 @@ If none hold, the relationship is pre-champion. Treat them as a coach, not a cha
 
 ## Related
 
-- [`../../shared/personas/`](../../shared/personas/) — the canonical persona this archetype is drawn from
-- [`../../shared/personas/buying-committees/`](../../shared/personas/buying-committees/) — committees where this archetype appears
-- [`../../functions/sales/methodology/`](../../functions/sales/methodology/) — MEDDPICC or chosen methodology this feeds
+- [`../../shared/personas/`](../../shared/personas/), the canonical persona this archetype is drawn from
+- [`../../shared/personas/buying-committees/`](../../shared/personas/buying-committees/), committees where this archetype appears
+- [`../../functions/sales/methodology/`](../../functions/sales/methodology/), MEDDPICC or chosen methodology this feeds
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

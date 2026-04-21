@@ -79,18 +79,18 @@ confidence: medium
 
 ### Enterprise  {segment: enterprise}
 
-<How they behave in enterprise — longer cycles, MSA negotiation, security review posture.>
+<How they behave in enterprise: longer cycles, MSA negotiation, security review posture.>
 
 ## Win-loss evidence
 
-- `<closed deal pattern 1 — e.g., "last 6 head-to-head mid-market deals: we won 4, lost 2. Wins had multi-product; losses had single-product." [source: ...]>`
+- `<closed deal pattern 1, e.g., "last 6 head-to-head mid-market deals: we won 4, lost 2. Wins had multi-product, losses had single-product." [source: ...]>`
 
 ## Related
 
-- [`shared/competitive-intel/win-loss-patterns.md`](./win-loss-patterns.md) — cross-competitor patterns
-- [`../../functions/sales/`](../../functions/sales/) — battlecards (Phase 1)
-- [`../positioning/`](../positioning/) — our positioning we're differentiating
+- [`shared/competitive-intel/win-loss-patterns.md`](./win-loss-patterns.md), cross-competitor patterns
+- [`../../functions/sales/`](../../functions/sales/), battlecards (Phase 1)
+- [`../positioning/`](../positioning/), our positioning we're differentiating
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

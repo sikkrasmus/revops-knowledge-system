@@ -1,7 +1,7 @@
 ---
 type: value-prop
 title: Core value propositions
-description: Value props by target segment / motion. Phase 0 abstract example.
+description: Value props by target segment and motion. Phase 0 abstract example.
 owner: rasmus@latentflows.com
 reviewers:
   - marketing-lead
@@ -52,27 +52,27 @@ Framing is product-first: "here's what it does, try it, upgrade when you need mo
 
 ### Mid-market sales-assisted  {motion: sales-assisted, segment: mid-market}
 
-Framing is outcome-first: "companies like yours save X hours per week / achieve Y conversion lift / collapse Z cycle time." Tie to specific metrics the Head of function (RevOps, Sales, Marketing, CS) cares about.
+Framing is outcome-first: "companies like yours save X hours per week, achieve Y conversion lift, or collapse Z cycle time." Tie to specific metrics the Head of function (RevOps, Sales, Marketing, CS) cares about.
 
 ### Enterprise  {motion: enterprise, segment: enterprise}
 
-Framing is strategic: "category-defining capability with a concrete ROI model over 3-5 years." Board-relevant language. Compliance and integration posture as table stakes.
+Framing is strategic: "category-defining capability with a concrete ROI model over 3 to 5 years." Board-relevant language, with compliance and integration posture as table stakes.
 
 ## What's true across all variants
 
 - **Credibility first.** Lead with proof, not promise.
 - **Specific over general.** Named customers (with permission), specific numbers, dated results.
-- **Their language.** The buyer doesn't call their problem "inefficient revenue ops" — they say "I lose 4 hours a week reconciling the forecast."
+- **Their language.** The buyer does not call their problem "inefficient revenue ops." They say "I lose 4 hours a week reconciling the forecast."
 
 ## What to never say
 
 - Generic "AI-powered" claims without specifying what the AI actually does.
-- "Single source of truth" as a feature — this is an outcome, not a claim.
+- "Single source of truth" framed as a feature. It is an outcome, not a claim.
 - "10x" anything without specific evidence.
 - Feature lists in the first sentence.
 
 ## Related
 
-- [`category-narrative.md`](category-narrative.md) — the broader frame
-- [`elevator-pitches.md`](elevator-pitches.md) — scenario-specific variants
-- [`../competitive-intel/`](../competitive-intel/) — what we differentiate against
+- [`category-narrative.md`](category-narrative.md), the broader frame
+- [`elevator-pitches.md`](elevator-pitches.md), scenario-specific variants
+- [`../competitive-intel/`](../competitive-intel/), what we differentiate against

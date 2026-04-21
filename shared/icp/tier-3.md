@@ -1,7 +1,7 @@
 ---
 type: icp
-title: Tier 3 ICP — opportunistic / self-serve-qualified
-description: Tier 3 ICP — minimal outbound, self-serve conversion when signals align.
+title: Tier 3 ICP, opportunistic and self-serve-qualified
+description: Tier 3 ICP. Minimal outbound, self-serve conversion when signals align.
 owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
@@ -26,18 +26,18 @@ has_contradiction: null
 confidence: medium
 ---
 
-# Tier 3 ICP — opportunistic / self-serve-qualified
+# Tier 3 ICP, opportunistic and self-serve-qualified
 
 > Phase 0 abstract example.
 
 ## Summary
 
-Tier 3 is the tail of the addressable market. We don't spend outbound effort here, but if a qualified-looking account self-serves in, it deserves appropriate treatment. CS is pooled or self-serve; expansion potential is low-to-moderate per account but real at volume.
+Tier 3 is the tail of the addressable market. We do not spend outbound effort here, but if a qualified-looking account self-serves in, it deserves appropriate treatment. CS is pooled or self-serve. Expansion potential is low to moderate per account but meaningful at volume.
 
 ## Firmographics
 
-- **ARR band**: `<e.g., $1-10M>`
-- **Employee count**: `<e.g., 20-80>`
+- **ARR band**: `<e.g., $1 to $10M>`
+- **Employee count**: `<e.g., 20 to 80>`
 - **Funding stage**: Seed+ with product-market fit signal
 
 ## Why Tier 3, not higher
@@ -65,4 +65,4 @@ Promotion signals to Tier 2:
 ## Related
 
 - [`tier-1.md`](tier-1.md), [`tier-2.md`](tier-2.md)
-- [`../pricing/`](../pricing/) — self-serve pricing
+- [`../pricing/`](../pricing/), self-serve pricing

@@ -8,19 +8,19 @@ last_reviewed: 2026-04-19
 
 # Connector Pattern
 
-Abstract pseudo-code template for any source-system connector. Phase 0 specifies this pattern; real implementations arrive via community contributions or the paid pilot.
+Abstract pseudo-code template for any source-system connector. Phase 0 specifies this pattern. Real implementations are built per-fork against the operator's specific source systems, or forked from community contributions.
 
 ---
 
 ## Five lifecycle stages
 
-Every connector implementation has exactly these stages:
+Every connector implementation has exactly these stages.
 
-1. **Auth** — obtain credentials and a valid session against the source system.
-2. **Extract** — query the source and retrieve data.
-3. **Synthesize** — transform extracted data into markdown + structured metadata.
-4. **Snapshot** — persist to `sources/` (Model A) or record a system-query citation (Model B).
-5. **PR** — open a pull request with proposed wiki changes.
+1. **Auth.** Obtain credentials and a valid session against the source system.
+2. **Extract.** Query the source and retrieve data.
+3. **Synthesize.** Transform extracted data into markdown plus structured metadata.
+4. **Snapshot.** Persist to `sources/` (in-repo) or record a system-query citation (live-system).
+5. **PR.** Open a pull request with proposed wiki changes.
 
 ## Abstract pseudo-code
 
@@ -64,7 +64,7 @@ def run(trigger):
         )
         citation = f"[source: {snapshot_path}]"
     else:
-        # Out-of-repo — cite as system-query with as_of timestamp
+        # Out-of-repo: cite as system-query with as_of timestamp
         citation = f"[source: <system>://{query.serialize()} as_of:{today}]"
 
     # Stage 5: PR
@@ -130,7 +130,7 @@ The `llm_synthesize` step depends on a prompt template per source type (call, do
 - **Redacts PII** per [`../../sources/POLICY.md`](../../sources/POLICY.md).
 - **Returns structured metadata** (title, one-line description, affected functions).
 
-Prompt templates are in-repo under `ingestion/artifact-commit/` (Phase 3+ — currently covered by the generalized prompt described in [`../artifact-commit/README.md`](../artifact-commit/README.md)). Versioned so changes can be rolled back.
+Prompt templates are in-repo under `ingestion/artifact-commit/`. v1 uses the generalized prompt described in [`../artifact-commit/README.md`](../artifact-commit/README.md). Per-source-type templates are aspirational. Whichever ships, prompts are versioned so changes can be rolled back.
 
 ## What the wiki-impact computation does
 
@@ -139,8 +139,8 @@ Prompt templates are in-repo under `ingestion/artifact-commit/` (Phase 3+ — cu
 Heuristic v1:
 
 - Grep the corpus for keywords in `metadata.title` and `metadata.keywords`.
-- Check `consumers:` frontmatter — pages in the affected function's directory.
-- Check graph — pages that cite similar sources.
+- Check `consumers:` frontmatter for pages in the affected function's directory.
+- Check graph for pages that cite similar sources.
 - Rank candidates; take top N.
 
 An LLM-based implementation (Phase 3) would use claim-level matching.
@@ -155,35 +155,35 @@ When a contradiction is found, the diff gets a `has_contradiction` frontmatter f
 
 Required per [`../artifact-commit/pr-template.md`](../artifact-commit/pr-template.md), but additionally for connector-generated PRs:
 
-- **Connector run ID** — traces back to the specific extract.
-- **Source system version / API version** used.
-- **Extraction query** — the exact query that retrieved the data.
-- **Synthesis prompt version** — for reproducibility.
-- **LLM confidence score per claim** — where available.
-- **Alternative synthesis** considered — if multiple plausible summaries, cite the one taken and note the alternative.
+- **Connector run ID.** Traces back to the specific extract.
+- **Source system version or API version** used.
+- **Extraction query.** The exact query that retrieved the data.
+- **Synthesis prompt version** for reproducibility.
+- **LLM confidence score per claim** where available.
+- **Alternative synthesis considered.** If multiple plausible summaries existed, cite the one taken and note the alternative.
 
 ## Error handling
 
 Connectors MUST handle:
 
-- **Auth failure** — don't retry silently with stale credentials; fail the run, alert operator.
-- **Rate limit** — respect source-side limits; back off, don't hammer.
-- **Partial extraction** — if extraction is incomplete, don't synthesize; fail the run, alert.
-- **Synthesis uncertainty** — if confidence is low, set `confidence: low` in the PR and flag in the description.
-- **PII detection failure** — if PII classifier is uncertain, set `pii_status: needs-review` and block merge until human confirms.
+- **Auth failure.** Don't retry silently with stale credentials. Fail the run, alert the operator.
+- **Rate limit.** Respect source-side limits. Back off, don't hammer.
+- **Partial extraction.** If extraction is incomplete, don't synthesize. Fail the run, alert.
+- **Synthesis uncertainty.** If confidence is low, set `confidence: low` in the PR and flag in the description.
+- **PII detection failure.** If the PII classifier is uncertain, set `pii_status: needs-review` and block merge until a human confirms.
 
 ## Observability
 
 Every connector run emits:
 
-- **Run ID** — UUID.
-- **Trigger** — webhook event or scheduled pull metadata.
-- **Timing** — start, end, duration per stage.
-- **Count** — records extracted, records summarized, pages affected.
-- **Outcome** — PR opened (number), no-change, or error.
+- **Run ID.** UUID.
+- **Trigger.** Webhook event or scheduled pull metadata.
+- **Timing.** Start, end, duration per stage.
+- **Count.** Records extracted, records summarized, pages affected.
+- **Outcome.** PR opened (number), no-change, or error.
 - **PII status** distribution.
 
-Logged to `log.md` via the ingest pipeline (not the merge hook — ingest appends independently on completion). Entry format:
+Logged to `log.md` via the ingest pipeline. The ingest pipeline appends independently on completion, separate from the merge hook. Entry format:
 
 ```
 ## [YYYY-MM-DD] ingest | <system>:<query-summary> | run-id:<uuid>, pr:<number-or-none>
@@ -191,18 +191,18 @@ Logged to `log.md` via the ingest pipeline (not the merge hook — ingest append
 
 ## What this pattern does NOT cover
 
-- **Source system schema migrations** — if the source system changes its API, the connector spec must be versioned and updated via PR. The pattern assumes a stable source schema at the connector's version.
-- **Conversation-harvest** — a different pattern for session transcripts. See [`../conversation-harvest/DESIGN.md`](../conversation-harvest/DESIGN.md).
-- **Bulk re-ingestion** — if source system has historic data that wasn't previously ingested, backfill is a separate script following the same stages but in batch mode.
+- **Source system schema migrations.** If the source system changes its API, the connector spec must be versioned and updated via PR. The pattern assumes a stable source schema at the connector's version.
+- **Conversation-harvest.** A different pattern for session transcripts. See [`../conversation-harvest/DESIGN.md`](../conversation-harvest/DESIGN.md).
+- **Bulk re-ingestion.** If the source system has historic data that wasn't previously ingested, backfill is a separate script following the same stages but in batch mode.
 
 ## Reference implementations
 
-Phase 0: none.
+v1: none. A fork builds connectors against its own source systems, or contributes one back.
 Community: follow this pattern and submit a PR adding a `<system>.md` spec file alongside this one.
 
 ## Related
 
-- [`README.md`](README.md) — connector directory overview
-- [`../pr-workflow.md`](../pr-workflow.md) — how connector PRs are reviewed
-- [`../drift-detection.md`](../drift-detection.md) — how drift in sources surfaces
-- [`../../sources/POLICY.md`](../../sources/POLICY.md) — in-repo vs. out-of-repo rules
+- [`README.md`](README.md), connector directory overview
+- [`../pr-workflow.md`](../pr-workflow.md), how connector PRs are reviewed
+- [`../drift-detection.md`](../drift-detection.md), how drift in sources surfaces
+- [`../../sources/POLICY.md`](../../sources/POLICY.md), in-repo vs. out-of-repo rules

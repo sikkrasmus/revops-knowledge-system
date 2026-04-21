@@ -1,6 +1,6 @@
 ---
 type: persona
-title: "<Role title — e.g., VP RevOps>"
+title: "<Role title, e.g., VP RevOps>"
 description: "<one-line summary of this persona in 1-2 clauses>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -52,7 +52,7 @@ confidence: medium
 
 ## What they dismiss
 
-- `<what doesn't resonate — trap to avoid>`
+- `<what doesn't resonate, trap to avoid>`
 
 ## How they buy
 
@@ -62,7 +62,7 @@ confidence: medium
 
 ## Objections (top 3)
 
-- `<objection 1>` — counter in [`shared/competitive-intel/`](../competitive-intel/) or [`functions/sales/`](../../functions/sales/)
+- `<objection 1>`, counter in [`shared/competitive-intel/`](../competitive-intel/) or [`functions/sales/`](../../functions/sales/)
 - `<objection 2>`
 - `<objection 3>`
 
@@ -78,9 +78,9 @@ confidence: medium
 
 ## Related
 
-- [`shared/personas/buying-committees/`](./buying-committees/) — configurations where this persona appears
-- [`shared/icp/`](../icp/) — ICP tiers where this persona is the primary buyer
+- [`shared/personas/buying-committees/`](./buying-committees/), configurations where this persona appears
+- [`shared/icp/`](../icp/), ICP tiers where this persona is the primary buyer
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

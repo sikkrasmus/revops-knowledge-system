@@ -18,7 +18,7 @@ Phase 0 ships the template and this README. In-production forks fill this direct
 
 ## Naming convention
 
-- `<competitor-slug>.md` — lowercase, hyphenated, from the competitor's primary brand name.
+- `<competitor-slug>.md`. Lowercase, hyphenated, from the competitor's primary brand name.
 
 ## When to create a new competitor profile
 
@@ -28,5 +28,5 @@ Phase 0 ships the template and this README. In-production forks fill this direct
 
 ## Related
 
-- [`../win-loss-patterns.md`](../win-loss-patterns.md) — cross-competitor patterns
-- [`../../../functions/sales/`](../../../functions/sales/) (Phase 1) — sales battlecards
+- [`../win-loss-patterns.md`](../win-loss-patterns.md), cross-competitor patterns
+- [`../../../functions/sales/`](../../../functions/sales/) (Phase 1), sales battlecards

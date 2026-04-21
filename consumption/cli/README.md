@@ -104,7 +104,7 @@ Tied scores sort alphabetically by slug. Top 20 by default; `--limit N` to overr
 - `schema/page-templates/` (author templates, not content)
 - `index.md`, `log.md` (automation-maintained; self-exclude)
 
-**Markdown files without frontmatter** are silently skipped by `list`, `search`, `reindex`, and `verify` (the SPEC rule — "skip if no frontmatter block"). If you author a new page and want it cataloged, add frontmatter.
+**Markdown files without frontmatter** are silently skipped by `list`, `search`, `reindex`, and `verify`. The rule is "skip if no frontmatter block" — every catalogued page must declare itself via the schema in [`../../schema/frontmatter.md`](../../schema/frontmatter.md). If you author a new page and want it cataloged, add frontmatter.
 
 ## Common helpers (`lib/common.sh`)
 

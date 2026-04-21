@@ -8,14 +8,14 @@ last_reviewed: 2026-04-19
 
 # Call Summaries
 
-Synthesized summaries of sales, CS, product, or research calls. Raw recordings stay in Gong / Fathom / Chorus / Avoma. This directory holds markdown summaries that can be cited by wiki pages.
+Synthesized summaries of sales, CS, product, or research calls. Raw recordings stay in Gong, Fathom, Chorus, or Avoma. This directory holds markdown summaries that can be cited by wiki pages.
 
 ## What to include in a synthesis
 
-- **Context** — who was on the call, when, what segment, what product context.
-- **Claims worth citing** — statements from the buyer that inform ICP, persona, pricing, positioning, or competitive intel pages.
-- **Explicit quotes only with consent** — paraphrase by default; verbatim only when customer has consented.
-- **Ground-truth signals** — what happened (next step agreed, deal stage shift, expansion trigger, objection voiced).
+- **Context.** Who was on the call, when, what segment, what product context.
+- **Claims worth citing.** Statements from the buyer that inform ICP, persona, pricing, positioning, or competitive intel pages.
+- **Explicit quotes only with consent.** Paraphrase by default. Verbatim only when the customer has consented.
+- **Ground-truth signals.** What happened (next step agreed, deal stage shift, expansion trigger, objection voiced).
 
 ## What to exclude
 
@@ -52,6 +52,6 @@ consumers:
 ---
 ```
 
-## Phase 0 content
+## What ships here
 
-No actual call summaries ship in Phase 0 — this is an abstract framework release. Your fork populates this directory with real call snapshots.
+No actual call summaries. This repo is the abstract framework. A fork populates this directory with real call snapshots.

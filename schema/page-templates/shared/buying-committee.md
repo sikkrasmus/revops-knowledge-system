@@ -1,6 +1,6 @@
 ---
 type: buying-committee
-title: "<Committee label — e.g., Mid-market multi-product buying committee>"
+title: "<Committee label, e.g., Mid-market multi-product buying committee>"
 description: "<one-line summary, ends with period>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -44,9 +44,9 @@ confidence: medium
 
 <Paragraph or numbered list: how decisions actually move through this committee. Who needs to say yes first, who can kill the deal, who drives.>
 
-1. `<step 1 — e.g., Champion validates fit>`
-2. `<step 2 — e.g., Security review loops in CISO>`
-3. `<step 3 — e.g., CFO sign-off on ACV >$100K>`
+1. `<step 1, e.g., Champion validates fit>`
+2. `<step 2, e.g., Security review loops in CISO>`
+3. `<step 3, e.g., CFO sign-off on ACV >$100K>`
 
 ## Typical pushback patterns
 
@@ -62,17 +62,17 @@ confidence: medium
 
 ### SMB variant  {segment: smb}
 
-<What changes — smaller committee, faster decisions, different objections.>
+<What changes: smaller committee, faster decisions, different objections.>
 
 ### Enterprise variant  {segment: enterprise}
 
-<What changes — larger committee, procurement + security + legal, longer cycles.>
+<What changes: larger committee, procurement plus security plus legal, longer cycles.>
 
 ## Related
 
-- [`shared/personas/`](../personas/) — individual persona pages
-- [`shared/icp/`](../icp/) — ICP tiers this committee configuration serves
+- [`shared/personas/`](../personas/), individual persona pages
+- [`shared/icp/`](../icp/), ICP tiers this committee configuration serves
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

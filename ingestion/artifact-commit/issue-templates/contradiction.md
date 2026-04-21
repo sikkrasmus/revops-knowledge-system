@@ -1,12 +1,12 @@
 ---
 type: meta
-title: Issue template — contradiction found
+title: Issue template, contradiction found
 description: Use when two pages or a page and a source make incompatible claims.
 owner: rasmus@latentflows.com
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-21
 ---
 
-# Issue template — contradiction found
+# Issue template, contradiction found
 
 Copy into a new issue when lint or human review surfaces a contradiction.
 
@@ -36,10 +36,10 @@ Per [`../../../schema/authoring-contract.md`](../../../schema/authoring-contract
 
 ## **Proposed resolution**
 
-- [ ] Claim A wins — update Claim B's page to align or remove
-- [ ] Claim B wins — update Claim A's page
-- [ ] Both are partially right — re-synthesize into a unified claim
-- [ ] Can't resolve mechanically — escalate
+- [ ] Claim A wins. Update Claim B's page to align or remove.
+- [ ] Claim B wins. Update Claim A's page.
+- [ ] Both are partially right. Re-synthesize into a unified claim.
+- [ ] Can't resolve mechanically. Escalate.
 
 ## **Assigned reviewer**
 

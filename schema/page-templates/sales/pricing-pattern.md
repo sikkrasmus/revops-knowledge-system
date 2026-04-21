@@ -1,6 +1,6 @@
 ---
 type: pricing-pattern
-title: "<Pricing pattern — descriptive label>"
+title: "<Pricing pattern, descriptive label>"
 description: "<one-line summary of the pattern and when to deploy it, ends with period>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -25,10 +25,10 @@ has_contradiction: null
 confidence: medium
 ---
 
-# <Pricing pattern — descriptive label>
+# <Pricing pattern, descriptive label>
 
 > Template for sales-side pricing patterns. Replace frontmatter values and placeholder content; remove this blockquote.
-> A pricing-pattern page documents a recurring deal shape and the quoting approach that tends to close it — not the canonical price book (that lives in [`../../shared/pricing/price-book.md`](../../shared/pricing/price-book.md)).
+> A pricing-pattern page documents a recurring deal shape and the quoting approach that tends to close it. The canonical price book lives in [`../../shared/pricing/price-book.md`](../../shared/pricing/price-book.md).
 
 ## Pattern in one paragraph
 
@@ -48,7 +48,7 @@ confidence: medium
 
 <Reference the canonical guardrails; do not duplicate percentages. Name which bands typically apply to this pattern.>
 
-- Standard band: `<0-10% / 10-18% / 18-25%>` — see [`../../shared/pricing/discount-guardrails.md`](../../shared/pricing/discount-guardrails.md)
+- Standard band: `<0-10% / 10-18% / 18-25%>`. See [`../../shared/pricing/discount-guardrails.md`](../../shared/pricing/discount-guardrails.md).
 - Non-price concessions typically granted: `<3-year term, reference-call commitment, multi-entity rollout>`
 
 ## Q2R gotchas
@@ -76,11 +76,11 @@ Quote-to-revenue considerations specific to this pattern.
 
 ## Related
 
-- [`../../shared/pricing/price-book.md`](../../shared/pricing/price-book.md) — canonical price book
-- [`../../shared/pricing/discount-guardrails.md`](../../shared/pricing/discount-guardrails.md) — discount rules
-- [`../../shared/pricing/usage-meters.md`](../../shared/pricing/usage-meters.md) — for usage-billed motions
-- [`../../functions/sales/frameworks/deal-desk-escalation.md`](../../functions/sales/frameworks/deal-desk-escalation.md) — when to escalate
+- [`../../shared/pricing/price-book.md`](../../shared/pricing/price-book.md), canonical price book
+- [`../../shared/pricing/discount-guardrails.md`](../../shared/pricing/discount-guardrails.md), discount rules
+- [`../../shared/pricing/usage-meters.md`](../../shared/pricing/usage-meters.md), for usage-billed motions
+- [`../../functions/sales/frameworks/deal-desk-escalation.md`](../../functions/sales/frameworks/deal-desk-escalation.md), when to escalate
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

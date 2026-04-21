@@ -1,6 +1,6 @@
 ---
 type: battlecard
-title: "<Competitor name — battlecard>"
+title: "<Competitor name, battlecard>"
 description: "<one-line summary of when and how to deploy this battlecard, ends with period>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -25,10 +25,10 @@ has_contradiction: null
 confidence: medium
 ---
 
-# <Competitor name — battlecard>
+# <Competitor name, battlecard>
 
 > Template for sales battlecards. Replace frontmatter values and placeholder content; remove this blockquote.
-> Battlecards stale fast — default `verified_until` to 60 days from creation and re-verify quarterly against closed-deal evidence in [`../../shared/competitive-intel/win-loss-patterns.md`](../../shared/competitive-intel/win-loss-patterns.md).
+> Battlecards stale fast. Default `verified_until` to 60 days from creation and re-verify quarterly against closed-deal evidence in [`../../shared/competitive-intel/win-loss-patterns.md`](../../shared/competitive-intel/win-loss-patterns.md).
 
 ## When to deploy this battlecard
 
@@ -40,7 +40,7 @@ confidence: medium
 
 ## Where we win
 
-- `<claim 1 — strength grounded in observed deal data>` [source: ...]
+- `<claim 1, strength grounded in observed deal data>` [source: ...]
 - `<claim 2>` [source: ...]
 - `<claim 3>` [source: ...]
 
@@ -60,8 +60,8 @@ confidence: medium
 
 ## Traps to avoid
 
-- **Don't** `<behavior that has lost deals before>` — [source: ...]
-- **Don't** `<behavior>` — [source: ...]
+- **Don't** `<behavior that has lost deals before>`. [source: ...]
+- **Don't** `<behavior>`. [source: ...]
 
 ## Segment variants
 
@@ -75,10 +75,10 @@ confidence: medium
 
 ## Related
 
-- [`../../shared/competitive-intel/`](../../shared/competitive-intel/) — canonical competitor profile and win-loss patterns
-- [`../../shared/positioning/`](../../shared/positioning/) — value props and elevator pitches
-- [`../../functions/sales/objections/`](../../functions/sales/objections/) — common objections raised in competitive deals
+- [`../../shared/competitive-intel/`](../../shared/competitive-intel/), canonical competitor profile and win-loss patterns
+- [`../../shared/positioning/`](../../shared/positioning/), value props and elevator pitches
+- [`../../functions/sales/objections/`](../../functions/sales/objections/), common objections raised in competitive deals
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

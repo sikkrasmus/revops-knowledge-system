@@ -1,6 +1,6 @@
 ---
 type: pricing-policy
-title: "<Price book label — e.g., Canonical price book 2026-Q2>"
+title: "<Price book label, e.g., Canonical price book 2026-Q2>"
 description: "<one-line summary of this pricing artifact>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -32,7 +32,7 @@ confidence: high
 
 # <Price book label>
 
-> Template for pricing policy pages. Highest-conflict shared artifact — reviewer routing is strict. Replace frontmatter and content, remove this blockquote.
+> Template for pricing policy pages. Highest-conflict shared artifact, so reviewer routing is strict. Replace frontmatter and content, remove this blockquote.
 
 ## Effective date
 
@@ -76,10 +76,10 @@ confidence: high
 
 ## Related
 
-- [`discount-guardrails.md`](./discount-guardrails.md) — discount rules and strategic exception bands
-- [`usage-meters.md`](./usage-meters.md) — for usage-billed motions
-- [`../product-and-packaging/`](../product-and-packaging/) — SKUs and editions this prices
+- [`discount-guardrails.md`](./discount-guardrails.md), discount rules and strategic exception bands
+- [`usage-meters.md`](./usage-meters.md), for usage-billed motions
+- [`../product-and-packaging/`](../product-and-packaging/), SKUs and editions this prices
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

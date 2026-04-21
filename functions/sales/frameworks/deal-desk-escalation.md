@@ -7,7 +7,7 @@ reviewers:
   - sales-lead
   - revops-lead
   - finance-lead
-last_reviewed: 2026-04-20
+last_reviewed: 2026-04-21
 verified_until: 2026-10-20
 motion:
   - sales-assisted

@@ -1,6 +1,6 @@
 ---
 type: discount-guardrail
-title: "<Guardrail label — e.g., Mid-market discount guardrails 2026>"
+title: "<Guardrail label, e.g., Mid-market discount guardrails 2026>"
 description: "<one-line summary of scope and approval thresholds>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -40,10 +40,10 @@ confidence: high
 
 The 18–25% band applies only when ALL conditions are met:
 
-- `<condition 1 — e.g., 3-year term>`
-- `<condition 2 — e.g., multi-product bundle>`
-- `<condition 3 — e.g., reference-customer commitment>`
-- `<condition 4 — e.g., target vertical, net-new logo>`
+- `<condition 1, e.g., 3-year term>`
+- `<condition 2, e.g., multi-product bundle>`
+- `<condition 3, e.g., reference-customer commitment>`
+- `<condition 4, e.g., target vertical, net-new logo>`
 
 Missing any condition → hold at 18% max.
 
@@ -58,7 +58,7 @@ In lieu of or alongside discount:
 
 ## Observed pattern (evidence-based)
 
-<Pattern from the last N closed deals — which conditions actually correlate with discount tier. Cite postmortem pages or HubSpot closed-won queries.>
+<Pattern from the last N closed deals: which conditions actually correlate with discount tier. Cite postmortem pages or HubSpot closed-won queries.>
 
 Example: "Last 12 closed deals at >18% discount in mid-market manufacturing: all had 3-year term; 9 of 12 had multi-product; 7 of 12 had reference commit" [source: hubspot://deals?stage=closed-won&discount>0.18&segment=mid-market&vertical=manufacturing as_of:YYYY-MM-DD].
 
@@ -76,9 +76,9 @@ Example: "Last 12 closed deals at >18% discount in mid-market manufacturing: all
 
 ## Related
 
-- [`pricing-policy.md`](./pricing-policy.md) — the price book this guardrails protect
-- [`../../functions/sales/`](../../functions/sales/) — sales playbooks reference this
+- [`pricing-policy.md`](./pricing-policy.md), the price book these guardrails protect
+- [`../../functions/sales/`](../../functions/sales/), sales playbooks reference this
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

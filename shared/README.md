@@ -11,23 +11,40 @@ verified_until: 2026-10-19
 
 # Shared Spine
 
-The seven co-authored-shared components. Every function in `functions/` reads from this spine. Changes here have the highest blast radius — reviewer routing is strict.
+Every function in a B2B company runs on its own methodology, tooling, and internals. A subset of artifacts gets read by two or more functions as the same object. That subset is the spine.
+
+Changes here have the highest blast radius in the corpus, so reviewer routing is strict.
 
 ---
 
 ## What "shared" means
 
-The test for the spine: the same artifact is referenced as the **same object** by two or more functions. If Marketing's ICP and Sales's ICP are different documents, they aren't shared — they're two artifacts with a naming collision. The spine dissolves that collision.
+The test for the spine: the same artifact is referenced as the **same object** by two or more functions. If Marketing's ICP and Sales's ICP are separate documents, the spine hasn't formed yet. They are two artifacts with a naming collision. The spine dissolves that collision.
 
-Shared components are:
+Shared components have three properties:
 
-- **Multi-author** — no single function owns them outright.
-- **Friction-generating when out of sync** — drift has cross-function consequences.
-- **Referenced broadly** — cited by pages across multiple `functions/` directories.
+- **Multi-author.** No single function owns them outright.
+- **Friction-generating when out of sync.** Drift has cross-function consequences.
+- **Referenced broadly.** Cited by pages across multiple `functions/` directories.
 
-"Authored-shared" (single author, many readers) content — legal/compliance posture, brand & voice, process-stage definitions — lives in function directories in Phase 0 or early Phase 1 and doesn't need this heavy review machinery.
+Content that one function authors and many read (legal posture, brand voice, process-stage definitions) is "authored-shared." It lives in the owning function's directory and skips this review machinery until it starts creating cross-function friction.
 
-## The seven components
+## The contents of your spine are your choice
+
+The test above is binding. The specific list of components is not. A fork decides its own spine based on where multi-author artifacts and cross-function friction actually sit in its business.
+
+Different shapes land on different spines:
+
+- **Devtools or PLG-only.** Personas may collapse into a single power-user profile. Activation-metric definitions in data-definitions carry more weight. Developer-relations or community content often graduates into the spine.
+- **Vertical SaaS in regulated industries.** Regulatory and compliance posture becomes spine-worthy rather than authored-shared. Customer-reference management usually does too.
+- **OSS-sponsored commercial.** Open-source community boundaries and commercial-edition definitions become spine components with their own ownership rotations.
+- **Multi-product portfolio.** Product-and-packaging splits per product. A portfolio-level positioning component may sit above per-product positioning.
+
+Add, rename, or subtract from the instance below to fit the shape of your business. This repo is a framework, not a turnkey product.
+
+## Example instance: B2B SaaS sales-assisted, $10 to $100M ARR
+
+The seven components below are what a sales-assisted B2B SaaS company in this ARR band tends to pull into its spine. This repo fills them in as an illustration of how the schema, ownership rotation, and change-class machinery hang together end to end. A different company shape lands on a different list.
 
 | Component | Owner rotation | Co-authors | Consumers |
 |---|---|---|---|
@@ -49,13 +66,13 @@ See [`../ingestion/pr-workflow.md`](../ingestion/pr-workflow.md) for the full ro
 
 No matter the maturity stage, these always require human review (per [`PRINCIPLES.md`](../PRINCIPLES.md) §6):
 
-- **ICP definition changes** — shift target market
-- **Pricing & discounting** — financial impact
-- **Product & packaging changes** — downstream contract impact
-- **Positioning & messaging** (strategic) — brand impact
-- **New page creation** — schema evolves
-- **Page deletion** — schema evolves
-- **Any change flagged `source_drift: true` with large drift**
+- **ICP definition changes.** Shift target market.
+- **Pricing and discounting.** Financial impact.
+- **Product and packaging changes.** Downstream contract impact.
+- **Positioning and messaging** (strategic). Brand impact.
+- **New page creation.** Schema evolves.
+- **Page deletion.** Schema evolves.
+- **Any change flagged `source_drift: true` with large drift.**
 
 ## Cross-references
 
@@ -78,14 +95,13 @@ Every page in this spine carries:
 
 Components that might graduate to the spine later but don't justify the overhead today:
 
-- **Legal / compliance posture** — authored-shared (Legal writes, all read). Lives in `functions/finance-legal/` in Phase 2.
-- **Brand & voice** — authored-shared (Marketing writes, all read). Lives in `functions/marketing/` in Phase 2.
-- **Customer segmentation rules** (beyond ICP tiers) — authored-shared (RevOps writes, all read). Lives in `functions/revops/` in Phase 2.
-- **GTM process-stage definitions** — authored-shared (RevOps writes, all read). Lives in `functions/revops/` in Phase 2.
+- **Legal and compliance posture.** Authored-shared (Legal writes, all read). Lives in the finance and legal function (described in [`../functions/FUTURE-FUNCTIONS.md`](../functions/FUTURE-FUNCTIONS.md)).
+- **Brand and voice.** Authored-shared (Marketing writes, all read). Lives in the marketing function.
+- **Customer segmentation rules** (beyond ICP tiers). Authored-shared (RevOps writes, all read). Lives in the RevOps function.
+- **GTM process-stage definitions.** Authored-shared (RevOps writes, all read). Lives in the RevOps function.
 
-Graduation criteria: the artifact becomes multi-author-in-practice, or drift causes cross-function friction, or three or more functions start maintaining local copies. Until then, authored-shared is the cheaper model.
+Graduation criteria: the artifact becomes multi-author in practice, or drift starts causing cross-function friction, or three or more functions start maintaining local copies. Until then, authored-shared is the cheaper model.
 
-## Phase status
+## Status
 
-- **Phase 0** (this release): all seven components scaffolded with README, templates, and at least one abstract example. Abstract only — not filled with any specific company's data.
-- **In-production fork**: your fork fills the spine with your real ICP, pricing, personas, etc.
+This repo ships all seven components as abstract scaffolds: each directory has a README, the templates referenced, and at least one example page filled with placeholder values. Nothing here is one company's real data. A fork replaces the placeholders with your ICP, pricing, personas, and the rest.

@@ -1,0 +1,78 @@
+flowchart TD
+    %% Define Styles
+    classDef default fill:#fdfcf9,stroke:#1a1a1a,stroke-width:1.5px,color:#1a1a1a,font-family:serif;
+    classDef warn fill:#fdfcf9,stroke:#b91c1c,stroke-width:1.5px,color:#b91c1c,font-family:serif;
+    classDef storage fill:#fdfcf9,stroke:#1a1a1a,stroke-width:3px,color:#1a1a1a,font-family:serif;
+    classDef faint fill:none,stroke:#9a9a9a,stroke-width:1.5px,stroke-dasharray: 4 4;
+    classDef group fill:none,stroke:#dcd9d1,stroke-width:1px,stroke-dasharray: 4 4;
+
+    %% Level 1: Ingestion Sources
+    subgraph L1 [Raw Sources]
+        direction LR
+        S1["`**Platform landscape**<br/>crm · erp · gong<br/>stripe · slack · docs<br/><small>~100 tools, queried live</small>`"]
+        S2["`**Work artifacts**<br/>playbooks · call synth<br/>reviews · postmortems<br/><small>authored by the team</small>`"]
+    end
+    style L1 fill:none,stroke:#9a9a9a,stroke-dasharray: 4 4,stroke-width:1.5px
+
+    %% Level 2: Connectors & Processing
+    subgraph L2 [Ingestion & Processing]
+        direction TB
+        subgraph C_modes [Connectors]
+            direction LR
+            C1["`**Live query**<br/>Cite platform data with *as_of:* timestamps.<br/>Never copied.`"]
+            C2["`**Synthesis · PR**<br/>Summarize artifacts into markdown,<br/>opened as a PR.`"]
+        end
+        style C_modes fill:#fdfcf9,stroke:#1a1a1a,stroke-width:1.5px
+
+        IA["`*core llm layer*<br/>**Intelligence agents**<br/>Multiple agents maintain the corpus. Synthesize inputs, score confidence, and open reconciliation PRs.`"]
+        
+        PR["`*human in the loop*<br/>**PR review gate**<br/>Reviewer sees diff plus citations plus confidence. Stage 1 is all-PR. Stage 2 opens auto-merge for low-risk classes.`"]:::warn
+
+        C_modes --> IA
+        IA -->|diff + cite| PR
+    end
+    style L2 fill:none,stroke:none
+
+    %% Level 3: Storage & Maintenance
+    subgraph L3 [Storage Layer]
+        direction LR
+        
+        subgraph corpus [Git Corpus]
+            direction TB
+            GC1["`*Top-level directories*<br/>shared/ | functions/ | schema/ | sources/`"]
+            GC2["`*Navigation trio*<br/>CLAUDE.md | index.md | log.md`"]
+            GC1 ~~~ GC2
+        end
+        style corpus fill:#fdfcf9,stroke:#1a1a1a,stroke-width:3px
+
+        LS["`*scheduled · weekly*<br/>**Lint service**<br/>Flags source drift, stale verification, contradictions. Opens reconciliation PRs.`"]
+    end
+    style L3 fill:none,stroke:none
+
+    %% Level 4: Retrieval & Consumption
+    subgraph L4 [Consumption]
+        direction TB
+        R["`*read-only*<br/>**Retrieval**<br/>Grep plus frontmatter filters. Reads index.md first, then drills into candidate pages and follows citations.`"]
+
+        subgraph consumers [End Users]
+            direction LR
+            U1["`**Workflow agents**<br/>ai sdr · deal-desk<br/>rfp · forecasting<br/><small>autonomous + hitl</small>`"]
+            U2["`**Humans via chat**<br/>claude · cowork<br/>chatgpt · gemini<br/><small>in-workflow queries</small>`"]
+        end
+        style consumers fill:none,stroke:#9a9a9a,stroke-dasharray: 4 4,stroke-width:1.5px
+        
+        R -->|via skill| U1
+        R -->|ci show| U2
+    end
+    style L4 fill:none,stroke:none
+
+    %% Main Vertical Flow Connections
+    S1 -->|live query| C1
+    S2 -->|doc ingest| C2
+    PR -->|merge| corpus
+    corpus -->|read-only| R
+
+    %% Feedback Loops (using longer links to prevent breaking the vertical hierarchy)
+    PR -.->|reject| IA
+    corpus -.-|content hashes| LS
+    LS -.-|opens PR| PR

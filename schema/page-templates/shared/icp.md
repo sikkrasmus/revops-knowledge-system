@@ -1,6 +1,6 @@
 ---
 type: icp
-title: "<Tier N ICP — descriptive label>"
+title: "<Tier N ICP, descriptive label>"
 description: "<one-line summary, ends with period, max 200 chars>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -24,7 +24,7 @@ has_contradiction: null
 confidence: medium
 ---
 
-# <Tier N ICP — descriptive label>
+# <Tier N ICP, descriptive label>
 
 > Template for ICP tier pages. Replace frontmatter and content, remove this blockquote.
 
@@ -34,7 +34,7 @@ confidence: medium
 
 ## Firmographics
 
-- **ARR band**: `<e.g., $25-100M>`
+- **ARR band**: `<e.g., $25 to $100M>`
 - **Employee count**: `<range>`
 - **Headquarters / region**: `<list>`
 - **Funding stage**: `<e.g., Series C+ or bootstrapped>`
@@ -67,9 +67,9 @@ confidence: medium
 
 ## Related
 
-- [`shared/personas/`](../personas/) — buying-committee personas for this tier
-- [`shared/pricing/`](../pricing/) — tier-specific pricing guidance
+- [`shared/personas/`](../personas/), buying-committee personas for this tier
+- [`shared/pricing/`](../pricing/), tier-specific pricing guidance
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

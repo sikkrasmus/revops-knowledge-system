@@ -21,8 +21,8 @@ Template: [`../../schema/page-templates/shared/competitor.md`](../../schema/page
 
 ## Structure
 
-- **[`competitors/`](competitors/)** — one file per competitor. Profile, positioning, strengths, weaknesses, our counter-positioning.
-- **[`win-loss-patterns.md`](win-loss-patterns.md)** — cross-competitor patterns observed from closed deals. What correlates with wins / losses, independent of which competitor.
+- **[`competitors/`](competitors/).** One file per competitor. Profile, positioning, strengths, weaknesses, our counter-positioning.
+- **[`win-loss-patterns.md`](win-loss-patterns.md).** Cross-competitor patterns observed from closed deals. What correlates with wins or losses, independent of which competitor.
 
 ## Ownership
 
@@ -32,25 +32,25 @@ Template: [`../../schema/page-templates/shared/competitor.md`](../../schema/page
 
 ## What's sourced where
 
-- **Profile** — public sources (website, pricing page, docs, analyst reports), enriched with deal-level evidence from closed-won and closed-lost.
-- **Strengths / weaknesses** — from win-loss interviews and Gong call patterns where the competitor was mentioned.
-- **Counter-positioning** — from tested sales plays and marketing content that converted against this competitor.
-- **Pricing signals** — from deal-level head-to-head evidence with named confidence.
+- **Profile.** Public sources (website, pricing page, docs, analyst reports), enriched with deal-level evidence from closed-won and closed-lost.
+- **Strengths and weaknesses.** From win-loss interviews and Gong call patterns where the competitor was mentioned.
+- **Counter-positioning.** From tested sales plays and marketing content that converted against this competitor.
+- **Pricing signals.** From deal-level head-to-head evidence with named confidence.
 
 ## Review cadence
 
-- **Quarterly per competitor** — refresh profile against current public signals and recent deal evidence.
-- **On major competitor event** — funding round, pricing change, product launch, acquisition: PR same week.
-- **On losing streak** — if we lose 3+ head-to-head deals to a single competitor in 30 days, open a counter-positioning PR regardless of cadence.
+- **Quarterly per competitor.** Refresh profile against current public signals and recent deal evidence.
+- **On major competitor event.** Funding round, pricing change, product launch, or acquisition: PR same week.
+- **On losing streak.** If we lose 3+ head-to-head deals to a single competitor in 30 days, open a counter-positioning PR regardless of cadence.
 
 ## Change class
 
-- **Profile updates** — routine, can auto-merge at Stage 2+.
-- **Counter-positioning changes** — always PR. Strategic content.
-- **New competitor page** — always PR.
+- **Profile updates.** Routine. Can auto-merge at Stage 2+.
+- **Counter-positioning changes.** Always PR. Strategic content.
+- **New competitor page.** Always PR.
 
 ## Related
 
-- [`../positioning/`](../positioning/) — our positioning we're differentiating
-- [`../../functions/sales/`](../../functions/sales/) (Phase 1) — battlecards, objection handlers
-- [`../../functions/marketing/`](../../functions/marketing/) (Phase 2) — competitive content, category narrative
+- [`../positioning/`](../positioning/), our positioning we're differentiating
+- [`../../functions/sales/`](../../functions/sales/) (Phase 1), battlecards and objection handlers
+- [`../../functions/FUTURE-FUNCTIONS.md`](../../functions/FUTURE-FUNCTIONS.md), where the marketing function (competitive content, category narrative) is described.

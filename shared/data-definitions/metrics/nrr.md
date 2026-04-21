@@ -1,7 +1,7 @@
 ---
 type: metric-definition
 title: Net Revenue Retention (NRR)
-description: NRR — percentage of recurring revenue retained from an existing cohort including expansion.
+description: NRR. Percentage of recurring revenue retained from an existing cohort including expansion.
 owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
@@ -76,7 +76,7 @@ Replace placeholder citations with real benchmark data when forking. Primary sou
 
 - **Confusing NRR with GRR (Gross Revenue Retention).** GRR excludes expansion. NRR includes it. Reporting NRR when the context calls for GRR hides churn pain.
 - **Including new-logo ARR in the cohort.** The cohort must be fixed at t=0. Including logos acquired during the period inflates NRR artificially.
-- **Measuring NRR on ARR added in the period instead of ARR at anchor date.** This is a different metric (Dollar Retention / Quick Ratio variants) — call it what it is.
+- **Measuring NRR on ARR added in the period instead of ARR at anchor date.** That is a different metric (Dollar Retention or Quick Ratio variants). Call it what it is.
 - **Variable cohort definitions across functions.** RevOps measures NRR on the customer cohort; Finance sometimes measures on the contract cohort. Agree on one definition; document the other as a variant.
 
 ## How our corpus uses it
@@ -92,10 +92,9 @@ Replace placeholder citations with real benchmark data when forking. Primary sou
 
 ## Related
 
-- [`../`](../) — other metrics (GRR, logo-churn, revenue-churn planned for in-production forks)
-- [`../../../functions/customer-success/`](../../../functions/customer-success/) (Phase 2)
-- [`../../../functions/finance-legal/`](../../../functions/finance-legal/) (Phase 2)
+- [`../`](../), other metrics (GRR, logo-churn, revenue-churn planned for in-production forks)
+- [`../../../functions/FUTURE-FUNCTIONS.md`](../../../functions/FUTURE-FUNCTIONS.md), where the customer success and finance/legal functions that consume NRR are described.
 
 ## Change log
 
-- 2026-04-19 — Phase 0 scaffold with abstract worked example. Benchmark citations use placeholder references — replace with real sources before in-production use.
+- 2026-04-19. Phase 0 scaffold with abstract worked example. Benchmark citations use placeholder references; replace with real sources before in-production use.

@@ -32,6 +32,8 @@ _ci_skip_paths=(
 _ci_skip_files=(
   "index.md"
   "log.md"
+  "LAUNCH-PLAN.md"
+  "PHASES.md"
 )
 
 # Is the given repo-relative path skipped?

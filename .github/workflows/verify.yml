@@ -1,13 +1,15 @@
 name: Verify
 
 # Runs on PR and on push to main. Gates:
-#   1. `ci reindex --check` — fails if index.md is stale relative to
+#   1. `ci reindex --check` fails if index.md is stale relative to
 #      current frontmatter. The `[bootstrap]` sentinel in a commit
-#      subject skips this check for that one commit only (see SPEC §7).
-#   2. `ci verify --all` — fails if any page has missing required
+#      subject skips this check for that one commit only. See
+#      ingestion/artifact-commit/commit-conventions.md
+#      (§ Automation-generated commits) for the bootstrap rule.
+#   2. `ci verify --all` fails if any page has missing required
 #      frontmatter, broken links, bad section labels, or citation
 #      inconsistency.
-#   3. Smoke test — runs each CLI command against the live corpus.
+#   3. Smoke test runs each CLI command against the live corpus.
 # Loop-prevention: skips when the push commit message contains
 # `[skip ci]` (used by log-append.yml).
 
@@ -40,7 +42,7 @@ jobs:
           # skip the --check invariant for this single commit.
           COMMIT_MSG="${{ github.event.head_commit.message }}"
           if [[ "$COMMIT_MSG" == *"[bootstrap]"* ]]; then
-            echo "Bootstrap commit detected — skipping index.md freshness check for this commit."
+            echo "Bootstrap commit detected, skipping index.md freshness check for this commit."
           else
             ./consumption/cli/ci reindex --check
           fi

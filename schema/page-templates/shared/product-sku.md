@@ -69,9 +69,9 @@ confidence: high
 
 ## Related
 
-- [`shared/pricing/`](../pricing/) — pricing for this SKU
-- [`shared/positioning/`](../positioning/) — positioning and messaging
+- [`shared/pricing/`](../pricing/), pricing for this SKU
+- [`shared/positioning/`](../positioning/), positioning and messaging
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

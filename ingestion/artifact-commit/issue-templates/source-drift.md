@@ -1,12 +1,12 @@
 ---
 type: meta
-title: Issue template — source drift detected
+title: Issue template, source drift detected
 description: Use when a source underlying one or more wiki pages has changed since snapshot.
 owner: rasmus@latentflows.com
-last_reviewed: 2026-04-19
+last_reviewed: 2026-04-21
 ---
 
-# Issue template — source drift detected
+# Issue template, source drift detected
 
 Copy into a new issue when drift-detection lint fires or manual review reveals source drift.
 
@@ -28,14 +28,14 @@ Pages that cite this source and therefore carry `source_drift: true`:
 
 ## **Drift summary**
 
-<What changed at the source. Keep factual — link to before/after if possible.>
+<What changed at the source. Keep factual. Link to before and after if possible.>
 
 ## **Reconciliation proposal**
 
 - [ ] Re-synthesize from current source (single-source driven pages)
 - [ ] Combine new source with existing synthesis (multi-source pages)
-- [ ] Source is wrong or superseded — leave wiki as-is, annotate
-- [ ] Escalate — conflicting with another source on same topic
+- [ ] Source is wrong or superseded. Leave wiki as-is, annotate.
+- [ ] Escalate. Conflicting with another source on the same topic.
 
 ## **Assigned reviewer**
 

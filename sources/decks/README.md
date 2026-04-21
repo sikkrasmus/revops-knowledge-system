@@ -8,7 +8,7 @@ last_reviewed: 2026-04-19
 
 # Deck Excerpts
 
-Markdown excerpts from decks. Original decks stay in Google Drive / Notion / etc. This directory holds the textual content that wiki pages — positioning, category narrative, value props — can cite.
+Markdown excerpts from decks. Original decks stay in Google Drive, Notion, or equivalent. This directory holds the textual content that wiki pages (positioning, category narrative, value props) can cite.
 
 ## What to include
 
@@ -18,8 +18,8 @@ Markdown excerpts from decks. Original decks stay in Google Drive / Notion / etc
 
 ## What to exclude
 
-- Financial data that's confidential (board decks with non-public revenue figures).
-- Screenshots or image content — this directory is markdown only.
+- Financial data that is confidential (board decks with non-public revenue figures).
+- Screenshots or image content. This directory is markdown only.
 
 ## Naming
 
@@ -47,6 +47,6 @@ consumers:
 ---
 ```
 
-## Phase 0 content
+## What ships here
 
-None. Your fork populates this directory with real decks.
+No actual deck excerpts. A fork populates this directory with real decks.

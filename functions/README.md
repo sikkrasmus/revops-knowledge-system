@@ -5,43 +5,45 @@ description: Function-specific content directories. Shared components in shared/
 owner: rasmus@latentflows.com
 reviewers:
   - revops-lead
-last_reviewed: 2026-04-19
-verified_until: 2026-10-19
+last_reviewed: 2026-04-21
+verified_until: 2026-10-21
 ---
 
 # Functions
 
-Function-specific content. Each function directory consumes from [`../shared/`](../shared/) and adds methodology, playbooks, frameworks, and plays particular to that function.
+Function-specific content. Each function consumes from [`../shared/`](../shared/) and adds methodology, playbooks, frameworks, and plays particular to that function.
 
 ---
 
-## Function directories
+## What ships in this directory
 
-| Directory | Phase | Status |
-|---|---|---|
-| [`sales/`](sales/) | Phase 1 | Scaffold in Phase 0; content filled in Phase 1 |
-| [`marketing/`](marketing/) | Phase 2 | Scaffold only |
-| [`customer-success/`](customer-success/) | Phase 2 | Scaffold only |
-| [`support/`](support/) | Phase 2 | Scaffold only |
-| [`revops/`](revops/) | Phase 2 | Scaffold only |
-| [`finance-legal/`](finance-legal/) | Phase 2 | Scaffold only |
+| Directory | Status |
+|---|---|
+| [`sales/`](sales/) | Filled end to end. The worked function. |
+| [`FUTURE-FUNCTIONS.md`](FUTURE-FUNCTIONS.md) | Marketing, customer success, support, RevOps, finance and legal. What each would cover when filled, plus the fill pattern. |
 
-Each directory's README states what it owns, what it consumes from `shared/`, and the planned structure.
+The five future functions ship as one consolidated page rather than five empty scaffolds. The fill pattern is identical across functions: copy [`sales/`](sales/), follow the [authoring contract](../schema/authoring-contract.md), cite shared components.
 
-## Common skeleton (per function)
+---
+
+## Common skeleton
+
+Every function follows the same shape.
 
 ```
 functions/<function>/
-├── README.md                    — what the function owns, consumes, and publishes
-├── methodology/                 — framework(s) the function operates under
-├── playbooks/                   — by scenario (deal stage, campaign type, renewal motion)
-├── frameworks/                  — decision frameworks
-├── tools-and-stack/             — the curated tool landscape for this function
-├── templates/                   — page templates specific to this function
-└── plays/                       — specific repeatable plays
+├── README.md                 # what the function owns, consumes, publishes
+├── methodology/              # framework(s) the function operates under
+├── playbooks/                # by scenario (deal stage, campaign type, renewal motion)
+├── frameworks/               # decision frameworks
+├── tools-and-stack/          # the curated tool landscape for this function
+├── templates/                # page templates specific to this function
+└── plays/                    # specific repeatable plays
 ```
 
-Not every subdirectory is required on day one. The Phase 0 scaffold has only `README.md`; Phase 1 fills `sales/` to the full skeleton; Phase 2 fills the rest.
+Not every subdirectory is required on day one. The minimum viable function is `methodology/` plus `playbooks/`.
+
+---
 
 ## Authoring contract for functions
 
@@ -51,11 +53,16 @@ Function-specific content follows the same [`../schema/authoring-contract.md`](.
 - Cite shared components where they depend on them (`ci graph` enumerates).
 - Follow graduated-trust governance per [`../ingestion/pr-workflow.md`](../ingestion/pr-workflow.md).
 
-## Why not more function pages in Phase 0
+---
 
-Scope discipline. Phase 0 proves the framework. Phase 1 fills one function to the full pattern; Phase 2+ generalizes. Shipping scaffolds-only for all functions in Phase 0 forces the content to land as deliberate authorship, not speculative filler.
+## Why one filled function is enough
+
+Scope discipline. The framework is proven once one function is filled end to end with citations into the shared spine. Filling more functions for visual completeness is filler. Adopters fill the functions their motion needs and leave the rest as scaffolds.
+
+---
 
 ## Related
 
-- [`../shared/`](../shared/) — co-authored components every function reads from
-- [`../PHASES.md`](../PHASES.md) — full phase model
+- [`../shared/`](../shared/), the seven co-authored components every function reads from.
+- [`../docs/03-IMPLEMENTATION.md`](../docs/03-IMPLEMENTATION.md), suggested rollout plan and the eight hard parts.
+- [`FUTURE-FUNCTIONS.md`](FUTURE-FUNCTIONS.md), what marketing, CS, support, RevOps, and finance/legal would cover when filled.

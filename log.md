@@ -13,4 +13,4 @@ Read filtered: `ci log --since 7d --type ingest`.
 
 ---
 
-## [2026-04-19] bootstrap | repo initialized for v1 rebuild | README.md, CLAUDE.md, PRINCIPLES.md, PHASES.md
+## [2026-04-19] bootstrap | repo initialized for v1 rebuild | README.md, CLAUDE.md, PRINCIPLES.md

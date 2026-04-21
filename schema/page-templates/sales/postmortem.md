@@ -1,6 +1,6 @@
 ---
 type: postmortem
-title: "<Deal postmortem — account / outcome label>"
+title: "<Deal postmortem, account / outcome label>"
 description: "<one-line summary of the deal, outcome, and single-sentence root cause, ends with period>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -25,7 +25,7 @@ has_contradiction: null
 confidence: high
 ---
 
-# <Deal postmortem — account / outcome label>
+# <Deal postmortem, account / outcome label>
 
 > Template for blameless deal postmortems. Replace frontmatter values and placeholder content; remove this blockquote.
 > Pattern: timeline + single-sentence root cause + action items with owners. The purpose is to generalize a lesson into the shared spine, not assign blame.
@@ -33,10 +33,10 @@ confidence: high
 ## Outcome
 
 - **Result**: `<closed-won / closed-lost / no-decision / stalled>`
-- **Account type (abstract)**: `<archetype — e.g., mid-market multi-product platform>`
+- **Account type (abstract)**: `<archetype, e.g., mid-market multi-product platform>`
 - **ACV**: `<range or anonymized number>`
 - **Cycle length**: `<days from first touch to outcome>`
-- **Competitors involved**: `<competitor archetype — not real names in the template>`
+- **Competitors involved**: `<competitor archetype, not real names in the template>`
 
 ## Timeline
 
@@ -55,7 +55,7 @@ Sequence of events that shaped the outcome. Keep factual, no interpretation.
 
 ## Contributing factors
 
-- `<factor 1 — e.g., champion turnover mid-cycle>` [source: ...]
+- `<factor 1, e.g., champion turnover mid-cycle>` [source: ...]
 - `<factor 2>` [source: ...]
 - `<factor 3>` [source: ...]
 
@@ -80,10 +80,10 @@ Sequence of events that shaped the outcome. Keep factual, no interpretation.
 
 ## Related
 
-- [`../../shared/competitive-intel/win-loss-patterns.md`](../../shared/competitive-intel/win-loss-patterns.md) — the corpus this feeds
-- [`../../functions/sales/frameworks/qualification.md`](../../functions/sales/frameworks/qualification.md) — whether the deal was mis-qualified upstream
-- [`../../functions/sales/methodology/`](../../functions/sales/methodology/) — if a methodology gap shows up repeatedly
+- [`../../shared/competitive-intel/win-loss-patterns.md`](../../shared/competitive-intel/win-loss-patterns.md), the corpus this feeds
+- [`../../functions/sales/frameworks/qualification.md`](../../functions/sales/frameworks/qualification.md), whether the deal was mis-qualified upstream
+- [`../../functions/sales/methodology/`](../../functions/sales/methodology/), if a methodology gap shows up repeatedly
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

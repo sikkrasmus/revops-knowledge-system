@@ -1,6 +1,6 @@
 ---
 type: metric-definition
-title: "<Metric name — e.g., Net Revenue Retention (NRR)>"
+title: "<Metric name, e.g., Net Revenue Retention (NRR)>"
 description: "<one-line definition, ends with period>."
 owner: "<email-or-github-handle>"
 reviewers:
@@ -16,7 +16,7 @@ consumers:
   - finance
   - product
 sources:
-  - <source path — benchmark research citation>
+  - <source path, benchmark research citation>
 source_drift: false
 verification_stale: false
 has_contradiction: null
@@ -58,8 +58,8 @@ Cite sources: SaaS Capital, OPEXEngine, Bessemer State of the Cloud, KeyBanc Saa
 
 ## Common mistakes / misdefinitions
 
-- `<mistake 1 — e.g., confusing NRR with GRR>`
-- `<mistake 2 — e.g., including logo churn in GRR>`
+- `<mistake 1, e.g., confusing NRR with GRR>`
+- `<mistake 2, e.g., including logo churn in GRR>`
 - `<mistake 3>`
 
 ## How our corpus uses it
@@ -75,10 +75,10 @@ Cite sources: SaaS Capital, OPEXEngine, Bessemer State of the Cloud, KeyBanc Saa
 
 ## Related
 
-- [`shared/data-definitions/`](./) — other metrics
-- [`../../functions/revops/`](../../functions/revops/) — RevOps analytics (Phase 2)
-- [`../../functions/finance-legal/`](../../functions/finance-legal/) — finance reporting (Phase 2)
+- [`shared/data-definitions/`](./), other metrics
+- [`../../functions/revops/`](../../functions/revops/), RevOps analytics (Phase 2)
+- [`../../functions/finance-legal/`](../../functions/finance-legal/), finance reporting (Phase 2)
 
 ## Change log
 
-- `<YYYY-MM-DD>` — `<change summary>` [source: <PR>]
+- `<YYYY-MM-DD>`, `<change summary>` [source: <PR>]

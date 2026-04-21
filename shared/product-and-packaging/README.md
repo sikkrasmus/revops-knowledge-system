@@ -21,9 +21,9 @@ Templates: [`../../schema/page-templates/shared/product-sku.md`](../../schema/pa
 
 ## Structure
 
-- **[`skus/`](skus/)** — one file per SKU. Core product capabilities, add-ons, integrations sold as SKUs.
-- **[`editions.md`](editions.md)** — edition definitions (Starter / Growth / Enterprise or equivalent). Which SKUs are included, usage limits, upgrade paths.
-- **[`add-ons.md`](add-ons.md)** — add-ons that extend editions. What each is, which editions it attaches to, pricing reference.
+- **[`skus/`](skus/).** One file per SKU. Core product capabilities, add-ons, and integrations sold as SKUs.
+- **[`editions.md`](editions.md).** Edition definitions (Starter, Growth, Enterprise, or equivalent). Which SKUs are included, usage limits, upgrade paths.
+- **[`add-ons.md`](add-ons.md).** Add-ons that extend editions. What each is, which editions it attaches to, pricing reference.
 
 ## Ownership
 
@@ -39,20 +39,20 @@ SKU renames, edition re-packaging, and add-on restructures have outsized downstr
 
 ## What's sourced where
 
-- **SKU capabilities** — from product PRDs, release notes, and in-product documentation.
-- **Edition inclusions** — from packaging decisions logged in the product / pricing committee.
-- **Usage limits** — from the billing system (source of truth) cross-referenced with the packaging doc.
-- **Known limitations** — from support ticket patterns and postmortem analyses.
+- **SKU capabilities.** From product PRDs, release notes, and in-product documentation.
+- **Edition inclusions.** From packaging decisions logged in the product or pricing committee.
+- **Usage limits.** From the billing system (source of truth) cross-referenced with the packaging doc.
+- **Known limitations.** From support ticket patterns and postmortem analyses.
 
 ## Review cadence
 
-- **On release** — every product release that adds, removes, or changes SKU behavior: PR to the SKU page as part of the release process.
-- **Quarterly** — edition-level re-verification against the billing system. Catch drift between documented inclusions and actual entitlement enforcement.
-- **On packaging change** — full re-verification of all downstream pages.
+- **On release.** Every product release that adds, removes, or changes SKU behavior triggers a PR to the SKU page as part of the release process.
+- **Quarterly.** Edition-level re-verification against the billing system. Catch drift between documented inclusions and actual entitlement enforcement.
+- **On packaging change.** Full re-verification of all downstream pages.
 
 ## Related
 
-- [`../pricing/`](../pricing/) — pricing attaches to SKUs and editions
-- [`../positioning/`](../positioning/) — positioning attaches to SKUs
-- [`../../functions/sales/`](../../functions/sales/) (Phase 1) — sales plays reference SKUs
-- [`../../functions/cs/`](../../functions/customer-success/) (Phase 2) — expansion plays reference add-ons
+- [`../pricing/`](../pricing/), pricing attaches to SKUs and editions
+- [`../positioning/`](../positioning/), positioning attaches to SKUs
+- [`../../functions/sales/`](../../functions/sales/) (Phase 1), sales plays reference SKUs
+- [`../../functions/FUTURE-FUNCTIONS.md`](../../functions/FUTURE-FUNCTIONS.md), where the customer success function (expansion plays that reference add-ons) is described.

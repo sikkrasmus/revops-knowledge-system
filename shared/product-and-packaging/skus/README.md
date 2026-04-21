@@ -18,16 +18,16 @@ Phase 0 ships the template and this README. In-production forks fill this direct
 
 ## Naming convention
 
-- `<sku-slug>.md` — lowercase, hyphenated, matches the billing-system SKU identifier where possible.
+- `<sku-slug>.md`. Lowercase, hyphenated, matches the billing-system SKU identifier where possible.
 
 ## When to create a new SKU page
 
-- New SKU ships in a release → PR to create the page as part of the release process.
-- Existing SKU changes materially (capabilities added or removed) → PR to update.
-- SKU is retired → PR to mark deprecated; don't delete for at least 2 renewal cycles (downstream references).
+- New SKU ships in a release: PR to create the page as part of the release process.
+- Existing SKU changes materially (capabilities added or removed): PR to update.
+- SKU is retired: PR to mark deprecated. Do not delete for at least 2 renewal cycles (downstream references).
 
 ## Related
 
-- [`../editions.md`](../editions.md) — which editions include which SKUs
-- [`../add-ons.md`](../add-ons.md) — add-on structure
-- [`../../pricing/`](../../pricing/) — pricing
+- [`../editions.md`](../editions.md), which editions include which SKUs
+- [`../add-ons.md`](../add-ons.md), add-on structure
+- [`../../pricing/`](../../pricing/), pricing
