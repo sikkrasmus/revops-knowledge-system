@@ -16,8 +16,8 @@ Bash + `yq` convenience wrappers around grep, find, frontmatter filtering, and t
 
 ```bash
 # Clone the repo (or fork into your org)
-git clone git@github.com:sikkrasmus/revops-knowledge-system.git
-cd revops-knowledge-system
+git clone git@github.com:sikkrasmus/company-index-framework.git
+cd company-index-framework
 
 # Install yq if you haven't
 brew install yq    # macOS

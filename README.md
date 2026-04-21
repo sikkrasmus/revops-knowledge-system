@@ -353,7 +353,7 @@ This framework is honest about what it does not do.
 ## Repository structure
 
 ```
-revops-knowledge-system/
+company-index-framework/
 ├── README.md                ← you are here
 ├── PRINCIPLES.md            ← eleven binding principles
 ├── CLAUDE.md                ← routing map, loaded by agents at session start
